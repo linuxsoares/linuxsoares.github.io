@@ -2,36 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>I&#39;m Jane Doe</title>
-    <link>//localhost:1313/</link>
+    <link>/</link>
     <description>Recent content on I&#39;m Jane Doe</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 16 Sep 2024 18:04:37 -0300</lastBuildDate><atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>First Clojure Project</title>
-      <link>//localhost:1313/posts/first-clojure-project/</link>
-      <pubDate>Mon, 16 Sep 2024 18:04:37 -0300</pubDate>
-      
-      <guid>//localhost:1313/posts/first-clojure-project/</guid>
-      
-        <description>&lt;h1 id=&#34;creating-our-first-clojure-project&#34;&gt;Creating Our First Clojure Project&lt;/h1&gt;
-&lt;p&gt;Let&amp;rsquo;s continue with our tutorial. Today, I will explain how we can create a Clojure project. I decided to split this article into two parts: we will explain how to create a regular project and a web project, where we will create an API for some service.&lt;/p&gt;
-&lt;p&gt;Let&amp;rsquo;s start by creating a regular project. It won&amp;rsquo;t be an API, a library, or anything like that. I just want to demonstrate how to create a project, explain its structure, and everything else.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>//localhost:1313/about/</link>
-      <pubDate>Mon, 16 Sep 2024 17:31:59 -0300</pubDate>
-      
-      <guid>//localhost:1313/about/</guid>
-      
-        <description>&lt;h2 id=&#34;about-me&#34;&gt;About Me&lt;/h2&gt;
-&lt;p&gt;Hi! I’m &lt;strong&gt;Gilmar Soares&lt;/strong&gt;, a seasoned software developer with over 12 years of experience in the industry. I specialize in languages like Scala, Java, Python, and Go, and have worked on a range of projects involving complex systems, functional programming, and scalable architectures. My expertise extends to tools like Elasticsearch, Google Spanner, Finagle, and various modern build and testing frameworks.&lt;/p&gt;
-&lt;p&gt;Beyond coding, I am passionate about optimizing performance, solving problems efficiently, and helping teams deliver robust, high-quality software. I’ve also been exploring the intersection of technology with natural language processing, API development, and data analysis.&lt;/p&gt;</description>
-      
-    </item>
-    
+    <lastBuildDate>Mon, 16 Sep 2024 18:04:37 -0300</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
