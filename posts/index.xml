@@ -6,7 +6,21 @@
     <description>Recent content in Posts on I&#39;m Gilmar Soares</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 17 Sep 2024 16:37:38 -0300</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Sep 2024 17:34:27 -0300</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How Am I Learning Golang</title>
+      <link>/posts/how-am-i-learning-golang/</link>
+      <pubDate>Mon, 23 Sep 2024 17:34:27 -0300</pubDate>
+      
+      <guid>/posts/how-am-i-learning-golang/</guid>
+      
+        <description>&lt;p&gt;In my work, I’ve started using Golang. I’m aware of AI tools like ChatGPT, which can help me complete tasks more efficiently.
+However, I really enjoy learning new technologies and am always open to new challenges.&lt;/p&gt;
+&lt;p&gt;In the past, I learned &lt;a href=&#34;https://www.scala-lang.org/&#34;&gt;Scala&lt;/a&gt;, &lt;a href=&#34;https://www.python.org/&#34;&gt;Python&lt;/a&gt;, and &lt;a href=&#34;https://www.java.com/&#34;&gt;Java&lt;/a&gt; by reading books and practicing them daily.
+This time, I’m learning Golang using different approaches. I use Exercism to practice Golang, and now I’ll show you how to use it.&lt;/p&gt;</description>
+      
+    </item>
+    
     <item>
       <title>Senior Software Engineer</title>
       <link>/posts/senior-software-engineer/</link>
