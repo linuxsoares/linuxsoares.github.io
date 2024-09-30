@@ -62,14 +62,13 @@ A phrase that I always remember to impact the people around me is, always be the
     </item>
     
     <item>
-      <title>About</title>
+      <title>About Me</title>
       <link>/about/</link>
       <pubDate>Mon, 16 Sep 2024 17:31:59 -0300</pubDate>
       
       <guid>/about/</guid>
       
-        <description>&lt;h2 id=&#34;about-me&#34;&gt;About Me&lt;/h2&gt;
-&lt;p&gt;My name is Gilmar and I am a software developer with over 7 years of experience, passionate about creating technological solutions that make a difference.&lt;/p&gt;
+        <description>&lt;p&gt;My name is Gilmar and I am a software developer with over 7 years of experience, passionate about creating technological solutions that make a difference.&lt;/p&gt;
 &lt;p&gt;I work with various languages and paradigms such as Python, Java, Scala, and SQL, and I have expertise in scalable system architectures. Currently,&lt;/p&gt;
 &lt;p&gt;I am dedicated to developing high-performance solutions (Black Friday level) using the GCP and AWS platforms.&lt;/p&gt;
 &lt;p&gt;My professional journey includes participating in projects that serve millions of users daily, especially in the e-commerce and public transportation sectors.&lt;/p&gt;</description>
