@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/</loc>
-    <lastmod>2024-09-27T17:43:00-03:00</lastmod>
+    <loc>/posts/how-can-ai-change-the-way-we-work/</loc>
+    <lastmod>2024-10-03T18:50:05-03:00</lastmod>
   </url><url>
-    <loc>/posts/keep-studyng-never-stop/</loc>
-    <lastmod>2024-09-27T17:43:00-03:00</lastmod>
+    <loc>/</loc>
+    <lastmod>2024-10-03T18:50:05-03:00</lastmod>
   </url><url>
     <loc>/posts/</loc>
+    <lastmod>2024-10-03T18:50:05-03:00</lastmod>
+  </url><url>
+    <loc>/posts/keep-studyng-never-stop/</loc>
     <lastmod>2024-09-27T17:43:00-03:00</lastmod>
   </url><url>
     <loc>/posts/how-am-i-learning-golang/</loc>
