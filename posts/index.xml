@@ -6,7 +6,23 @@
     <description>Recent content in Posts on I&#39;m Gilmar Soares</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 10 Oct 2024 13:46:16 -0300</lastBuildDate><atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Oct 2024 16:59:52 -0300</lastBuildDate><atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Remember Life Is Not a 100 Meter Race</title>
+      <link>//localhost:1313/posts/remember-life-is-not-a-100-meter-race/</link>
+      <pubDate>Thu, 17 Oct 2024 16:59:52 -0300</pubDate>
+      
+      <guid>//localhost:1313/posts/remember-life-is-not-a-100-meter-race/</guid>
+      
+        <description>&lt;p&gt;In my life I ever like something and use, make this every day, until you get sick of it.
+But now, I start a therapy and one of the first thing that I learn is use Calendar to organize my routine.&lt;/p&gt;
+&lt;p&gt;Organize my routine, I understand that I need to make a plan of anything organized in my week, month or year.
+For example, In my routine actually, I have one your to exercises every week day,
+I have one hour to study language (english) two days of week,
+I have 30 minutes every day to read books outside my profession and other things&amp;hellip;&lt;/p&gt;</description>
+      
+    </item>
+    
     <item>
       <title>Duck Typing in Go</title>
       <link>//localhost:1313/posts/duck-typing-in-go/</link>
@@ -15,9 +31,10 @@
       <guid>//localhost:1313/posts/duck-typing-in-go/</guid>
       
         <description>&lt;p&gt;Hello everyone!&lt;/p&gt;
-&lt;p&gt;How I say in another post, I&amp;rsquo;m learning Go language to use in some projects in my work!
-I&amp;rsquo;ll explain in this little post how to use duck typing in Go, because it&amp;rsquo;s very hard to me when I started to learn Go.&lt;/p&gt;
-&lt;p&gt;For start explaining, I&amp;rsquo;ll show a simple example in Python:&lt;/p&gt;
+&lt;p&gt;As I mentioned in a previous post, I’m currently learning Go to use in some of my work projects.
+In this short post, I’ll explain how to use duck typing in Go,
+which was quite challenging for me when I first started learning the language.&lt;/p&gt;
+&lt;p&gt;To begin, let’s look at a simple example in Python:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Duck&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;quack&lt;/span&gt;(self):
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Quack, quack!&amp;#34;&lt;/span&gt;)
@@ -36,8 +53,8 @@ I&amp;rsquo;ll explain in this little post how to use duck typing in Go, because
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    quack(donald) &lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt; Quack, quack&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;!&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    quack(john) &lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt; Quack, quack&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;!&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In this crazy example, the Person class can quack like a Duck because this class is a subclass of Duck class.
-In Python, we don&amp;rsquo;t need to specify the type of the object in the function, we just need to call the method that we want to use.&lt;/p&gt;</description>
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In this somewhat quirky example, the Person class can &amp;ldquo;quack&amp;rdquo; like a Duck because it inherits from the Duck class.
+In Python, we don’t need to explicitly declare the type of the object in the function; we simply call the method we want to use.&lt;/p&gt;</description>
       
     </item>
     
