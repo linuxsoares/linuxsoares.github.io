@@ -1,0 +1,634 @@
+<!doctype html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head>
+  <meta charset="utf-8" />
+  <title>
+    
+        |
+        How to Document Your Go Api
+      
+
+    
+
+  </title>
+
+  <meta name="generator" content="Hugo 0.134.2"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="" />
+  <meta
+    name="description"
+    content=""
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.8d4fad7e6916ad2e291e8d97ada157c70350d6d7150fea137e7243340967befb.css"
+      integrity="sha256-jU&#43;tfmkWrS4pHo2XraFXxwNQ1tcVD&#43;oTfnJDNAlnvvs="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.73ccfdf28df555e11009c13c20ced067af3cb021504cba43644c705930428b00.css"
+    integrity="sha256-c8z98o31VeEQCcE8IM7QZ688sCFQTLpDZExwWTBCiwA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.137b1cf3cea9a8adb7884343a9a5ddddf4280f59153f74dc782fb7f7bf0d0519.css"
+    integrity="sha256-E3sc886pqK23iENDqaXd3fQoD1kVP3TceC&#43;3978NBRk="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.e65dc5b48fb5f39b142360c57c3a215744c94e56c755c929cc3e88fe12aab4d3.css"
+    integrity="sha256-5l3FtI&#43;185sUI2DFfDohV0TJTlbHVckpzD6I/hKqtNM="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/regular.min.6f4f16d58da1c82c0c3a3436e021a3d39b4742f741192c546e73e947eacfd92f.css"
+    integrity="sha256-b08W1Y2hyCwMOjQ24CGj05tHQvdBGSxUbnPpR&#43;rP2S8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.e10425ad768bc98ff1fb272a0ac8420f9d1ba22f0612c08ff1010c95080ffe7e.css"
+    integrity="sha256-4QQlrXaLyY/x&#43;ycqCshCD50boi8GEsCP8QEMlQgP/n4="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+  <link rel="canonical" href="/posts/how-to-document-your-go-api/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js"
+      integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+  
+
+
+  
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="How to Document Your Go Api">
+  <meta name="twitter:description" content="Today, I’m writing a technical post about API documentation in Go. I hope you find it useful!
+First, we’ll create a simple CRUD API using Go and the Gin framework. Let’s get started!
+package main import ( &#34;net/http&#34; &#34;strconv&#34; &#34;github.com/gin-gonic/gin&#34; ) type User struct { ID int `json:&#34;id&#34;` Name string `json:&#34;name&#34;` } var users = []User{ {ID: 1, Name: &#34;John&#34;}, {ID: 2, Name: &#34;Doe&#34;}, } func main() { r := gin.Default() // Change to default is /api/v1 api := r.RouterGroup.Group(&#34;/api/v1&#34;) { api.GET(&#34;/users&#34;, getUsers) api.GET(&#34;/users/:id&#34;, getUser) api.POST(&#34;/users&#34;, createUser) api.PUT(&#34;/users&#34;, editUser) api.DELETE(&#34;/users/:id&#34;, removeUser) } r.Run(&#34;:8080&#34;) } func getUsers(c *gin.Context) { c.JSON(http.StatusOK, users) } func getUser(c *gin.Context) { id, _ := strconv.Atoi(c.Param(&#34;id&#34;)) userFound, _ := findUserByID(users, id) c.JSON(http.StatusOK, userFound) } func createUser(c *gin.Context) { var user User c.BindJSON(&amp;user) users = append(users, user) c.JSON(http.StatusCreated, user) } func editUser(c *gin.Context) { var user User c.BindJSON(&amp;user) putUser(users, user) c.JSON(http.StatusOK, user) } func removeUser(c *gin.Context) { id, _ := strconv.Atoi(c.Param(&#34;id&#34;)) deleteUserByID(users, id) c.JSON(http.StatusOK, nil) } func findUserByID(users []User, id int) (*User, bool) { for _, user := range users { if user.ID == id { return &amp;user, true } } return nil, false } func deleteUserByID(users []User, id int) []User { newUsers := []User{} for _, user := range users { if user.ID != id { newUsers = append(newUsers, user) } } return newUsers } func putUser(users []User, newUser User) []User { for i := range users { if users[i].ID == newUser.ID { // Update the existing user users[i] = newUser return users } } // Add new user if not found return append(users, newUser) } Now that we have a simple CRUD API in Go, let’s document it.">
+
+
+
+  
+  <meta property="og:url" content="/posts/how-to-document-your-go-api/">
+  <meta property="og:site_name" content="I&#39;m Gilmar Soares">
+  <meta property="og:title" content="How to Document Your Go Api">
+  <meta property="og:description" content="Today, I’m writing a technical post about API documentation in Go. I hope you find it useful!
+First, we’ll create a simple CRUD API using Go and the Gin framework. Let’s get started!
+package main import ( &#34;net/http&#34; &#34;strconv&#34; &#34;github.com/gin-gonic/gin&#34; ) type User struct { ID int `json:&#34;id&#34;` Name string `json:&#34;name&#34;` } var users = []User{ {ID: 1, Name: &#34;John&#34;}, {ID: 2, Name: &#34;Doe&#34;}, } func main() { r := gin.Default() // Change to default is /api/v1 api := r.RouterGroup.Group(&#34;/api/v1&#34;) { api.GET(&#34;/users&#34;, getUsers) api.GET(&#34;/users/:id&#34;, getUser) api.POST(&#34;/users&#34;, createUser) api.PUT(&#34;/users&#34;, editUser) api.DELETE(&#34;/users/:id&#34;, removeUser) } r.Run(&#34;:8080&#34;) } func getUsers(c *gin.Context) { c.JSON(http.StatusOK, users) } func getUser(c *gin.Context) { id, _ := strconv.Atoi(c.Param(&#34;id&#34;)) userFound, _ := findUserByID(users, id) c.JSON(http.StatusOK, userFound) } func createUser(c *gin.Context) { var user User c.BindJSON(&amp;user) users = append(users, user) c.JSON(http.StatusCreated, user) } func editUser(c *gin.Context) { var user User c.BindJSON(&amp;user) putUser(users, user) c.JSON(http.StatusOK, user) } func removeUser(c *gin.Context) { id, _ := strconv.Atoi(c.Param(&#34;id&#34;)) deleteUserByID(users, id) c.JSON(http.StatusOK, nil) } func findUserByID(users []User, id int) (*User, bool) { for _, user := range users { if user.ID == id { return &amp;user, true } } return nil, false } func deleteUserByID(users []User, id int) []User { newUsers := []User{} for _, user := range users { if user.ID != id { newUsers = append(newUsers, user) } } return newUsers } func putUser(users []User, newUser User) []User { for i := range users { if users[i].ID == newUser.ID { // Update the existing user users[i] = newUser return users } } // Add new user if not found return append(users, newUser) } Now that we have a simple CRUD API in Go, let’s document it.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-10-24T16:22:02-03:00">
+    <meta property="article:modified_time" content="2024-10-24T16:22:02-03:00">
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "posts",
+        "name": "How to Document Your Go Api",
+        "headline": "How to Document Your Go Api",
+        "alternativeHeadline": "",
+        "description": "
+      
+        \u003cp\u003eToday, I’m writing a technical post about API documentation in Go. I hope you find it useful!\u003c\/p\u003e\n\u003cp\u003eFirst, we’ll create a simple CRUD API using Go and the Gin framework.\nLet’s get started!\u003c\/p\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;\u0022\u003e\u003ccode class=\u0022language-go\u0022 data-lang=\u0022go\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#f92672\u0022\u003epackage\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003emain\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#f92672\u0022\u003eimport\u003c\/span\u003e (\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#34;net\/http\u0026#34;\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#34;strconv\u0026#34;\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#34;github.com\/gin-gonic\/gin\u0026#34;\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e)\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#66d9ef\u0022\u003etype\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003eUser\u003c\/span\u003e \u003cspan style=\u0022color:#66d9ef\u0022\u003estruct\u003c\/span\u003e {\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#a6e22e\u0022\u003eID\u003c\/span\u003e   \u003cspan style=\u0022color:#66d9ef\u0022\u003eint\u003c\/span\u003e    \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0060json:\u0026#34;id\u0026#34;\u0060\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#a6e22e\u0022\u003eName\u003c\/span\u003e \u003cspan style=\u0022color:#66d9ef\u0022\u003estring\u003c\/span\u003e \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0060json:\u0026#34;name\u0026#34;\u0060\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e}\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#66d9ef\u0022\u003evar\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003eusers\u003c\/span\u003e = []\u003cspan style=\u0022color:#a6e22e\u0022\u003eUser\u003c\/span\u003e{\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t{\u003cspan style=\u0022color:#a6e22e\u0022\u003eID\u003c\/span\u003e: \u003cspan style=\u0022color:#ae81ff\u0022\u003e1\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003eName\u003c\/span\u003e: \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#34;John\u0026#34;\u003c\/span\u003e},\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t{\u003cspan style=\u0022color:#a6e22e\u0022\u003eID\u003c\/span\u003e: \u003cspan style=\u0022color:#ae81ff\u0022\u003e2\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003eName\u003c\/span\u003e: \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#34;Doe\u0026#34;\u003c\/span\u003e},\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e}\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#66d9ef\u0022\u003efunc\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003emain\u003c\/span\u003e() {\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#a6e22e\u0022\u003er\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e:=\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003egin\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eDefault\u003c\/span\u003e()\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#75715e\u0022\u003e\/\/ Change to default is \/api\/v1\n\u003c\/span\u003e\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e\u003c\/span\u003e\t\u003cspan style=\u0022color:#a6e22e\u0022\u003eapi\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e:=\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003er\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eRouterGroup\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eGroup\u003c\/span\u003e(\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#34;\/api\/v1\u0026#34;\u003c\/span\u003e)\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t{\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\t\u003cspan style=\u0022color:#a6e22e\u0022\u003eapi\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eGET\u003c\/span\u003e(\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#34;\/users\u0026#34;\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003egetUsers\u003c\/span\u003e)\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\t\u003cspan style=\u0022color:#a6e22e\u0022\u003eapi\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eGET\u003c\/span\u003e(\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#34;\/users\/:id\u0026#34;\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003egetUser\u003c\/span\u003e)\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\t\u003cspan style=\u0022color:#a6e22e\u0022\u003eapi\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003ePOST\u003c\/span\u003e(\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#34;\/users\u0026#34;\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003ecreateUser\u003c\/span\u003e)\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\t\u003cspan style=\u0022color:#a6e22e\u0022\u003eapi\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003ePUT\u003c\/span\u003e(\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#34;\/users\u0026#34;\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003eeditUser\u003c\/span\u003e)\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\t\u003cspan style=\u0022color:#a6e22e\u0022\u003eapi\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eDELETE\u003c\/span\u003e(\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#34;\/users\/:id\u0026#34;\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003eremoveUser\u003c\/span\u003e)\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t}\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#a6e22e\u0022\u003er\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eRun\u003c\/span\u003e(\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#34;:8080\u0026#34;\u003c\/span\u003e)\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e}\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#66d9ef\u0022\u003efunc\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003egetUsers\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003ec\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e*\u003c\/span\u003e\u003cspan style=\u0022color:#a6e22e\u0022\u003egin\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eContext\u003c\/span\u003e) {\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#a6e22e\u0022\u003ec\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eJSON\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003ehttp\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eStatusOK\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003eusers\u003c\/span\u003e)\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e}\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#66d9ef\u0022\u003efunc\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003egetUser\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003ec\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e*\u003c\/span\u003e\u003cspan style=\u0022color:#a6e22e\u0022\u003egin\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eContext\u003c\/span\u003e) {\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#a6e22e\u0022\u003eid\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003e_\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e:=\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003estrconv\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eAtoi\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003ec\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eParam\u003c\/span\u003e(\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#34;id\u0026#34;\u003c\/span\u003e))\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#a6e22e\u0022\u003euserFound\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003e_\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e:=\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003efindUserByID\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003eusers\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003eid\u003c\/span\u003e)\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#a6e22e\u0022\u003ec\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eJSON\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003ehttp\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eStatusOK\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003euserFound\u003c\/span\u003e)\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e}\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#66d9ef\u0022\u003efunc\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003ecreateUser\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003ec\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e*\u003c\/span\u003e\u003cspan style=\u0022color:#a6e22e\u0022\u003egin\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eContext\u003c\/span\u003e) {\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#66d9ef\u0022\u003evar\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003euser\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003eUser\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#a6e22e\u0022\u003ec\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eBindJSON\u003c\/span\u003e(\u003cspan style=\u0022color:#f92672\u0022\u003e\u0026amp;\u003c\/span\u003e\u003cspan style=\u0022color:#a6e22e\u0022\u003euser\u003c\/span\u003e)\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#a6e22e\u0022\u003eusers\u003c\/span\u003e = append(\u003cspan style=\u0022color:#a6e22e\u0022\u003eusers\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003euser\u003c\/span\u003e)\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#a6e22e\u0022\u003ec\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eJSON\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003ehttp\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eStatusCreated\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003euser\u003c\/span\u003e)\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e}\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#66d9ef\u0022\u003efunc\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003eeditUser\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003ec\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e*\u003c\/span\u003e\u003cspan style=\u0022color:#a6e22e\u0022\u003egin\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eContext\u003c\/span\u003e) {\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#66d9ef\u0022\u003evar\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003euser\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003eUser\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#a6e22e\u0022\u003ec\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eBindJSON\u003c\/span\u003e(\u003cspan style=\u0022color:#f92672\u0022\u003e\u0026amp;\u003c\/span\u003e\u003cspan style=\u0022color:#a6e22e\u0022\u003euser\u003c\/span\u003e)\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#a6e22e\u0022\u003eputUser\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003eusers\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003euser\u003c\/span\u003e)\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#a6e22e\u0022\u003ec\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eJSON\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003ehttp\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eStatusOK\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003euser\u003c\/span\u003e)\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e}\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#66d9ef\u0022\u003efunc\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003eremoveUser\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003ec\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e*\u003c\/span\u003e\u003cspan style=\u0022color:#a6e22e\u0022\u003egin\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eContext\u003c\/span\u003e) {\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#a6e22e\u0022\u003eid\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003e_\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e:=\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003estrconv\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eAtoi\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003ec\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eParam\u003c\/span\u003e(\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#34;id\u0026#34;\u003c\/span\u003e))\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#a6e22e\u0022\u003edeleteUserByID\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003eusers\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003eid\u003c\/span\u003e)\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#a6e22e\u0022\u003ec\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eJSON\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003ehttp\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eStatusOK\u003c\/span\u003e, \u003cspan style=\u0022color:#66d9ef\u0022\u003enil\u003c\/span\u003e)\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e}\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#66d9ef\u0022\u003efunc\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003efindUserByID\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003eusers\u003c\/span\u003e []\u003cspan style=\u0022color:#a6e22e\u0022\u003eUser\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003eid\u003c\/span\u003e \u003cspan style=\u0022color:#66d9ef\u0022\u003eint\u003c\/span\u003e) (\u003cspan style=\u0022color:#f92672\u0022\u003e*\u003c\/span\u003e\u003cspan style=\u0022color:#a6e22e\u0022\u003eUser\u003c\/span\u003e, \u003cspan style=\u0022color:#66d9ef\u0022\u003ebool\u003c\/span\u003e) {\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#66d9ef\u0022\u003efor\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003e_\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003euser\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e:=\u003c\/span\u003e \u003cspan style=\u0022color:#66d9ef\u0022\u003erange\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003eusers\u003c\/span\u003e {\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\t\u003cspan style=\u0022color:#66d9ef\u0022\u003eif\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003euser\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eID\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e==\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003eid\u003c\/span\u003e {\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\t\t\u003cspan style=\u0022color:#66d9ef\u0022\u003ereturn\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e\u0026amp;\u003c\/span\u003e\u003cspan style=\u0022color:#a6e22e\u0022\u003euser\u003c\/span\u003e, \u003cspan style=\u0022color:#66d9ef\u0022\u003etrue\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\t}\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t}\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#66d9ef\u0022\u003ereturn\u003c\/span\u003e \u003cspan style=\u0022color:#66d9ef\u0022\u003enil\u003c\/span\u003e, \u003cspan style=\u0022color:#66d9ef\u0022\u003efalse\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e}\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#66d9ef\u0022\u003efunc\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003edeleteUserByID\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003eusers\u003c\/span\u003e []\u003cspan style=\u0022color:#a6e22e\u0022\u003eUser\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003eid\u003c\/span\u003e \u003cspan style=\u0022color:#66d9ef\u0022\u003eint\u003c\/span\u003e) []\u003cspan style=\u0022color:#a6e22e\u0022\u003eUser\u003c\/span\u003e {\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#a6e22e\u0022\u003enewUsers\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e:=\u003c\/span\u003e []\u003cspan style=\u0022color:#a6e22e\u0022\u003eUser\u003c\/span\u003e{}\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#66d9ef\u0022\u003efor\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003e_\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003euser\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e:=\u003c\/span\u003e \u003cspan style=\u0022color:#66d9ef\u0022\u003erange\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003eusers\u003c\/span\u003e {\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\t\u003cspan style=\u0022color:#66d9ef\u0022\u003eif\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003euser\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eID\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e!=\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003eid\u003c\/span\u003e {\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\t\t\u003cspan style=\u0022color:#a6e22e\u0022\u003enewUsers\u003c\/span\u003e = append(\u003cspan style=\u0022color:#a6e22e\u0022\u003enewUsers\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003euser\u003c\/span\u003e)\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\t}\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t}\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#66d9ef\u0022\u003ereturn\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003enewUsers\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e}\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#66d9ef\u0022\u003efunc\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003eputUser\u003c\/span\u003e(\u003cspan style=\u0022color:#a6e22e\u0022\u003eusers\u003c\/span\u003e []\u003cspan style=\u0022color:#a6e22e\u0022\u003eUser\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003enewUser\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003eUser\u003c\/span\u003e) []\u003cspan style=\u0022color:#a6e22e\u0022\u003eUser\u003c\/span\u003e {\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#66d9ef\u0022\u003efor\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003ei\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e:=\u003c\/span\u003e \u003cspan style=\u0022color:#66d9ef\u0022\u003erange\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003eusers\u003c\/span\u003e {\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\t\u003cspan style=\u0022color:#66d9ef\u0022\u003eif\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003eusers\u003c\/span\u003e[\u003cspan style=\u0022color:#a6e22e\u0022\u003ei\u003c\/span\u003e].\u003cspan style=\u0022color:#a6e22e\u0022\u003eID\u003c\/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e==\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003enewUser\u003c\/span\u003e.\u003cspan style=\u0022color:#a6e22e\u0022\u003eID\u003c\/span\u003e {\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\t\t\u003cspan style=\u0022color:#75715e\u0022\u003e\/\/ Update the existing user\n\u003c\/span\u003e\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e\u003c\/span\u003e\t\t\t\u003cspan style=\u0022color:#a6e22e\u0022\u003eusers\u003c\/span\u003e[\u003cspan style=\u0022color:#a6e22e\u0022\u003ei\u003c\/span\u003e] = \u003cspan style=\u0022color:#a6e22e\u0022\u003enewUser\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\t\t\u003cspan style=\u0022color:#66d9ef\u0022\u003ereturn\u003c\/span\u003e \u003cspan style=\u0022color:#a6e22e\u0022\u003eusers\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\t}\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t}\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\t\u003cspan style=\u0022color:#75715e\u0022\u003e\/\/ Add new user if not found\n\u003c\/span\u003e\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e\u003c\/span\u003e\t\u003cspan style=\u0022color:#66d9ef\u0022\u003ereturn\u003c\/span\u003e append(\u003cspan style=\u0022color:#a6e22e\u0022\u003eusers\u003c\/span\u003e, \u003cspan style=\u0022color:#a6e22e\u0022\u003enewUser\u003c\/span\u003e)\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e}\n\u003c\/span\u003e\u003c\/span\u003e\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003cp\u003eNow that we have a simple CRUD API in Go, let’s document it.\u003c\/p\u003e
+
+
+      
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/posts\/how-to-document-your-go-api\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": ""
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": ""
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": ""
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": ""
+        },
+        "copyrightYear" : "2024",
+        "dateCreated": "2024-10-24T16:22:02.00Z",
+        "datePublished": "2024-10-24T16:22:02.00Z",
+        "dateModified": "2024-10-24T16:22:02.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name":  null ,
+            "url": "/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+      ]
+
+    ,
+        "url" : "\/posts\/how-to-document-your-go-api\/",
+        "wordCount" : "778",
+        "genre" : [ ],
+        "keywords" : [ ]
+    }
+  </script>
+
+
+
+
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4X1DKBHT7W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-4X1DKBHT7W');
+  </script>
+
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/gilmar.jpeg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/"></a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p></p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/gilmarsoares/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.instagram.com/gilmar.m.soares/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Instagram"
+            title="Instagram"
+          >
+            <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://bsky.app/profile/gilgms.bsky.social"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Bluesky"
+            title="Bluesky"
+          >
+            <i class="fab fa-bluesky fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:linux.soares@gmail.com"
+            target="_blank"
+            rel="noopener me"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        
+        2024
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/"
+              
+              title=""
+              >HOME</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/posts/"
+              
+              title=""
+              >ARCHIVE</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/about"
+              
+              title=""
+              >ABOUT</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      
+        <h1>How to Document Your Go Api</h1>
+      
+      <p>Today, I’m writing a technical post about API documentation in Go. I hope you find it useful!</p>
+<p>First, we’ll create a simple CRUD API using Go and the Gin framework.
+Let’s get started!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;net/http&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;strconv&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;github.com/gin-gonic/gin&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">User</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">ID</span>   <span style="color:#66d9ef">int</span>    <span style="color:#e6db74">`json:&#34;id&#34;`</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Name</span> <span style="color:#66d9ef">string</span> <span style="color:#e6db74">`json:&#34;name&#34;`</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">users</span> = []<span style="color:#a6e22e">User</span>{
+</span></span><span style="display:flex;"><span>	{<span style="color:#a6e22e">ID</span>: <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;John&#34;</span>},
+</span></span><span style="display:flex;"><span>	{<span style="color:#a6e22e">ID</span>: <span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;Doe&#34;</span>},
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">r</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">Default</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Change to default is /api/v1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">api</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">RouterGroup</span>.<span style="color:#a6e22e">Group</span>(<span style="color:#e6db74">&#34;/api/v1&#34;</span>)
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">api</span>.<span style="color:#a6e22e">GET</span>(<span style="color:#e6db74">&#34;/users&#34;</span>, <span style="color:#a6e22e">getUsers</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">api</span>.<span style="color:#a6e22e">GET</span>(<span style="color:#e6db74">&#34;/users/:id&#34;</span>, <span style="color:#a6e22e">getUser</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">api</span>.<span style="color:#a6e22e">POST</span>(<span style="color:#e6db74">&#34;/users&#34;</span>, <span style="color:#a6e22e">createUser</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">api</span>.<span style="color:#a6e22e">PUT</span>(<span style="color:#e6db74">&#34;/users&#34;</span>, <span style="color:#a6e22e">editUser</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">api</span>.<span style="color:#a6e22e">DELETE</span>(<span style="color:#e6db74">&#34;/users/:id&#34;</span>, <span style="color:#a6e22e">removeUser</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Run</span>(<span style="color:#e6db74">&#34;:8080&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">getUsers</span>(<span style="color:#a6e22e">c</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">Context</span>) {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">JSON</span>(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">StatusOK</span>, <span style="color:#a6e22e">users</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">getUser</span>(<span style="color:#a6e22e">c</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">Context</span>) {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">id</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">Atoi</span>(<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Param</span>(<span style="color:#e6db74">&#34;id&#34;</span>))
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">userFound</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">findUserByID</span>(<span style="color:#a6e22e">users</span>, <span style="color:#a6e22e">id</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">JSON</span>(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">StatusOK</span>, <span style="color:#a6e22e">userFound</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">createUser</span>(<span style="color:#a6e22e">c</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">Context</span>) {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">user</span> <span style="color:#a6e22e">User</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">BindJSON</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">user</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">users</span> = append(<span style="color:#a6e22e">users</span>, <span style="color:#a6e22e">user</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">JSON</span>(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">StatusCreated</span>, <span style="color:#a6e22e">user</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">editUser</span>(<span style="color:#a6e22e">c</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">Context</span>) {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">user</span> <span style="color:#a6e22e">User</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">BindJSON</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">user</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">putUser</span>(<span style="color:#a6e22e">users</span>, <span style="color:#a6e22e">user</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">JSON</span>(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">StatusOK</span>, <span style="color:#a6e22e">user</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">removeUser</span>(<span style="color:#a6e22e">c</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">Context</span>) {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">id</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">Atoi</span>(<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Param</span>(<span style="color:#e6db74">&#34;id&#34;</span>))
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">deleteUserByID</span>(<span style="color:#a6e22e">users</span>, <span style="color:#a6e22e">id</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">JSON</span>(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">StatusOK</span>, <span style="color:#66d9ef">nil</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">findUserByID</span>(<span style="color:#a6e22e">users</span> []<span style="color:#a6e22e">User</span>, <span style="color:#a6e22e">id</span> <span style="color:#66d9ef">int</span>) (<span style="color:#f92672">*</span><span style="color:#a6e22e">User</span>, <span style="color:#66d9ef">bool</span>) {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">user</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">users</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">ID</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">id</span> {
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">user</span>, <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">deleteUserByID</span>(<span style="color:#a6e22e">users</span> []<span style="color:#a6e22e">User</span>, <span style="color:#a6e22e">id</span> <span style="color:#66d9ef">int</span>) []<span style="color:#a6e22e">User</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">newUsers</span> <span style="color:#f92672">:=</span> []<span style="color:#a6e22e">User</span>{}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">user</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">users</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">ID</span> <span style="color:#f92672">!=</span> <span style="color:#a6e22e">id</span> {
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">newUsers</span> = append(<span style="color:#a6e22e">newUsers</span>, <span style="color:#a6e22e">user</span>)
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">newUsers</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">putUser</span>(<span style="color:#a6e22e">users</span> []<span style="color:#a6e22e">User</span>, <span style="color:#a6e22e">newUser</span> <span style="color:#a6e22e">User</span>) []<span style="color:#a6e22e">User</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">users</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">users</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">ID</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">newUser</span>.<span style="color:#a6e22e">ID</span> {
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e">// Update the existing user
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#a6e22e">users</span>[<span style="color:#a6e22e">i</span>] = <span style="color:#a6e22e">newUser</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">users</span>
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Add new user if not found
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">return</span> append(<span style="color:#a6e22e">users</span>, <span style="color:#a6e22e">newUser</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Now that we have a simple CRUD API in Go, let’s document it.</p>
+<p>Note: In this example, I didn’t use the best approach for a CRUD. Instead, I defined a User struct to represent a user and used a slice to store the users.
+In a real-world project, you should use a database to store the data. Additionally,
+while I used basic functions to manipulate the data, it’s recommended to follow the repository pattern in production code.</p>
+<p>With that out of the way, let’s move on to creating our documentation.</p>
+<p>First, we’ll create a Makefile to simplify managing the app.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-makefile" data-lang="makefile"><span style="display:flex;"><span><span style="color:#a6e22e">run</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    go run main.go
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">build-swagger</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>	@go run github.com/swaggo/swag/cmd/swag@latest init -g main.go -o docs
+</span></span></code></pre></div><p>Now, we need to install some dependencies to use Swag.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    go get -u github.com/swaggo/gin-swagger
+</span></span><span style="display:flex;"><span>    go get -u github.com/swaggo/files
+</span></span></code></pre></div><p>Now, I need to add some descriptions using code comments in the main function.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// @BasePath /api/v1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// PingExample godoc
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Summary ping example
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Schemes
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Description do ping
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">...</span>
+</span></span></code></pre></div><p>We need to add a route to serve the Swagger documentation.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">GET</span>(<span style="color:#e6db74">&#34;/swagger/*any&#34;</span>, <span style="color:#a6e22e">ginSwagger</span>.<span style="color:#a6e22e">WrapHandler</span>(<span style="color:#a6e22e">swaggerfiles</span>.<span style="color:#a6e22e">Handler</span>))
+</span></span></code></pre></div><p>Now, we need to run a command to generate the documentation.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>make build-swagger
+</span></span></code></pre></div><p>With all the Swag configurations complete, we can run the app and access the documentation in the browser.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>make run
+</span></span></code></pre></div><p>Now, access the URL http://localhost:8080/swagger/index.html to view the documentation.</p>
+<p>Below is an example of how to document a CRUD:</p>
+<p>GET USERS:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// @BasePath /
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// ShowAccount 	 godoc
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Summary      Show a Users list
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Description  get users
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Tags         getUsers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Accept       json
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Produce      json
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Router       /users  [get]
+</span></span></span></code></pre></div><p>GET USER:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// @BasePath /
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// ShowAccount 	 godoc
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Summary      Show a Users list
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Description  get users
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Tags         getUsers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Accept       json
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Produce      json
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Param        id         path      string  true  &#34;ID&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Router       /users/{id}  [get]
+</span></span></span></code></pre></div><p>POST:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// @BasePath /
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// ShowAccount 	 godoc
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Summary      Create a User
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Description  create users
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Tags         createUser
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Accept       json
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Produce      json
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Param user body User true &#34;User to create&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Router 		/users [post]
+</span></span></span></code></pre></div><p>PUT:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// @BasePath /
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// ShowAccount 	 godoc
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Summary      Edit a User
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Description  edit users
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Tags         editUser
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Accept       json
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Produce      json
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Param user body User true &#34;User to edit&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Router 		/users [put]
+</span></span></span></code></pre></div><p>DELETE:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// @BasePath /
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// ShowAccount 	 godoc
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Summary      Remove a Users list
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Description  delete user
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Tags         removeUser
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Accept       json
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Produce      json
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Param        id         path      string  true  &#34;ID&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Router       /users/{id}  [delete]
+</span></span></span></code></pre></div><p>With these comments in each function, we can generate the documentation using Swag.</p>
+<p>You can view the project in the <a href="https://github.com/linuxsoares/crud-user-go">repository</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, we learned how to document a Go API using Swag.
+We started by creating a simple CRUD API in Go and then documented it using Swag.
+We also learned how to generate the documentation and view it in the browser.</p>
+<p>Swag is a powerful tool that can help you document your Go APIs easily.</p>
+<p>I hope you found this article helpful. If you have any questions or suggestions,
+feel free to send me a message in my social media accounts.</p>
+<p>Thank you for reading!</p>
+</div>
+    <div class="post__footer">
+      
+
+      
+    </div>
+
+    
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        
+        2024
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script></body>
+</html>
