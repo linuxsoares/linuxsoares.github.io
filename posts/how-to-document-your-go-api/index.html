@@ -202,7 +202,7 @@ package main import ( &#34;net/http&#34; &#34;strconv&#34; &#34;github.com/gin-g
 
     ,
         "url" : "\/posts\/how-to-document-your-go-api\/",
-        "wordCount" : "778",
+        "wordCount" : "781",
         "genre" : [ ],
         "keywords" : [ ]
     }
@@ -592,6 +592,8 @@ while I used basic functions to manipulate the data, it’s recommended to follo
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Param        id         path      string  true  &#34;ID&#34;
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// @Router       /users/{id}  [delete]
 </span></span></span></code></pre></div><p>With these comments in each function, we can generate the documentation using Swag.</p>
+<p>The result is:</p>
+<p><img src="/images/swagger-doc.png" alt="Swagger example"></p>
 <p>You can view the project in the <a href="https://github.com/linuxsoares/crud-user-go">repository</a>.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>In this article, we learned how to document a Go API using Swag.
