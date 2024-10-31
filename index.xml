@@ -6,7 +6,23 @@
     <description>Recent content on I&#39;m Gilmar Soares</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 24 Oct 2024 16:22:02 -0300</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 31 Oct 2024 14:38:09 -0300</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Publish Your Go Library on Pkg Go</title>
+      <link>/posts/how-to-publish-your-go-library-on-pkg-go/</link>
+      <pubDate>Thu, 31 Oct 2024 14:38:09 -0300</pubDate>
+      
+      <guid>/posts/how-to-publish-your-go-library-on-pkg-go/</guid>
+      
+        <description>&lt;p&gt;Continue my way to learn Go in a deep way, today I&amp;rsquo;ll show to you how to publish you library in &lt;a href=&#34;https://pkg.go.dev/&#34;&gt;Pkg.Go&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;First of all, you need to have a Go library in you Github account or any other Git repository.
+In this example, I&amp;rsquo;ll use a simple library that I created to show how to publish it.&lt;/p&gt;
+&lt;p&gt;The library is &lt;a href=&#34;https://github.com/linuxsoares/valid-brazilian-cnpj&#34;&gt;valid-brazilian-cnpj&lt;/a&gt;.
+In Brazil we have a document called CNPJ, the next year the rules to validate it will change,
+so I created this library to help me to validate CNPJ.&lt;/p&gt;</description>
+      
+    </item>
+    
     <item>
       <title>How to Document Your Go Api</title>
       <link>/posts/how-to-document-your-go-api/</link>
