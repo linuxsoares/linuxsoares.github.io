@@ -6,7 +6,22 @@
     <description>Recent content in Posts on I&#39;m Gilmar Soares</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 31 Oct 2024 14:38:09 -0300</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Nov 2024 10:58:22 -0300</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Strategy for Studying Leetcode</title>
+      <link>/posts/my-strategy-for-studying-leetcode/</link>
+      <pubDate>Thu, 07 Nov 2024 10:58:22 -0300</pubDate>
+      
+      <guid>/posts/my-strategy-for-studying-leetcode/</guid>
+      
+        <description>&lt;p&gt;First of all, don&amp;rsquo;t put pressure on yourself. Focus on the long term by doing a little every day or fitting it into your schedule and sticking to the plan, okay?&lt;/p&gt;
+&lt;p&gt;With that in mind, here is my strategy for studying Leetcode.&lt;/p&gt;
+&lt;h2 id=&#34;1-start-with-the-basics&#34;&gt;1. Start with the basics&lt;/h2&gt;
+&lt;p&gt;At the moment, I’m studying the basics of algorithms, focusing on string manipulation on Leetcode by filtering for easy problems. In this post,
+I’ll walk you through the &lt;code&gt;125. Valid Palindrome&lt;/code&gt; exercise on Leetcode.&lt;/p&gt;</description>
+      
+    </item>
+    
     <item>
       <title>How to Publish Your Go Library on Pkg Go</title>
       <link>/posts/how-to-publish-your-go-library-on-pkg-go/</link>
