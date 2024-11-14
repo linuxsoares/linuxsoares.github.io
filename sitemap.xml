@@ -2,47 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/</loc>
+    <loc>//localhost:1313/</loc>
+    <lastmod>2024-11-14T17:36:05-03:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/posts/</loc>
+    <lastmod>2024-11-14T17:36:05-03:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/posts/this-post-isnt-about-technology/</loc>
+    <lastmod>2024-11-14T17:36:05-03:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/posts/my-strategy-for-studying-leetcode/</loc>
     <lastmod>2024-11-07T10:58:22-03:00</lastmod>
   </url><url>
-    <loc>/posts/my-strategy-for-studying-leetcode/</loc>
-    <lastmod>2024-11-07T10:58:22-03:00</lastmod>
-  </url><url>
-    <loc>/posts/</loc>
-    <lastmod>2024-11-07T10:58:22-03:00</lastmod>
-  </url><url>
-    <loc>/posts/how-to-publish-your-go-library-on-pkg-go/</loc>
+    <loc>//localhost:1313/posts/how-to-publish-your-go-library-on-pkg-go/</loc>
     <lastmod>2024-10-31T14:38:09-03:00</lastmod>
   </url><url>
-    <loc>/posts/how-to-document-your-go-api/</loc>
+    <loc>//localhost:1313/posts/how-to-document-your-go-api/</loc>
     <lastmod>2024-10-24T16:22:02-03:00</lastmod>
   </url><url>
-    <loc>/posts/remember-life-is-not-a-100-meter-race/</loc>
+    <loc>//localhost:1313/posts/remember-life-is-not-a-100-meter-race/</loc>
     <lastmod>2024-10-17T16:59:52-03:00</lastmod>
   </url><url>
-    <loc>/posts/duck-typing-in-go/</loc>
+    <loc>//localhost:1313/posts/duck-typing-in-go/</loc>
     <lastmod>2024-10-10T13:46:16-03:00</lastmod>
   </url><url>
-    <loc>/posts/how-can-ai-change-the-way-we-work/</loc>
+    <loc>//localhost:1313/posts/how-can-ai-change-the-way-we-work/</loc>
     <lastmod>2024-10-03T18:50:05-03:00</lastmod>
   </url><url>
-    <loc>/posts/keep-studyng-never-stop/</loc>
+    <loc>//localhost:1313/posts/keep-studyng-never-stop/</loc>
     <lastmod>2024-09-27T17:43:00-03:00</lastmod>
   </url><url>
-    <loc>/posts/how-am-i-learning-golang/</loc>
+    <loc>//localhost:1313/posts/how-am-i-learning-golang/</loc>
     <lastmod>2024-09-23T17:34:27-03:00</lastmod>
   </url><url>
-    <loc>/posts/senior-software-engineer/</loc>
+    <loc>//localhost:1313/posts/senior-software-engineer/</loc>
     <lastmod>2024-09-17T16:37:38-03:00</lastmod>
   </url><url>
-    <loc>/posts/first-clojure-project/</loc>
+    <loc>//localhost:1313/posts/first-clojure-project/</loc>
     <lastmod>2024-09-16T18:04:37-03:00</lastmod>
   </url><url>
-    <loc>/about/</loc>
+    <loc>//localhost:1313/about/</loc>
     <lastmod>2024-09-16T17:31:59-03:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>//localhost:1313/categories/</loc>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>//localhost:1313/tags/</loc>
   </url>
 </urlset>
