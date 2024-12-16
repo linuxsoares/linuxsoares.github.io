@@ -6,7 +6,23 @@
     <description>Recent content on I&#39;m Gilmar Soares</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Dec 2024 18:46:28 -0300</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Dec 2024 16:18:30 -0300</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Recursion_and_quick_sort</title>
+      <link>/posts/recursion_and_quick_sort/</link>
+      <pubDate>Mon, 16 Dec 2024 16:18:30 -0300</pubDate>
+      
+      <guid>/posts/recursion_and_quick_sort/</guid>
+      
+        <description>&lt;p&gt;In this post, I can explain two important concepts in computer science: recursion and quick sort.
+I need to explain recursion before I can explain quick sort because quick sort use recursion to sort the array.&lt;/p&gt;
+&lt;h2 id=&#34;recursion&#34;&gt;Recursion&lt;/h2&gt;
+&lt;p&gt;Recursion is a technique in computer science where a function calls itself.
+This technique is used to solve problems that can be broken down into smaller problems of the same type.&lt;/p&gt;
+&lt;p&gt;Here is an example of a recursive function that calculates the factorial of a number:&lt;/p&gt;</description>
+      
+    </item>
+    
     <item>
       <title>Selection Sort</title>
       <link>/posts/selection_sort/</link>
