@@ -6,7 +6,7 @@
   
     class="html theme--light"
   
-><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+><head>
   <meta charset="utf-8" />
   <title>
     
@@ -84,7 +84,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 
-  <link rel="canonical" href="//localhost:1313/posts/how_to_build_a_hashmap/" />
+  <link rel="canonical" href="/posts/how_to_build_a_hashmap/" />
 
   
   
@@ -124,7 +124,7 @@ A Hash Map is an array-based structure that gives you near-instant access to a s
 
 
   
-  <meta property="og:url" content="//localhost:1313/posts/how_to_build_a_hashmap/">
+  <meta property="og:url" content="/posts/how_to_build_a_hashmap/">
   <meta property="og:site_name" content="I&#39;m Gilmar Soares">
   <meta property="og:title" content="How to build a hashmap">
   <meta property="og:description" content="This week, we’re diving into one of the most powerful and fundamental data structures in programming: the Hash Map, often called a Hash Table or Dictionary. Hash maps are vital in nearly every language for quickly storing and retrieving data as key-value pairs.
@@ -163,7 +163,7 @@ A Hash Map is an array-based structure that gives you near-instant access to a s
         "isFamilyFriendly": "true",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "\/\/localhost:1313\/posts\/how_to_build_a_hashmap\/"
+            "@id": "\/posts\/how_to_build_a_hashmap\/"
         },
         "author" : {
             "@type": "Person",
@@ -188,10 +188,10 @@ A Hash Map is an array-based structure that gives you near-instant access to a s
         "publisher":{
             "@type":"Organization",
             "name":  null ,
-            "url": "//localhost:1313/",
+            "url": "/",
             "logo": {
                 "@type": "ImageObject",
-                "url": "\/\/localhost:1313\/favicon-32x32.png",
+                "url": "\/favicon-32x32.png",
                 "width":"32",
                 "height":"32"
             }
@@ -201,7 +201,7 @@ A Hash Map is an array-based structure that gives you near-instant access to a s
       ]
 
     ,
-        "url" : "\/\/localhost:1313\/posts\/how_to_build_a_hashmap\/",
+        "url" : "\/posts\/how_to_build_a_hashmap\/",
         "wordCount" : "514",
         "genre" : [ ],
         "keywords" : [ ]
@@ -242,7 +242,7 @@ A Hash Map is an array-based structure that gives you near-instant access to a s
       />
       
         <div class="sidebar__introduction-title">
-          <a href="//localhost:1313/"></a>
+          <a href="/"></a>
         </div>
       
       <div class="sidebar__introduction-description">
@@ -424,14 +424,14 @@ The value is your coat itself.
 <p>Python&rsquo;s Built-in Hash Map: The dict</p>
 <p>Before we build our own, let&rsquo;s look at Python&rsquo;s highly optimized, native implementation: the dict.
 Python</p>
-<h1 id="create-an-empty-dictionary">Create an empty dictionary</h1>
+<h3 id="create-an-empty-dictionary">Create an empty dictionary</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>user_profile <span style="color:#f92672">=</span> {}
-</span></span></code></pre></div><h1 id="store-key-value-pairs">Store key-value pairs</h1>
+</span></span></code></pre></div><h3 id="store-key-value-pairs">Store key-value pairs</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>user_profile[<span style="color:#e6db74">&#34;username&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;coder_x&#34;</span>
 </span></span><span style="display:flex;"><span>user_profile[<span style="color:#e6db74">&#34;status&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;online&#34;</span>
-</span></span></code></pre></div><h1 id="retrieve-a-value-instantly-using-its-key">Retrieve a value instantly using its key</h1>
+</span></span></code></pre></div><h3 id="retrieve-a-value-instantly-using-its-key">Retrieve a value instantly using its key</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(user_profile[<span style="color:#e6db74">&#34;username&#34;</span>]) <span style="color:#75715e"># Output: coder_x</span>
-</span></span></code></pre></div><h1 id="the-final-structure">The final structure</h1>
+</span></span></code></pre></div><h3 id="the-final-structure">The final structure</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(user_profile) <span style="color:#75715e"># Output: {&#39;username&#39;: &#39;coder_x&#39;, &#39;status&#39;: &#39;online&#39;}</span>
 </span></span></code></pre></div><p>Building a Custom HashMap Class</p>
 <p>Now, let&rsquo;s implement the core logic ourselves. Our HashMap will clearly show how keys are converted to array indices for storage and retrieval:</p>
@@ -457,22 +457,22 @@ Python</p>
 </span></span></code></pre></div><p>Practical Example and Indexing</p>
 <p>Let&rsquo;s see our custom HashMap in action and observe the indices it generates:
 Python</p>
-<h1 id="1-initialize-the-hash-map-with-10-slots">1. Initialize the hash map with 10 slots</h1>
+<h3 id="1-initialize-the-hash-map-with-10-slots">1. Initialize the hash map with 10 slots</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>contact_list <span style="color:#f92672">=</span> HashMap(<span style="color:#ae81ff">10</span>)
-</span></span></code></pre></div><h1 id="2-store-entries-note-the-hash-index-is-calculated-internally">2. Store entries (Note: the hash index is calculated internally)</h1>
-<h1 id="key-alice---hash-index-3">Key: &ldquo;Alice&rdquo; -&gt; hash index: 3</h1>
+</span></span></code></pre></div><h3 id="2-store-entries-note-the-hash-index-is-calculated-internally">2. Store entries (Note: the hash index is calculated internally)</h3>
+<h4 id="key-alice---hash-index-3">Key: &ldquo;Alice&rdquo; -&gt; hash index: 3</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>contact_list<span style="color:#f92672">.</span>set(<span style="color:#e6db74">&#34;Alice&#34;</span>, <span style="color:#e6db74">&#34;555-0101&#34;</span>)
-</span></span></code></pre></div><h1 id="key-bob---hash-index-6">Key: &ldquo;Bob&rdquo; -&gt; hash index: 6</h1>
+</span></span></code></pre></div><h4 id="key-bob---hash-index-6">Key: &ldquo;Bob&rdquo; -&gt; hash index: 6</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>contact_list<span style="color:#f92672">.</span>set(<span style="color:#e6db74">&#34;Bob&#34;</span>, <span style="color:#e6db74">&#34;555-0202&#34;</span>)
-</span></span></code></pre></div><h1 id="key-charlie---hash-index-7">Key: &ldquo;Charlie&rdquo; -&gt; hash index: 7</h1>
+</span></span></code></pre></div><h4 id="key-charlie---hash-index-7">Key: &ldquo;Charlie&rdquo; -&gt; hash index: 7</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>contact_list<span style="color:#f92672">.</span>set(<span style="color:#e6db74">&#34;Charlie&#34;</span>, <span style="color:#e6db74">&#34;555-0303&#34;</span>)
-</span></span></code></pre></div><h1 id="3-retrieve-values-using-the-original-keys">3. Retrieve values using the original keys</h1>
+</span></span></code></pre></div><h3 id="3-retrieve-values-using-the-original-keys">3. Retrieve values using the original keys</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Alice&#39;s Number: </span><span style="color:#e6db74">{</span>contact_list<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;Alice&#39;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)    <span style="color:#75715e"># Output: 555-0101</span>
 </span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Bob&#39;s Number: </span><span style="color:#e6db74">{</span>contact_list<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;Bob&#39;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)      <span style="color:#75715e"># Output: 555-0202</span>
-</span></span></code></pre></div><h1 id="4-view-the-underlying-array-after-insertions">4. View the underlying array after insertions</h1>
+</span></span></code></pre></div><h3 id="4-view-the-underlying-array-after-insertions">4. View the underlying array after insertions</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">--- Map Array State ---&#34;</span>)
 </span></span><span style="display:flex;"><span>print(str(contact_list))
-</span></span></code></pre></div><h1 id="output-indices-0-9">Output (Indices 0-9):</h1>
+</span></span></code></pre></div><h4 id="output-indices-0-9">Output (Indices 0-9):</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>[<span style="color:#66d9ef">None</span>, <span style="color:#66d9ef">None</span>, <span style="color:#66d9ef">None</span>, <span style="color:#e6db74">&#39;555-0101&#39;</span>, <span style="color:#66d9ef">None</span>, <span style="color:#66d9ef">None</span>, <span style="color:#e6db74">&#39;555-0202&#39;</span>, <span style="color:#e6db74">&#39;555-0303&#39;</span>, <span style="color:#66d9ef">None</span>, <span style="color:#66d9ef">None</span>]
 </span></span></code></pre></div><p>This simplified model demonstrates the core principle: using a hash function to achieve fast O(1) (constant time) lookups by jumping directly to the correct array slot. Real-world hash maps add complexity to handle growth and collisions, but the foundational concept remains this efficient indexing strategy!</p>
 <p>I hope this walkthrough has given you a solid understanding of how a Hash Map works at its core!
