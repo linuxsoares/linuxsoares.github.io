@@ -5,7 +5,7 @@
     <link>/</link>
     <description>Recent content on I&#39;m Gilmar Soares</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>en-gb</language>
     <lastBuildDate>Thu, 06 Mar 2025 17:54:50 -0300</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to build a hashmap</title>
@@ -14,7 +14,7 @@
       
       <guid>/posts/how_to_build_a_hashmap/</guid>
       
-        <description>&lt;p&gt;This week, we&amp;rsquo;re diving into one of the most powerful and fundamental data structures in programming: the Hash Map, often called a Hash Table or Dictionary. Hash maps are vital in nearly every language for quickly storing and retrieving data as key-value pairs.&lt;/p&gt;
+      <description>&lt;p&gt;This week, we&amp;rsquo;re diving into one of the most powerful and fundamental data structures in programming: the Hash Map, often called a Hash Table or Dictionary. Hash maps are vital in nearly every language for quickly storing and retrieving data as key-value pairs.&lt;/p&gt;
 &lt;p&gt;What&amp;rsquo;s a Hash Map, Really?&lt;/p&gt;
 &lt;p&gt;A Hash Map is an array-based structure that gives you near-instant access to a stored value. It achieves this speed by using a special hash function to convert the key (e.g., a person&amp;rsquo;s name) into an index (a number) in the underlying array.&lt;/p&gt;</description>
       
@@ -27,7 +27,7 @@
       
       <guid>/posts/using_ai_for_programmers/</guid>
       
-        <description>&lt;p&gt;Today, I’m back from my vacation, and I’ve been thinking about writing about how we can use AI to help us with coding.&lt;/p&gt;
+      <description>&lt;p&gt;Today, I’m back from my vacation, and I’ve been thinking about writing about how we can use AI to help us with coding.&lt;/p&gt;
 &lt;h2 id=&#34;take-a-break-and-recharge&#34;&gt;Take a Break and Recharge&lt;/h2&gt;
 &lt;p&gt;First of all, I want to say this: take a moment in your life to rest. Go on vacation, visit the beach, the mountains,
 the countryside, or the city—go wherever you like. But make sure to take time to recharge.&lt;/p&gt;
@@ -43,7 +43,7 @@ the countryside, or the city—go wherever you like. But make sure to take time 
       
       <guid>/posts/recursion_and_quick_sort/</guid>
       
-        <description>&lt;p&gt;In this post, I can explain two important concepts in computer science: recursion and quick sort.
+      <description>&lt;p&gt;In this post, I can explain two important concepts in computer science: recursion and quick sort.
 I need to explain recursion before I can explain quick sort because quick sort use recursion to sort the array.&lt;/p&gt;
 &lt;h2 id=&#34;recursion&#34;&gt;Recursion&lt;/h2&gt;
 &lt;p&gt;Recursion is a technique in computer science where a function calls itself.
@@ -59,7 +59,7 @@ This technique is used to solve problems that can be broken down into smaller pr
       
       <guid>/posts/selection_sort/</guid>
       
-        <description>&lt;p&gt;Continuing my study of algorithms, I can now explain the selection sort algorithm to you.&lt;/p&gt;
+      <description>&lt;p&gt;Continuing my study of algorithms, I can now explain the selection sort algorithm to you.&lt;/p&gt;
 &lt;p&gt;Selection sort is a simple algorithm. It works by finding the smallest element in an array,
 adding it to a new array, and removing it from the original array.
 This process is repeated until the original array is empty. Once the original array is empty,
@@ -74,7 +74,7 @@ the new array will contain the elements in sorted order.&lt;/p&gt;</description>
       
       <guid>/posts/going_against_the_flow_of_the_world/</guid>
       
-        <description>&lt;p&gt;In my country, this week marks the start of &amp;ldquo;Black Week,&amp;rdquo; although the correct term is &amp;ldquo;Black Friday,&amp;rdquo;
+      <description>&lt;p&gt;In my country, this week marks the start of &amp;ldquo;Black Week,&amp;rdquo; although the correct term is &amp;ldquo;Black Friday,&amp;rdquo;
 traditionally a single day of discounts in stores. As you know,
 I’m a software engineer, and this week I’ve noticed many courses on sale,
 offering a variety of options for learning new things.&lt;/p&gt;
@@ -91,7 +91,7 @@ often promise accelerated learning. I’ve decided that, as a human being, I sho
       
       <guid>/posts/explaining_binary_search_in_a_simple_way/</guid>
       
-        <description>&lt;p&gt;Today I try to explain binary search in a simple way.
+      <description>&lt;p&gt;Today I try to explain binary search in a simple way.
 Binary search is a search algorithm that finds the position of a target value within a sorted array.
 Sorted array is an important point here.&lt;/p&gt;
 &lt;p&gt;To explain binary search, we need a array to exemplify.&lt;/p&gt;
@@ -108,7 +108,7 @@ Binary search works by comparing the target value to the middle element of the a
       
       <guid>/posts/this-post-isnt-about-technology/</guid>
       
-        <description>&lt;h2 id=&#34;this-post-is-about-depth-of-knowledge&#34;&gt;This post is about depth of knowledge!&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;this-post-is-about-depth-of-knowledge&#34;&gt;This post is about depth of knowledge!&lt;/h2&gt;
 &lt;p&gt;When I started my blog, I added Google Analytics—not to track performance,
 but because I was curious about how people engage with my posts.&lt;/p&gt;
 &lt;p&gt;Over time, as I’ve been writing for this blog, I’ve observed an interesting trend.
@@ -126,7 +126,7 @@ or my personal schedule and life routines didn’t generate much traffic.&lt;/p&
       
       <guid>/posts/my-strategy-for-studying-leetcode/</guid>
       
-        <description>&lt;p&gt;First of all, don&amp;rsquo;t put pressure on yourself. Focus on the long term by doing a little every day or fitting it into your schedule and sticking to the plan, okay?&lt;/p&gt;
+      <description>&lt;p&gt;First of all, don&amp;rsquo;t put pressure on yourself. Focus on the long term by doing a little every day or fitting it into your schedule and sticking to the plan, okay?&lt;/p&gt;
 &lt;p&gt;With that in mind, here is my strategy for studying Leetcode.&lt;/p&gt;
 &lt;h2 id=&#34;1-start-with-the-basics&#34;&gt;1. Start with the basics&lt;/h2&gt;
 &lt;p&gt;At the moment, I’m studying the basics of algorithms, focusing on string manipulation on Leetcode by filtering for easy problems. In this post,
@@ -141,7 +141,7 @@ I’ll walk you through the &lt;code&gt;125. Valid Palindrome&lt;/code&gt; exerc
       
       <guid>/posts/how-to-publish-your-go-library-on-pkg-go/</guid>
       
-        <description>&lt;p&gt;Continue my way to learn Go in a deep way, today I&amp;rsquo;ll show to you how to publish you library in &lt;a href=&#34;https://pkg.go.dev/&#34;&gt;Pkg.Go&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;Continue my way to learn Go in a deep way, today I&amp;rsquo;ll show to you how to publish you library in &lt;a href=&#34;https://pkg.go.dev/&#34;&gt;Pkg.Go&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;First of all, you need to have a Go library in you Github account or any other Git repository.
 In this example, I&amp;rsquo;ll use a simple library that I created to show how to publish it.&lt;/p&gt;
 &lt;p&gt;The library is &lt;a href=&#34;https://github.com/linuxsoares/valid-brazilian-cnpj&#34;&gt;valid-brazilian-cnpj&lt;/a&gt;.
@@ -157,7 +157,7 @@ so I created this library to help me to validate CNPJ.&lt;/p&gt;</description>
       
       <guid>/posts/how-to-document-your-go-api/</guid>
       
-        <description>&lt;p&gt;Today, I’m writing a technical post about API documentation in Go. I hope you find it useful!&lt;/p&gt;
+      <description>&lt;p&gt;Today, I’m writing a technical post about API documentation in Go. I hope you find it useful!&lt;/p&gt;
 &lt;p&gt;First, we’ll create a simple CRUD API using Go and the Gin framework.
 Let’s get started!&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;
@@ -182,8 +182,8 @@ Let’s get started!&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;r&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;gin&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Default&lt;/span&gt;()
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#75715e&#34;&gt;// Change to default is /api/v1
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;api&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;r&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;RouterGroup&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Group&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/api/v1&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#75715e&#34;&gt;// Change to default is /api/v1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;api&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;r&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;RouterGroup&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Group&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/api/v1&amp;#34;&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	{
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#a6e22e&#34;&gt;api&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;GET&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/users&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;getUsers&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
@@ -251,13 +251,13 @@ Let’s get started!&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;putUser&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;users&lt;/span&gt; []&lt;span style=&#34;color:#a6e22e&#34;&gt;User&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;newUser&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;User&lt;/span&gt;) []&lt;span style=&#34;color:#a6e22e&#34;&gt;User&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;range&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;users&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;users&lt;/span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;i&lt;/span&gt;].&lt;span style=&#34;color:#a6e22e&#34;&gt;ID&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;newUser&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;ID&lt;/span&gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#75715e&#34;&gt;// Update the existing user
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;			&lt;span style=&#34;color:#a6e22e&#34;&gt;users&lt;/span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;i&lt;/span&gt;] = &lt;span style=&#34;color:#a6e22e&#34;&gt;newUser&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#75715e&#34;&gt;// Update the existing user&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#a6e22e&#34;&gt;users&lt;/span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;i&lt;/span&gt;] = &lt;span style=&#34;color:#a6e22e&#34;&gt;newUser&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;users&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		}
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#75715e&#34;&gt;// Add new user if not found
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; append(&lt;span style=&#34;color:#a6e22e&#34;&gt;users&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;newUser&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#75715e&#34;&gt;// Add new user if not found&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; append(&lt;span style=&#34;color:#a6e22e&#34;&gt;users&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;newUser&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now that we have a simple CRUD API in Go, let’s document it.&lt;/p&gt;</description>
       
@@ -270,7 +270,7 @@ Let’s get started!&lt;/p&gt;
       
       <guid>/posts/remember-life-is-not-a-100-meter-race/</guid>
       
-        <description>&lt;p&gt;In my life, I’ve often liked something and used it every day until I got sick of it.
+      <description>&lt;p&gt;In my life, I’ve often liked something and used it every day until I got sick of it.
 But now, I’ve started therapy, and one of the first things I’ve learned is how to use a calendar to organize my routine.&lt;/p&gt;
 &lt;p&gt;By organizing my routine, I realized that I need to plan everything in advance—whether it’s for the week, month, or year.
 For example, in my current routine:&lt;/p&gt;
@@ -290,7 +290,7 @@ I won’t learn English or Golang (a programming language) in a day or a week. H
       
       <guid>/posts/duck-typing-in-go/</guid>
       
-        <description>&lt;p&gt;Hello everyone!&lt;/p&gt;
+      <description>&lt;p&gt;Hello everyone!&lt;/p&gt;
 &lt;p&gt;As I mentioned in a previous post, I’m currently learning Go to use in some of my work projects.
 In this short post, I’ll explain how to use duck typing in Go,
 which was quite challenging for me when I first started learning the language.&lt;/p&gt;
@@ -325,7 +325,7 @@ In Python, we don’t need to explicitly declare the type of the object in the f
       
       <guid>/posts/how-can-ai-change-the-way-we-work/</guid>
       
-        <description>&lt;p&gt;The first answer is, I DON’T KNOW! Bye-bye! (Just kidding! Keep reading, please! It was only a joke!)&lt;/p&gt;
+      <description>&lt;p&gt;The first answer is, I DON’T KNOW! Bye-bye! (Just kidding! Keep reading, please! It was only a joke!)&lt;/p&gt;
 &lt;p&gt;Today, I saw the new Canvas feature from OpenAI, and I’m feeling two things:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;I’m very excited about the evolution of AI and the new possibilities it can bring.&lt;/li&gt;
@@ -342,7 +342,7 @@ In Python, we don’t need to explicitly declare the type of the object in the f
       
       <guid>/posts/keep-studyng-never-stop/</guid>
       
-        <description>&lt;h2 id=&#34;why-i-suggest-you-never-stop-studying&#34;&gt;Why I suggest you never stop studying!&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;why-i-suggest-you-never-stop-studying&#34;&gt;Why I suggest you never stop studying!&lt;/h2&gt;
 &lt;p&gt;At the start of my career, searching for a profession, I was always very curious about computers, but with a limited income, we couldn&amp;rsquo;t afford to study, buy computers, or have access to technology in general.&lt;/p&gt;
 &lt;p&gt;My first job was painting bicycle handlebars, and I had no prospects. Later, I got a job managing the inventory of a candy store. With that, I made an agreement with my family that the little money I earned would go towards paying for college, and we all agreed!&lt;/p&gt;</description>
       
@@ -355,7 +355,7 @@ In Python, we don’t need to explicitly declare the type of the object in the f
       
       <guid>/posts/how-am-i-learning-golang/</guid>
       
-        <description>&lt;p&gt;In my work, I’ve started using Golang. I’m aware of AI tools like ChatGPT, which can help me complete tasks more efficiently.
+      <description>&lt;p&gt;In my work, I’ve started using Golang. I’m aware of AI tools like ChatGPT, which can help me complete tasks more efficiently.
 However, I really enjoy learning new technologies and am always open to new challenges.&lt;/p&gt;
 &lt;p&gt;In the past, I learned &lt;a href=&#34;https://www.scala-lang.org/&#34;&gt;Scala&lt;/a&gt;, &lt;a href=&#34;https://www.python.org/&#34;&gt;Python&lt;/a&gt;, and &lt;a href=&#34;https://www.java.com/&#34;&gt;Java&lt;/a&gt; by reading books and practicing them daily.
 This time, I’m learning Golang using different approaches. I use Exercism to practice Golang, and now I’ll show you how to use it.&lt;/p&gt;</description>
@@ -369,7 +369,7 @@ This time, I’m learning Golang using different approaches. I use Exercism to p
       
       <guid>/posts/senior-software-engineer/</guid>
       
-        <description>&lt;h2 id=&#34;senior-software-engineers-impacting-business-growth-and-inspiring-teams&#34;&gt;Senior Software Engineers: Impacting Business Growth and Inspiring Teams&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;senior-software-engineers-impacting-business-growth-and-inspiring-teams&#34;&gt;Senior Software Engineers: Impacting Business Growth and Inspiring Teams&lt;/h2&gt;
 &lt;p&gt;When I started as a Software Engineer, I skipped the internal steps because my initial experience in tech was with infrastructure, not programming. I transitioned into software engineering four years later, and when I finally worked as a Software Engineer, I was very fortunate. My coworkers were exceptional professionals who supported me at the beginning of my journey.&lt;/p&gt;
 &lt;p&gt;As a Senior Software Engineer now, I strive every day to be like those mentors and positively impact the people I work with. Knowing the business you work in better than anyone else enables you to help those around you and be an outstanding professional wherever you go.
 A phrase that I always remember to impact the people around me is, always be the senior you wish you had met when you were a junior. This phrase has helped me to be a better professional and to help others in their journey.&lt;/p&gt;</description>
@@ -383,7 +383,7 @@ A phrase that I always remember to impact the people around me is, always be the
       
       <guid>/posts/first-clojure-project/</guid>
       
-        <description>&lt;h1 id=&#34;creating-our-first-clojure-project&#34;&gt;Creating Our First Clojure Project&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;creating-our-first-clojure-project&#34;&gt;Creating Our First Clojure Project&lt;/h1&gt;
 &lt;p&gt;Let&amp;rsquo;s continue with our tutorial. Today, I will explain how we can create a Clojure project. I decided to split this article into two parts: we will explain how to create a regular project and a web project, where we will create an API for some service.&lt;/p&gt;
 &lt;p&gt;Let&amp;rsquo;s start by creating a regular project. It won&amp;rsquo;t be an API, a library, or anything like that. I just want to demonstrate how to create a project, explain its structure, and everything else.&lt;/p&gt;</description>
       
@@ -396,7 +396,7 @@ A phrase that I always remember to impact the people around me is, always be the
       
       <guid>/about/</guid>
       
-        <description>&lt;p&gt;My name is Gilmar and I am a software developer with over 7 years of experience, passionate about creating technological solutions that make a difference.&lt;/p&gt;
+      <description>&lt;p&gt;My name is Gilmar and I am a software developer with over 7 years of experience, passionate about creating technological solutions that make a difference.&lt;/p&gt;
 &lt;p&gt;I work with various languages and paradigms such as Python, Java, Scala, and SQL, and I have expertise in scalable system architectures. Currently,&lt;/p&gt;
 &lt;p&gt;I am dedicated to developing high-performance solutions (Black Friday level) using the GCP and AWS platforms.&lt;/p&gt;
 &lt;p&gt;My professional journey includes participating in projects that serve millions of users daily, especially in the e-commerce and public transportation sectors.&lt;/p&gt;</description>
