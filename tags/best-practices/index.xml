@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Best-Practices on I&#39;m Gilmar Soares</title>
+    <link>/tags/best-practices/</link>
+    <description>Recent content in Best-Practices on I&#39;m Gilmar Soares</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 13 Feb 2025 10:02:53 -0300</lastBuildDate><atom:link href="/tags/best-practices/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using AI for Programmers</title>
+      <link>/posts/using_ai_for_programmers/</link>
+      <pubDate>Thu, 13 Feb 2025 10:02:53 -0300</pubDate>
+      
+      <guid>/posts/using_ai_for_programmers/</guid>
+      
+      <description>&lt;p&gt;Today, I’m back from my vacation, and I’ve been thinking about writing about how we can use AI to help us with coding.&lt;/p&gt;
+&lt;h2 id=&#34;take-a-break-and-recharge&#34;&gt;Take a Break and Recharge&lt;/h2&gt;
+&lt;p&gt;First of all, I want to say this: take a moment in your life to rest. Go on vacation, visit the beach, the mountains,
+the countryside, or the city—go wherever you like. But make sure to take time to recharge.&lt;/p&gt;
+&lt;h2 id=&#34;now-lets-talk-about-ai&#34;&gt;Now, Let&amp;rsquo;s Talk About AI&lt;/h2&gt;
+&lt;p&gt;AI tools like Copilot, ChatGPT, and DeepSeek are great for assisting with coding, but we need to use them carefully.&lt;/p&gt;
+&lt;p&gt;While AI can help us write code, the generated code isn’t truly ours, and that can become a problem in the future.
+If we don’t fully understand the code AI produces, debugging it later can be challenging. When an exception is thrown,
+we need to know why it happened and how to fix it.&lt;/p&gt;
+&lt;p&gt;So, while AI tools are helpful, we must use them with caution.
+We should know every line of code we write, understand its logic, and truly take ownership of it.&lt;/p&gt;
+&lt;h2 id=&#34;my-advice-on-using-ai&#34;&gt;My Advice on Using AI&lt;/h2&gt;
+&lt;p&gt;Use AI for any task you need—whether for pair programming, writing code, generating tests,
+or creating documentation—but always make sure you understand what you’re writing.&lt;/p&gt;
+&lt;p&gt;With this post, I want to emphasize that AI is just a tool. The code that AI generates is still your responsibility.&lt;/p&gt;
+&lt;p&gt;This is my first post after my vacation and I hope you like it!&lt;/p&gt;
+&lt;p&gt;Wishing you a great day.&lt;/p&gt;
+&lt;p&gt;See you in the next post!&lt;/p&gt;
+&lt;p&gt;Bye.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>

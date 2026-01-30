@@ -2,22 +2,97 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/categories/</loc>
+    <lastmod>2026-01-06T17:54:50-03:00</lastmod>
+  </url><url>
+    <loc>/tags/consistency/</loc>
+    <lastmod>2026-01-06T17:54:50-03:00</lastmod>
+  </url><url>
+    <loc>/tags/goals/</loc>
+    <lastmod>2026-01-06T17:54:50-03:00</lastmod>
+  </url><url>
     <loc>/</loc>
+    <lastmod>2026-01-06T17:54:50-03:00</lastmod>
+  </url><url>
+    <loc>/tags/motivation/</loc>
     <lastmod>2026-01-06T17:54:50-03:00</lastmod>
   </url><url>
     <loc>/posts/new_year_same_consistency/</loc>
     <lastmod>2026-01-06T17:54:50-03:00</lastmod>
   </url><url>
+    <loc>/tags/new-year/</loc>
+    <lastmod>2026-01-06T17:54:50-03:00</lastmod>
+  </url><url>
+    <loc>/categories/personal/</loc>
+    <lastmod>2026-01-06T17:54:50-03:00</lastmod>
+  </url><url>
     <loc>/posts/</loc>
     <lastmod>2026-01-06T17:54:50-03:00</lastmod>
+  </url><url>
+    <loc>/categories/productivity/</loc>
+    <lastmod>2026-01-06T17:54:50-03:00</lastmod>
+  </url><url>
+    <loc>/tags/productivity/</loc>
+    <lastmod>2026-01-06T17:54:50-03:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2026-01-06T17:54:50-03:00</lastmod>
+  </url><url>
+    <loc>/categories/algorithms/</loc>
+    <lastmod>2025-03-06T17:54:50-03:00</lastmod>
+  </url><url>
+    <loc>/tags/algorithms/</loc>
+    <lastmod>2025-03-06T17:54:50-03:00</lastmod>
+  </url><url>
+    <loc>/tags/data-structures/</loc>
+    <lastmod>2025-03-06T17:54:50-03:00</lastmod>
+  </url><url>
+    <loc>/tags/hashmap/</loc>
+    <lastmod>2025-03-06T17:54:50-03:00</lastmod>
   </url><url>
     <loc>/posts/how_to_build_a_hashmap/</loc>
     <lastmod>2025-03-06T17:54:50-03:00</lastmod>
   </url><url>
+    <loc>/categories/programming/</loc>
+    <lastmod>2025-03-06T17:54:50-03:00</lastmod>
+  </url><url>
+    <loc>/tags/python/</loc>
+    <lastmod>2025-03-06T17:54:50-03:00</lastmod>
+  </url><url>
+    <loc>/tags/ai/</loc>
+    <lastmod>2025-02-13T10:02:53-03:00</lastmod>
+  </url><url>
+    <loc>/categories/ai/</loc>
+    <lastmod>2025-02-13T10:02:53-03:00</lastmod>
+  </url><url>
+    <loc>/tags/best-practices/</loc>
+    <lastmod>2025-02-13T10:02:53-03:00</lastmod>
+  </url><url>
+    <loc>/tags/chatgpt/</loc>
+    <lastmod>2025-02-13T10:02:53-03:00</lastmod>
+  </url><url>
+    <loc>/tags/copilot/</loc>
+    <lastmod>2025-02-13T10:02:53-03:00</lastmod>
+  </url><url>
+    <loc>/tags/software-engineering/</loc>
+    <lastmod>2025-02-13T10:02:53-03:00</lastmod>
+  </url><url>
     <loc>/posts/using_ai_for_programmers/</loc>
     <lastmod>2025-02-13T10:02:53-03:00</lastmod>
   </url><url>
+    <loc>/tags/golang/</loc>
+    <lastmod>2024-12-16T16:18:30-03:00</lastmod>
+  </url><url>
+    <loc>/tags/quick-sort/</loc>
+    <lastmod>2024-12-16T16:18:30-03:00</lastmod>
+  </url><url>
+    <loc>/tags/recursion/</loc>
+    <lastmod>2024-12-16T16:18:30-03:00</lastmod>
+  </url><url>
     <loc>/posts/recursion_and_quick_sort/</loc>
+    <lastmod>2024-12-16T16:18:30-03:00</lastmod>
+  </url><url>
+    <loc>/tags/sorting/</loc>
     <lastmod>2024-12-16T16:18:30-03:00</lastmod>
   </url><url>
     <loc>/posts/selection_sort/</loc>
@@ -26,11 +101,41 @@
     <loc>/posts/going_against_the_flow_of_the_world/</loc>
     <lastmod>2024-11-28T16:40:03-03:00</lastmod>
   </url><url>
+    <loc>/categories/learning/</loc>
+    <lastmod>2024-11-28T16:40:03-03:00</lastmod>
+  </url><url>
+    <loc>/tags/learning/</loc>
+    <lastmod>2024-11-28T16:40:03-03:00</lastmod>
+  </url><url>
+    <loc>/tags/life-lessons/</loc>
+    <lastmod>2024-11-28T16:40:03-03:00</lastmod>
+  </url><url>
+    <loc>/tags/mindfulness/</loc>
+    <lastmod>2024-11-28T16:40:03-03:00</lastmod>
+  </url><url>
+    <loc>/tags/personal-growth/</loc>
+    <lastmod>2024-11-28T16:40:03-03:00</lastmod>
+  </url><url>
+    <loc>/tags/binary-search/</loc>
+    <lastmod>2024-11-21T16:15:51-03:00</lastmod>
+  </url><url>
     <loc>/posts/explaining_binary_search_in_a_simple_way/</loc>
     <lastmod>2024-11-21T16:15:51-03:00</lastmod>
   </url><url>
+    <loc>/tags/analytics/</loc>
+    <lastmod>2024-11-14T17:36:05-03:00</lastmod>
+  </url><url>
+    <loc>/tags/blogging/</loc>
+    <lastmod>2024-11-14T17:36:05-03:00</lastmod>
+  </url><url>
     <loc>/posts/this-post-isnt-about-technology/</loc>
     <lastmod>2024-11-14T17:36:05-03:00</lastmod>
+  </url><url>
+    <loc>/tags/interview-prep/</loc>
+    <lastmod>2024-11-07T10:58:22-03:00</lastmod>
+  </url><url>
+    <loc>/tags/leetcode/</loc>
+    <lastmod>2024-11-07T10:58:22-03:00</lastmod>
   </url><url>
     <loc>/posts/my-strategy-for-studying-leetcode/</loc>
     <lastmod>2024-11-07T10:58:22-03:00</lastmod>
@@ -38,35 +143,99 @@
     <loc>/posts/how-to-publish-your-go-library-on-pkg-go/</loc>
     <lastmod>2024-10-31T14:38:09-03:00</lastmod>
   </url><url>
+    <loc>/tags/open-source/</loc>
+    <lastmod>2024-10-31T14:38:09-03:00</lastmod>
+  </url><url>
+    <loc>/tags/pkg-go/</loc>
+    <lastmod>2024-10-31T14:38:09-03:00</lastmod>
+  </url><url>
+    <loc>/tags/tutorial/</loc>
+    <lastmod>2024-10-31T14:38:09-03:00</lastmod>
+  </url><url>
+    <loc>/categories/tutorials/</loc>
+    <lastmod>2024-10-31T14:38:09-03:00</lastmod>
+  </url><url>
+    <loc>/tags/api/</loc>
+    <lastmod>2024-10-24T16:22:02-03:00</lastmod>
+  </url><url>
+    <loc>/tags/documentation/</loc>
+    <lastmod>2024-10-24T16:22:02-03:00</lastmod>
+  </url><url>
+    <loc>/tags/gin/</loc>
+    <lastmod>2024-10-24T16:22:02-03:00</lastmod>
+  </url><url>
     <loc>/posts/how-to-document-your-go-api/</loc>
     <lastmod>2024-10-24T16:22:02-03:00</lastmod>
   </url><url>
+    <loc>/tags/swagger/</loc>
+    <lastmod>2024-10-24T16:22:02-03:00</lastmod>
+  </url><url>
+    <loc>/tags/mental-health/</loc>
+    <lastmod>2024-10-17T16:59:52-03:00</lastmod>
+  </url><url>
     <loc>/posts/remember-life-is-not-a-100-meter-race/</loc>
+    <lastmod>2024-10-17T16:59:52-03:00</lastmod>
+  </url><url>
+    <loc>/tags/routine/</loc>
     <lastmod>2024-10-17T16:59:52-03:00</lastmod>
   </url><url>
     <loc>/posts/duck-typing-in-go/</loc>
     <lastmod>2024-10-10T13:46:16-03:00</lastmod>
   </url><url>
+    <loc>/tags/duck-typing/</loc>
+    <lastmod>2024-10-10T13:46:16-03:00</lastmod>
+  </url><url>
+    <loc>/tags/interfaces/</loc>
+    <lastmod>2024-10-10T13:46:16-03:00</lastmod>
+  </url><url>
+    <loc>/categories/career/</loc>
+    <lastmod>2024-10-03T18:50:05-03:00</lastmod>
+  </url><url>
+    <loc>/tags/future-of-work/</loc>
+    <lastmod>2024-10-03T18:50:05-03:00</lastmod>
+  </url><url>
     <loc>/posts/how-can-ai-change-the-way-we-work/</loc>
     <lastmod>2024-10-03T18:50:05-03:00</lastmod>
+  </url><url>
+    <loc>/tags/career/</loc>
+    <lastmod>2024-09-27T17:43:00-03:00</lastmod>
+  </url><url>
+    <loc>/tags/education/</loc>
+    <lastmod>2024-09-27T17:43:00-03:00</lastmod>
   </url><url>
     <loc>/posts/keep-studyng-never-stop/</loc>
     <lastmod>2024-09-27T17:43:00-03:00</lastmod>
   </url><url>
+    <loc>/tags/exercism/</loc>
+    <lastmod>2024-09-23T17:34:27-03:00</lastmod>
+  </url><url>
     <loc>/posts/how-am-i-learning-golang/</loc>
     <lastmod>2024-09-23T17:34:27-03:00</lastmod>
+  </url><url>
+    <loc>/tags/leadership/</loc>
+    <lastmod>2024-09-17T16:37:38-03:00</lastmod>
+  </url><url>
+    <loc>/tags/mentorship/</loc>
+    <lastmod>2024-09-17T16:37:38-03:00</lastmod>
   </url><url>
     <loc>/posts/senior-software-engineer/</loc>
     <lastmod>2024-09-17T16:37:38-03:00</lastmod>
   </url><url>
+    <loc>/tags/clojure/</loc>
+    <lastmod>2024-09-16T18:04:37-03:00</lastmod>
+  </url><url>
     <loc>/posts/first-clojure-project/</loc>
+    <lastmod>2024-09-16T18:04:37-03:00</lastmod>
+  </url><url>
+    <loc>/tags/functional-programming/</loc>
+    <lastmod>2024-09-16T18:04:37-03:00</lastmod>
+  </url><url>
+    <loc>/tags/leiningen/</loc>
     <lastmod>2024-09-16T18:04:37-03:00</lastmod>
   </url><url>
     <loc>/about/</loc>
     <lastmod>2024-09-16T17:31:59-03:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
-  </url><url>
-    <loc>/tags/</loc>
+    <loc>/search/</loc>
   </url>
 </urlset>

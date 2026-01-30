@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Personal on I&#39;m Gilmar Soares</title>
+    <link>/categories/personal/</link>
+    <description>Recent content in Personal on I&#39;m Gilmar Soares</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 06 Jan 2026 17:54:50 -0300</lastBuildDate><atom:link href="/categories/personal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New Year, Same Consistency</title>
+      <link>/posts/new_year_same_consistency/</link>
+      <pubDate>Tue, 06 Jan 2026 17:54:50 -0300</pubDate>
+      
+      <guid>/posts/new_year_same_consistency/</guid>
+      
+      <description>&lt;p&gt;Hey everyone, welcome to the new year! Let&amp;rsquo;s make this a year of consistency and growth.&lt;/p&gt;
+&lt;p&gt;Today is January 6, 2026. I’ve been reading about creating to-do lists for yearly goals, and it has made me think about how vital it is to stay consistent in our actions. While I often read about the importance of setting &amp;ldquo;New Year&amp;rsquo;s resolutions,&amp;rdquo; I rarely see anyone talk about creating a to-do list for your life.&lt;/p&gt;
+&lt;p&gt;I don’t believe that New Year’s Eve alone can change someone, or that you can achieve something just because you start with a burst of willpower. Instead, I believe that if you have a desire—for example, learning a new language—you should create a plan, strive for weekly consistency, and refuse to give up until you reach that goal.&lt;/p&gt;
+&lt;p&gt;For this year, I hope you believe in yourself more than in a number changing on the calendar. I hope you challenge yourself, make a plan, and actually follow it. I also hope you respect your limits without putting too much pressure on yourself; simply follow the plan and learn to enjoy the journey, not just the result. I guarantee that this mindset will change your life more than the passing years ever could.&lt;/p&gt;
+&lt;p&gt;Use your schedule to organize your plan and try to respect the time blocks you’ve chosen, whether it’s 30 minutes or an hour. The most important thing is to be consistent.&lt;/p&gt;
+&lt;p&gt;It is often much harder to stick to a long-term plan than it is to do a lot at the beginning and quit a week later. But the truth is, if you can stay consistent over time, you will see incredible changes. And of course, the real secret is this: if you love the process, nothing and no one can stop you!&lt;/p&gt;
+&lt;p&gt;For 2026 and for the rest of your life, I wish you consistency.&lt;/p&gt;
+&lt;p&gt;Hugs!&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Going Against the Flow of the World</title>
+      <link>/posts/going_against_the_flow_of_the_world/</link>
+      <pubDate>Thu, 28 Nov 2024 16:40:03 -0300</pubDate>
+      
+      <guid>/posts/going_against_the_flow_of_the_world/</guid>
+      
+      <description>&lt;p&gt;In my country, this week marks the start of &amp;ldquo;Black Week,&amp;rdquo; although the correct term is &amp;ldquo;Black Friday,&amp;rdquo;
+traditionally a single day of discounts in stores. As you know,
+I’m a software engineer, and this week I’ve noticed many courses on sale,
+offering a variety of options for learning new things.&lt;/p&gt;
+&lt;p&gt;However, this time, I’ve been reflecting on these courses and the increasingly fast-paced world
+we live in—a world where everyone feels the need to learn quickly and where courses
+often promise accelerated learning. I’ve decided that, as a human being, I shouldn’t follow this path of speed.&lt;/p&gt;
+&lt;p&gt;Throughout history, anyone who has gained deep knowledge in a subject has done so through
+years of study and consistent practice. I believe this should remain the standard today.&lt;/p&gt;
+&lt;p&gt;The idea behind this post isn’t about avoiding buying courses or learning materials altogether.
+Instead, it’s about embracing the process of learning gradually, a little every day, and resisting
+the pressure to conform to the fast-paced trends of the modern world.&lt;/p&gt;
+&lt;p&gt;With that in mind, I’d like to share my decision this Black Friday week:
+I’ve decided not to buy any courses or materials that promise faster, easier,
+or miraculous results. Instead, I’ll continue reading my books, sticking to the routine
+I shared &lt;a href=&#34;https://linuxsoares.github.io/posts/remember-life-is-not-a-100-meter-race/&#34;&gt;here&lt;/a&gt;, and focusing on learning slowly and deeply.&lt;/p&gt;
+&lt;p&gt;I hope you make the most of this week of discounts where you live and take the opportunity to plan ahead,
+focusing on a path that considers the medium and long term and that this post inspires you to reflect on
+your learning process and the path you’re taking.&lt;/p&gt;
+&lt;p&gt;Hugs! 🤗&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>This Post Isn&#39;t About Technology</title>
+      <link>/posts/this-post-isnt-about-technology/</link>
+      <pubDate>Thu, 14 Nov 2024 17:36:05 -0300</pubDate>
+      
+      <guid>/posts/this-post-isnt-about-technology/</guid>
+      
+      <description>&lt;h2 id=&#34;this-post-is-about-depth-of-knowledge&#34;&gt;This post is about depth of knowledge!&lt;/h2&gt;
+&lt;p&gt;When I started my blog, I added Google Analytics—not to track performance,
+but because I was curious about how people engage with my posts.&lt;/p&gt;
+&lt;p&gt;Over time, as I’ve been writing for this blog, I’ve observed an interesting trend.
+People seem to gravitate toward “ready-made recipes” or practical guides.
+For instance, when I wrote posts about studying Golang or how Exercism helps me learn,
+they attracted little attention. Similarly, posts about LeetCode, study techniques,
+or my personal schedule and life routines didn’t generate much traffic.&lt;/p&gt;
+&lt;p&gt;However, when I shared a step-by-step guide on using Swagger in a Golang API—essentially
+a “recipe”—it became the most-viewed post in my blog’s history.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/count_posts_view.png&#34; alt=&#34;Example image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The image above shows a visualization of my blog&amp;rsquo;s behavior over the past week. As we can see, the post about Swagger has received more than double the views of any other post.&lt;/p&gt;
+&lt;p&gt;Reflecting on this, if I could share one piece of advice, it would be this:&lt;/p&gt;
+&lt;p&gt;Treat your life as a long journey—a marathon, not a sprint. Organize your time,
+study a little every day, and create a routine that helps you stay focused.
+Aim for deep, meaningful learning, because acquiring deep knowledge is the best way to
+secure a relatively stable future—free from fears and uncertainties, even about challenges like AI.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://linuxsoares.github.io/posts/remember-life-is-not-a-100-meter-race/&#34;&gt;In the post&lt;/a&gt; where I compare life to a
+marathon rather than a 100-meter sprint, I share how my routine works in the hope of helping and
+motivating you to organize your life and focus on the long term.&lt;/p&gt;
+&lt;p&gt;This post isn’t meant as criticism—think of it as friendly advice!
+As the poet says, “If advice were truly valuable, it would be sold, not given away.”
+Yet, here I am, offering it freely in an effort to help.&lt;/p&gt;
+&lt;p&gt;I hope you enjoyed this post and that it inspires or helps you in some way!&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Remember Life Is Not a 100 Meter Race</title>
+      <link>/posts/remember-life-is-not-a-100-meter-race/</link>
+      <pubDate>Thu, 17 Oct 2024 16:59:52 -0300</pubDate>
+      
+      <guid>/posts/remember-life-is-not-a-100-meter-race/</guid>
+      
+      <description>&lt;p&gt;In my life, I’ve often liked something and used it every day until I got sick of it.
+But now, I’ve started therapy, and one of the first things I’ve learned is how to use a calendar to organize my routine.&lt;/p&gt;
+&lt;p&gt;By organizing my routine, I realized that I need to plan everything in advance—whether it’s for the week, month, or year.
+For example, in my current routine:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;I exercise for one hour every weekday.
+I study English two days a week, for one hour each day.
+I spend 30 minutes every day reading books outside of my profession, among other activities.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The best part about organizing your week with clear goals is understanding that progress takes time.
+I won’t learn English or Golang (a programming language) in a day or a week. However, by organizing my week, I can work toward these goals gradually and stay on track.&lt;/p&gt;
+&lt;p&gt;Below, I’ll show you how I organize my week. I hope it helps you organize yours too.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/example-calendar.png&#34; alt=&#34;Example image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This is how I’ve structured my schedule:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;I exercise every day of the week.
+I read every day.
+I study a new technology every day.
+I work regularly and ensure I spend quality time with my daughter and family.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I truly hope this helps you organize your week. It has been a great tool for managing anxiety and developing a long-term mindset. After all, life is not a 100-meter race!&lt;/p&gt;
+&lt;p&gt;I hope you found this helpful and that it inspires you to organize your week too.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Keep Studying Never Stop</title>
+      <link>/posts/keep-studyng-never-stop/</link>
+      <pubDate>Fri, 27 Sep 2024 17:43:00 -0300</pubDate>
+      
+      <guid>/posts/keep-studyng-never-stop/</guid>
+      
+      <description>&lt;h2 id=&#34;why-i-suggest-you-never-stop-studying&#34;&gt;Why I suggest you never stop studying!&lt;/h2&gt;
+&lt;p&gt;At the start of my career, searching for a profession, I was always very curious about computers, but with a limited income, we couldn&amp;rsquo;t afford to study, buy computers, or have access to technology in general.&lt;/p&gt;
+&lt;p&gt;My first job was painting bicycle handlebars, and I had no prospects. Later, I got a job managing the inventory of a candy store. With that, I made an agreement with my family that the little money I earned would go towards paying for college, and we all agreed!&lt;/p&gt;
+&lt;p&gt;Before starting college, a friend recommended me for an infrastructure job (internship), and without a second thought, &lt;strong&gt;I said YES YES YES, I WANT IT&lt;/strong&gt;! In the interview, &lt;strong&gt;I wasn&amp;rsquo;t truthful, FEARING I MIGHT LOSE THE ONLY CHANCE&lt;/strong&gt;, and when they asked if I had ever swapped hard drives in servers, I said YES, OF COURSE!&lt;/p&gt;
+&lt;p&gt;In the end, it was so simple, and I managed to do it without ever having done it before.&lt;/p&gt;
+&lt;p&gt;Later in college, I simply fell in love with writing code. I always completed the projects and tasks, sometimes without sleeping, but I got them done, and with an indescribable joy.&lt;/p&gt;
+&lt;p&gt;Today, I have become a software engineer, and I continue learning new technologies as if it were my first day.&lt;/p&gt;
+&lt;p&gt;I must say, college helped my life in a way NOTHING else could have; it changed everything for the better! Sometimes I hear people say it’s not worth it, but I think the opposite—if you can or want to, do it without hesitation like I did in the past!&lt;/p&gt;
+&lt;p&gt;Lastly, I’d like to say, despite fears in this new world of GenAI and the challenges that come with it, &lt;strong&gt;never, NEVER stop studying&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;And if you need help, any mentoring, I can try to help you, just reach out!&lt;/p&gt;
+&lt;p&gt;Hugs, and keep moving forward with your studies!&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Senior Software Engineer</title>
+      <link>/posts/senior-software-engineer/</link>
+      <pubDate>Tue, 17 Sep 2024 16:37:38 -0300</pubDate>
+      
+      <guid>/posts/senior-software-engineer/</guid>
+      
+      <description>&lt;h2 id=&#34;senior-software-engineers-impacting-business-growth-and-inspiring-teams&#34;&gt;Senior Software Engineers: Impacting Business Growth and Inspiring Teams&lt;/h2&gt;
+&lt;p&gt;When I started as a Software Engineer, I skipped the internal steps because my initial experience in tech was with infrastructure, not programming. I transitioned into software engineering four years later, and when I finally worked as a Software Engineer, I was very fortunate. My coworkers were exceptional professionals who supported me at the beginning of my journey.&lt;/p&gt;
+&lt;p&gt;As a Senior Software Engineer now, I strive every day to be like those mentors and positively impact the people I work with. Knowing the business you work in better than anyone else enables you to help those around you and be an outstanding professional wherever you go.
+A phrase that I always remember to impact the people around me is, always be the senior you wish you had met when you were a junior. This phrase has helped me to be a better professional and to help others in their journey.&lt;/p&gt;
+&lt;p&gt;This text is to invite you to be the senior you wish you had met when you were a junior. Be the professional who helps others and makes a difference in the lives of those around you.
+And a few years later, if you follow this tip every day, you will see incredible people, being excellent professionals because in the past, they were lucky enough to meet you, who impacted them positively.&lt;/p&gt;
+&lt;p&gt;Be the best version of yourself every day!&lt;/p&gt;
+&lt;p&gt;Hugs.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>

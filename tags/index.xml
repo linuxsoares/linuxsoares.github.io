@@ -5,6 +5,524 @@
     <link>/tags/</link>
     <description>Recent content in Tags on I&#39;m Gilmar Soares</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 06 Jan 2026 17:54:50 -0300</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Consistency</title>
+      <link>/tags/consistency/</link>
+      <pubDate>Tue, 06 Jan 2026 17:54:50 -0300</pubDate>
+      
+      <guid>/tags/consistency/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Goals</title>
+      <link>/tags/goals/</link>
+      <pubDate>Tue, 06 Jan 2026 17:54:50 -0300</pubDate>
+      
+      <guid>/tags/goals/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Motivation</title>
+      <link>/tags/motivation/</link>
+      <pubDate>Tue, 06 Jan 2026 17:54:50 -0300</pubDate>
+      
+      <guid>/tags/motivation/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>New-Year</title>
+      <link>/tags/new-year/</link>
+      <pubDate>Tue, 06 Jan 2026 17:54:50 -0300</pubDate>
+      
+      <guid>/tags/new-year/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Productivity</title>
+      <link>/tags/productivity/</link>
+      <pubDate>Tue, 06 Jan 2026 17:54:50 -0300</pubDate>
+      
+      <guid>/tags/productivity/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Algorithms</title>
+      <link>/tags/algorithms/</link>
+      <pubDate>Thu, 06 Mar 2025 17:54:50 -0300</pubDate>
+      
+      <guid>/tags/algorithms/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Data-Structures</title>
+      <link>/tags/data-structures/</link>
+      <pubDate>Thu, 06 Mar 2025 17:54:50 -0300</pubDate>
+      
+      <guid>/tags/data-structures/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Hashmap</title>
+      <link>/tags/hashmap/</link>
+      <pubDate>Thu, 06 Mar 2025 17:54:50 -0300</pubDate>
+      
+      <guid>/tags/hashmap/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>/tags/python/</link>
+      <pubDate>Thu, 06 Mar 2025 17:54:50 -0300</pubDate>
+      
+      <guid>/tags/python/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Ai</title>
+      <link>/tags/ai/</link>
+      <pubDate>Thu, 13 Feb 2025 10:02:53 -0300</pubDate>
+      
+      <guid>/tags/ai/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Best-Practices</title>
+      <link>/tags/best-practices/</link>
+      <pubDate>Thu, 13 Feb 2025 10:02:53 -0300</pubDate>
+      
+      <guid>/tags/best-practices/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Chatgpt</title>
+      <link>/tags/chatgpt/</link>
+      <pubDate>Thu, 13 Feb 2025 10:02:53 -0300</pubDate>
+      
+      <guid>/tags/chatgpt/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Copilot</title>
+      <link>/tags/copilot/</link>
+      <pubDate>Thu, 13 Feb 2025 10:02:53 -0300</pubDate>
+      
+      <guid>/tags/copilot/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Software-Engineering</title>
+      <link>/tags/software-engineering/</link>
+      <pubDate>Thu, 13 Feb 2025 10:02:53 -0300</pubDate>
+      
+      <guid>/tags/software-engineering/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>/tags/golang/</link>
+      <pubDate>Mon, 16 Dec 2024 16:18:30 -0300</pubDate>
+      
+      <guid>/tags/golang/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Quick-Sort</title>
+      <link>/tags/quick-sort/</link>
+      <pubDate>Mon, 16 Dec 2024 16:18:30 -0300</pubDate>
+      
+      <guid>/tags/quick-sort/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Recursion</title>
+      <link>/tags/recursion/</link>
+      <pubDate>Mon, 16 Dec 2024 16:18:30 -0300</pubDate>
+      
+      <guid>/tags/recursion/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Sorting</title>
+      <link>/tags/sorting/</link>
+      <pubDate>Mon, 16 Dec 2024 16:18:30 -0300</pubDate>
+      
+      <guid>/tags/sorting/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Learning</title>
+      <link>/tags/learning/</link>
+      <pubDate>Thu, 28 Nov 2024 16:40:03 -0300</pubDate>
+      
+      <guid>/tags/learning/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Life-Lessons</title>
+      <link>/tags/life-lessons/</link>
+      <pubDate>Thu, 28 Nov 2024 16:40:03 -0300</pubDate>
+      
+      <guid>/tags/life-lessons/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Mindfulness</title>
+      <link>/tags/mindfulness/</link>
+      <pubDate>Thu, 28 Nov 2024 16:40:03 -0300</pubDate>
+      
+      <guid>/tags/mindfulness/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Personal-Growth</title>
+      <link>/tags/personal-growth/</link>
+      <pubDate>Thu, 28 Nov 2024 16:40:03 -0300</pubDate>
+      
+      <guid>/tags/personal-growth/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Binary-Search</title>
+      <link>/tags/binary-search/</link>
+      <pubDate>Thu, 21 Nov 2024 16:15:51 -0300</pubDate>
+      
+      <guid>/tags/binary-search/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Analytics</title>
+      <link>/tags/analytics/</link>
+      <pubDate>Thu, 14 Nov 2024 17:36:05 -0300</pubDate>
+      
+      <guid>/tags/analytics/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Blogging</title>
+      <link>/tags/blogging/</link>
+      <pubDate>Thu, 14 Nov 2024 17:36:05 -0300</pubDate>
+      
+      <guid>/tags/blogging/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Interview-Prep</title>
+      <link>/tags/interview-prep/</link>
+      <pubDate>Thu, 07 Nov 2024 10:58:22 -0300</pubDate>
+      
+      <guid>/tags/interview-prep/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Leetcode</title>
+      <link>/tags/leetcode/</link>
+      <pubDate>Thu, 07 Nov 2024 10:58:22 -0300</pubDate>
+      
+      <guid>/tags/leetcode/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Open-Source</title>
+      <link>/tags/open-source/</link>
+      <pubDate>Thu, 31 Oct 2024 14:38:09 -0300</pubDate>
+      
+      <guid>/tags/open-source/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Pkg-Go</title>
+      <link>/tags/pkg-go/</link>
+      <pubDate>Thu, 31 Oct 2024 14:38:09 -0300</pubDate>
+      
+      <guid>/tags/pkg-go/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Tutorial</title>
+      <link>/tags/tutorial/</link>
+      <pubDate>Thu, 31 Oct 2024 14:38:09 -0300</pubDate>
+      
+      <guid>/tags/tutorial/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Api</title>
+      <link>/tags/api/</link>
+      <pubDate>Thu, 24 Oct 2024 16:22:02 -0300</pubDate>
+      
+      <guid>/tags/api/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Documentation</title>
+      <link>/tags/documentation/</link>
+      <pubDate>Thu, 24 Oct 2024 16:22:02 -0300</pubDate>
+      
+      <guid>/tags/documentation/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Gin</title>
+      <link>/tags/gin/</link>
+      <pubDate>Thu, 24 Oct 2024 16:22:02 -0300</pubDate>
+      
+      <guid>/tags/gin/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Swagger</title>
+      <link>/tags/swagger/</link>
+      <pubDate>Thu, 24 Oct 2024 16:22:02 -0300</pubDate>
+      
+      <guid>/tags/swagger/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Mental-Health</title>
+      <link>/tags/mental-health/</link>
+      <pubDate>Thu, 17 Oct 2024 16:59:52 -0300</pubDate>
+      
+      <guid>/tags/mental-health/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Routine</title>
+      <link>/tags/routine/</link>
+      <pubDate>Thu, 17 Oct 2024 16:59:52 -0300</pubDate>
+      
+      <guid>/tags/routine/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Duck-Typing</title>
+      <link>/tags/duck-typing/</link>
+      <pubDate>Thu, 10 Oct 2024 13:46:16 -0300</pubDate>
+      
+      <guid>/tags/duck-typing/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Interfaces</title>
+      <link>/tags/interfaces/</link>
+      <pubDate>Thu, 10 Oct 2024 13:46:16 -0300</pubDate>
+      
+      <guid>/tags/interfaces/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Future-of-Work</title>
+      <link>/tags/future-of-work/</link>
+      <pubDate>Thu, 03 Oct 2024 18:50:05 -0300</pubDate>
+      
+      <guid>/tags/future-of-work/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Career</title>
+      <link>/tags/career/</link>
+      <pubDate>Fri, 27 Sep 2024 17:43:00 -0300</pubDate>
+      
+      <guid>/tags/career/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Education</title>
+      <link>/tags/education/</link>
+      <pubDate>Fri, 27 Sep 2024 17:43:00 -0300</pubDate>
+      
+      <guid>/tags/education/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Exercism</title>
+      <link>/tags/exercism/</link>
+      <pubDate>Mon, 23 Sep 2024 17:34:27 -0300</pubDate>
+      
+      <guid>/tags/exercism/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Leadership</title>
+      <link>/tags/leadership/</link>
+      <pubDate>Tue, 17 Sep 2024 16:37:38 -0300</pubDate>
+      
+      <guid>/tags/leadership/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Mentorship</title>
+      <link>/tags/mentorship/</link>
+      <pubDate>Tue, 17 Sep 2024 16:37:38 -0300</pubDate>
+      
+      <guid>/tags/mentorship/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Clojure</title>
+      <link>/tags/clojure/</link>
+      <pubDate>Mon, 16 Sep 2024 18:04:37 -0300</pubDate>
+      
+      <guid>/tags/clojure/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Functional-Programming</title>
+      <link>/tags/functional-programming/</link>
+      <pubDate>Mon, 16 Sep 2024 18:04:37 -0300</pubDate>
+      
+      <guid>/tags/functional-programming/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Leiningen</title>
+      <link>/tags/leiningen/</link>
+      <pubDate>Mon, 16 Sep 2024 18:04:37 -0300</pubDate>
+      
+      <guid>/tags/leiningen/</guid>
+      
+      <description></description>
+      
+    </item>
+    
   </channel>
 </rss>

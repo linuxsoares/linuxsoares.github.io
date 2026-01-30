@@ -3,17 +3,17 @@
 <meta http-equiv="content-type" content="text/html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title itemprop="name">How to Document Your Go Api | I&#39;m Gilmar Soares</title>
-<meta property="og:title" content="How to Document Your Go Api | I&#39;m Gilmar Soares" />
-<meta name="twitter:title" content="How to Document Your Go Api | I&#39;m Gilmar Soares" />
-<meta itemprop="name" content="How to Document Your Go Api | I&#39;m Gilmar Soares" />
-<meta name="application-name" content="How to Document Your Go Api | I&#39;m Gilmar Soares" />
+<title itemprop="name">How to Document Your Go API | I&#39;m Gilmar Soares</title>
+<meta property="og:title" content="How to Document Your Go API | I&#39;m Gilmar Soares" />
+<meta name="twitter:title" content="How to Document Your Go API | I&#39;m Gilmar Soares" />
+<meta itemprop="name" content="How to Document Your Go API | I&#39;m Gilmar Soares" />
+<meta name="application-name" content="How to Document Your Go API | I&#39;m Gilmar Soares" />
 <meta property="og:site_name" content="" />
 
-<meta name="description" content="">
-<meta itemprop="description" content="" />
-<meta property="og:description" content="" />
-<meta name="twitter:description" content="" />
+<meta name="description" content="Step-by-step guide on documenting your Go API using Swagger and Swag. Build a CRUD API with Gin framework and generate interactive documentation.">
+<meta itemprop="description" content="Step-by-step guide on documenting your Go API using Swagger and Swag. Build a CRUD API with Gin framework and generate interactive documentation." />
+<meta property="og:description" content="Step-by-step guide on documenting your Go API using Swagger and Swag. Build a CRUD API with Gin framework and generate interactive documentation." />
+<meta name="twitter:description" content="Step-by-step guide on documenting your Go API using Swagger and Swag. Build a CRUD API with Gin framework and generate interactive documentation." />
 
 <meta property="og:locale" content="en-gb" />
 <meta name="language" content="en-gb" />
@@ -46,13 +46,13 @@
     {
         "@context": "http://schema.org",
         "@type": "Article",
-        "headline": "How to Document Your Go Api",
+        "headline": "How to Document Your Go API",
         "author": {
         "@type": "Person",
         "name": ""
         },
         "datePublished": "2024-10-24",
-        "description": "",
+        "description": "Step-by-step guide on documenting your Go API using Swagger and Swag. Build a CRUD API with Gin framework and generate interactive documentation.",
         "wordCount":  781 ,
         "mainEntityOfPage": "True",
         "dateModified": "2024-10-24",
@@ -73,30 +73,33 @@
     
     <meta property="og:url" content="/posts/how-to-document-your-go-api/">
   <meta property="og:site_name" content="I&#39;m Gilmar Soares">
-  <meta property="og:title" content="How to Document Your Go Api">
-  <meta property="og:description" content="Today, I’m writing a technical post about API documentation in Go. I hope you find it useful!
-First, we’ll create a simple CRUD API using Go and the Gin framework. Let’s get started!
-package main import ( &#34;net/http&#34; &#34;strconv&#34; &#34;github.com/gin-gonic/gin&#34; ) type User struct { ID int `json:&#34;id&#34;` Name string `json:&#34;name&#34;` } var users = []User{ {ID: 1, Name: &#34;John&#34;}, {ID: 2, Name: &#34;Doe&#34;}, } func main() { r := gin.Default() // Change to default is /api/v1 api := r.RouterGroup.Group(&#34;/api/v1&#34;) { api.GET(&#34;/users&#34;, getUsers) api.GET(&#34;/users/:id&#34;, getUser) api.POST(&#34;/users&#34;, createUser) api.PUT(&#34;/users&#34;, editUser) api.DELETE(&#34;/users/:id&#34;, removeUser) } r.Run(&#34;:8080&#34;) } func getUsers(c *gin.Context) { c.JSON(http.StatusOK, users) } func getUser(c *gin.Context) { id, _ := strconv.Atoi(c.Param(&#34;id&#34;)) userFound, _ := findUserByID(users, id) c.JSON(http.StatusOK, userFound) } func createUser(c *gin.Context) { var user User c.BindJSON(&amp;user) users = append(users, user) c.JSON(http.StatusCreated, user) } func editUser(c *gin.Context) { var user User c.BindJSON(&amp;user) putUser(users, user) c.JSON(http.StatusOK, user) } func removeUser(c *gin.Context) { id, _ := strconv.Atoi(c.Param(&#34;id&#34;)) deleteUserByID(users, id) c.JSON(http.StatusOK, nil) } func findUserByID(users []User, id int) (*User, bool) { for _, user := range users { if user.ID == id { return &amp;user, true } } return nil, false } func deleteUserByID(users []User, id int) []User { newUsers := []User{} for _, user := range users { if user.ID != id { newUsers = append(newUsers, user) } } return newUsers } func putUser(users []User, newUser User) []User { for i := range users { if users[i].ID == newUser.ID { // Update the existing user users[i] = newUser return users } } // Add new user if not found return append(users, newUser) } Now that we have a simple CRUD API in Go, let’s document it.">
+  <meta property="og:title" content="How to Document Your Go API">
+  <meta property="og:description" content="Step-by-step guide on documenting your Go API using Swagger and Swag. Build a CRUD API with Gin framework and generate interactive documentation.">
   <meta property="og:locale" content="en_gb">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2024-10-24T16:22:02-03:00">
     <meta property="article:modified_time" content="2024-10-24T16:22:02-03:00">
+    <meta property="article:tag" content="Golang">
+    <meta property="article:tag" content="Api">
+    <meta property="article:tag" content="Swagger">
+    <meta property="article:tag" content="Documentation">
+    <meta property="article:tag" content="Gin">
+    <meta property="og:image" content="/images/gilmar.jpeg">
 
 
     
     
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="How to Document Your Go Api">
-  <meta name="twitter:description" content="Today, I’m writing a technical post about API documentation in Go. I hope you find it useful!
-First, we’ll create a simple CRUD API using Go and the Gin framework. Let’s get started!
-package main import ( &#34;net/http&#34; &#34;strconv&#34; &#34;github.com/gin-gonic/gin&#34; ) type User struct { ID int `json:&#34;id&#34;` Name string `json:&#34;name&#34;` } var users = []User{ {ID: 1, Name: &#34;John&#34;}, {ID: 2, Name: &#34;Doe&#34;}, } func main() { r := gin.Default() // Change to default is /api/v1 api := r.RouterGroup.Group(&#34;/api/v1&#34;) { api.GET(&#34;/users&#34;, getUsers) api.GET(&#34;/users/:id&#34;, getUser) api.POST(&#34;/users&#34;, createUser) api.PUT(&#34;/users&#34;, editUser) api.DELETE(&#34;/users/:id&#34;, removeUser) } r.Run(&#34;:8080&#34;) } func getUsers(c *gin.Context) { c.JSON(http.StatusOK, users) } func getUser(c *gin.Context) { id, _ := strconv.Atoi(c.Param(&#34;id&#34;)) userFound, _ := findUserByID(users, id) c.JSON(http.StatusOK, userFound) } func createUser(c *gin.Context) { var user User c.BindJSON(&amp;user) users = append(users, user) c.JSON(http.StatusCreated, user) } func editUser(c *gin.Context) { var user User c.BindJSON(&amp;user) putUser(users, user) c.JSON(http.StatusOK, user) } func removeUser(c *gin.Context) { id, _ := strconv.Atoi(c.Param(&#34;id&#34;)) deleteUserByID(users, id) c.JSON(http.StatusOK, nil) } func findUserByID(users []User, id int) (*User, bool) { for _, user := range users { if user.ID == id { return &amp;user, true } } return nil, false } func deleteUserByID(users []User, id int) []User { newUsers := []User{} for _, user := range users { if user.ID != id { newUsers = append(newUsers, user) } } return newUsers } func putUser(users []User, newUser User) []User { for i := range users { if users[i].ID == newUser.ID { // Update the existing user users[i] = newUser return users } } // Add new user if not found return append(users, newUser) } Now that we have a simple CRUD API in Go, let’s document it.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="/images/gilmar.jpeg">
+  <meta name="twitter:title" content="How to Document Your Go API">
+  <meta name="twitter:description" content="Step-by-step guide on documenting your Go API using Swagger and Swag. Build a CRUD API with Gin framework and generate interactive documentation.">
 
 
     
 
     <link rel="canonical" href="/posts/how-to-document-your-go-api/">
-    <link href="/style.min.e390ba7da26222f4dc42a349955d76dbbe44e5ce2535a43de5a70633a0a9ec3c.css" rel="stylesheet">
+    <link href="/style.min.2d921c18cf1ec555ffc03d59a8adc211c402c68c930c27d6a0c306ab175a8d09.css" rel="stylesheet">
     <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
 
     
@@ -180,6 +183,13 @@ stroke-linejoin="round" class="feather feather-home">
                     
                 </li>
                 
+                <li>
+                    <a class="menu-link " href="/search">
+                        SEARCH
+                    </a>
+                    
+                </li>
+                
                 <li class="menu-separator">
                     <span>|</span>
                 </li>
@@ -200,199 +210,209 @@ stroke-linejoin="round" class="feather feather-home">
     <main class="page-content" aria-label="Content">
         <article>
             <header class="header">
-                <h1 class="header-title">How to Document Your Go Api</h1>
+                <h1 class="header-title">How to Document Your Go API</h1>
                 
                 
                 
                 <div class="post-meta">
                     <time datetime="2024-10-24T16:22:02-03:00" itemprop="datePublished"> 24 Oct 2024 </time>
+                    <span class="reading-time"> · 4 min read</span>
                 </div>
                 
             </header>
             
+    
+    <details class="toc" ZgotmplZ>
+        <summary><b>Table of Contents</b></summary>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+    </details>
             <div class="page-content">
                 <p>Today, I’m writing a technical post about API documentation in Go. I hope you find it useful!</p>
 <p>First, we’ll create a simple CRUD API using Go and the Gin framework.
 Let’s get started!</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
-</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;net/http&#34;</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;strconv&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;github.com/gin-gonic/gin&#34;</span>
-</span></span><span style="display:flex;"><span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">User</span> <span style="color:#66d9ef">struct</span> {
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">ID</span>   <span style="color:#66d9ef">int</span>    <span style="color:#e6db74">`json:&#34;id&#34;`</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Name</span> <span style="color:#66d9ef">string</span> <span style="color:#e6db74">`json:&#34;name&#34;`</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">users</span> = []<span style="color:#a6e22e">User</span>{
-</span></span><span style="display:flex;"><span>	{<span style="color:#a6e22e">ID</span>: <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;John&#34;</span>},
-</span></span><span style="display:flex;"><span>	{<span style="color:#a6e22e">ID</span>: <span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;Doe&#34;</span>},
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">r</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">Default</span>()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Change to default is /api/v1</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">api</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">RouterGroup</span>.<span style="color:#a6e22e">Group</span>(<span style="color:#e6db74">&#34;/api/v1&#34;</span>)
-</span></span><span style="display:flex;"><span>	{
-</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">api</span>.<span style="color:#a6e22e">GET</span>(<span style="color:#e6db74">&#34;/users&#34;</span>, <span style="color:#a6e22e">getUsers</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">api</span>.<span style="color:#a6e22e">GET</span>(<span style="color:#e6db74">&#34;/users/:id&#34;</span>, <span style="color:#a6e22e">getUser</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">api</span>.<span style="color:#a6e22e">POST</span>(<span style="color:#e6db74">&#34;/users&#34;</span>, <span style="color:#a6e22e">createUser</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">api</span>.<span style="color:#a6e22e">PUT</span>(<span style="color:#e6db74">&#34;/users&#34;</span>, <span style="color:#a6e22e">editUser</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">api</span>.<span style="color:#a6e22e">DELETE</span>(<span style="color:#e6db74">&#34;/users/:id&#34;</span>, <span style="color:#a6e22e">removeUser</span>)
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Run</span>(<span style="color:#e6db74">&#34;:8080&#34;</span>)
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">getUsers</span>(<span style="color:#a6e22e">c</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">Context</span>) {
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">JSON</span>(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">StatusOK</span>, <span style="color:#a6e22e">users</span>)
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">getUser</span>(<span style="color:#a6e22e">c</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">Context</span>) {
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">id</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">Atoi</span>(<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Param</span>(<span style="color:#e6db74">&#34;id&#34;</span>))
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">userFound</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">findUserByID</span>(<span style="color:#a6e22e">users</span>, <span style="color:#a6e22e">id</span>)
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">JSON</span>(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">StatusOK</span>, <span style="color:#a6e22e">userFound</span>)
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">createUser</span>(<span style="color:#a6e22e">c</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">Context</span>) {
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">user</span> <span style="color:#a6e22e">User</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">BindJSON</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">user</span>)
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">users</span> = append(<span style="color:#a6e22e">users</span>, <span style="color:#a6e22e">user</span>)
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">JSON</span>(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">StatusCreated</span>, <span style="color:#a6e22e">user</span>)
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">editUser</span>(<span style="color:#a6e22e">c</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">Context</span>) {
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">user</span> <span style="color:#a6e22e">User</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">BindJSON</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">user</span>)
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">putUser</span>(<span style="color:#a6e22e">users</span>, <span style="color:#a6e22e">user</span>)
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">JSON</span>(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">StatusOK</span>, <span style="color:#a6e22e">user</span>)
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">removeUser</span>(<span style="color:#a6e22e">c</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">Context</span>) {
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">id</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">Atoi</span>(<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Param</span>(<span style="color:#e6db74">&#34;id&#34;</span>))
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">deleteUserByID</span>(<span style="color:#a6e22e">users</span>, <span style="color:#a6e22e">id</span>)
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">JSON</span>(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">StatusOK</span>, <span style="color:#66d9ef">nil</span>)
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">findUserByID</span>(<span style="color:#a6e22e">users</span> []<span style="color:#a6e22e">User</span>, <span style="color:#a6e22e">id</span> <span style="color:#66d9ef">int</span>) (<span style="color:#f92672">*</span><span style="color:#a6e22e">User</span>, <span style="color:#66d9ef">bool</span>) {
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">user</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">users</span> {
-</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">ID</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">id</span> {
-</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">user</span>, <span style="color:#66d9ef">true</span>
-</span></span><span style="display:flex;"><span>		}
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#66d9ef">false</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">deleteUserByID</span>(<span style="color:#a6e22e">users</span> []<span style="color:#a6e22e">User</span>, <span style="color:#a6e22e">id</span> <span style="color:#66d9ef">int</span>) []<span style="color:#a6e22e">User</span> {
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">newUsers</span> <span style="color:#f92672">:=</span> []<span style="color:#a6e22e">User</span>{}
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">user</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">users</span> {
-</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">ID</span> <span style="color:#f92672">!=</span> <span style="color:#a6e22e">id</span> {
-</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">newUsers</span> = append(<span style="color:#a6e22e">newUsers</span>, <span style="color:#a6e22e">user</span>)
-</span></span><span style="display:flex;"><span>		}
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">newUsers</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">putUser</span>(<span style="color:#a6e22e">users</span> []<span style="color:#a6e22e">User</span>, <span style="color:#a6e22e">newUser</span> <span style="color:#a6e22e">User</span>) []<span style="color:#a6e22e">User</span> {
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">users</span> {
-</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">users</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">ID</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">newUser</span>.<span style="color:#a6e22e">ID</span> {
-</span></span><span style="display:flex;"><span>			<span style="color:#75715e">// Update the existing user</span>
-</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">users</span>[<span style="color:#a6e22e">i</span>] = <span style="color:#a6e22e">newUser</span>
-</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">users</span>
-</span></span><span style="display:flex;"><span>		}
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Add new user if not found</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> append(<span style="color:#a6e22e">users</span>, <span style="color:#a6e22e">newUser</span>)
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>Now that we have a simple CRUD API in Go, let’s document it.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="s">&#34;net/http&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="s">&#34;strconv&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="s">&#34;github.com/gin-gonic/gin&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">type</span><span class="w"> </span><span class="nx">User</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nx">ID</span><span class="w">   </span><span class="kt">int</span><span class="w">    </span><span class="s">`json:&#34;id&#34;`</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nx">Name</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="s">`json:&#34;name&#34;`</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">var</span><span class="w"> </span><span class="nx">users</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">User</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="p">{</span><span class="nx">ID</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nx">Name</span><span class="p">:</span><span class="w"> </span><span class="s">&#34;John&#34;</span><span class="p">},</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="p">{</span><span class="nx">ID</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nx">Name</span><span class="p">:</span><span class="w"> </span><span class="s">&#34;Doe&#34;</span><span class="p">},</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nx">r</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">gin</span><span class="p">.</span><span class="nf">Default</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="c1">// Change to default is /api/v1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nx">api</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">RouterGroup</span><span class="p">.</span><span class="nf">Group</span><span class="p">(</span><span class="s">&#34;/api/v1&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="nx">api</span><span class="p">.</span><span class="nf">GET</span><span class="p">(</span><span class="s">&#34;/users&#34;</span><span class="p">,</span><span class="w"> </span><span class="nx">getUsers</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="nx">api</span><span class="p">.</span><span class="nf">GET</span><span class="p">(</span><span class="s">&#34;/users/:id&#34;</span><span class="p">,</span><span class="w"> </span><span class="nx">getUser</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="nx">api</span><span class="p">.</span><span class="nf">POST</span><span class="p">(</span><span class="s">&#34;/users&#34;</span><span class="p">,</span><span class="w"> </span><span class="nx">createUser</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="nx">api</span><span class="p">.</span><span class="nf">PUT</span><span class="p">(</span><span class="s">&#34;/users&#34;</span><span class="p">,</span><span class="w"> </span><span class="nx">editUser</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="nx">api</span><span class="p">.</span><span class="nf">DELETE</span><span class="p">(</span><span class="s">&#34;/users/:id&#34;</span><span class="p">,</span><span class="w"> </span><span class="nx">removeUser</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nx">r</span><span class="p">.</span><span class="nf">Run</span><span class="p">(</span><span class="s">&#34;:8080&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="nf">getUsers</span><span class="p">(</span><span class="nx">c</span><span class="w"> </span><span class="o">*</span><span class="nx">gin</span><span class="p">.</span><span class="nx">Context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nx">c</span><span class="p">.</span><span class="nf">JSON</span><span class="p">(</span><span class="nx">http</span><span class="p">.</span><span class="nx">StatusOK</span><span class="p">,</span><span class="w"> </span><span class="nx">users</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="nf">getUser</span><span class="p">(</span><span class="nx">c</span><span class="w"> </span><span class="o">*</span><span class="nx">gin</span><span class="p">.</span><span class="nx">Context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nx">id</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">strconv</span><span class="p">.</span><span class="nf">Atoi</span><span class="p">(</span><span class="nx">c</span><span class="p">.</span><span class="nf">Param</span><span class="p">(</span><span class="s">&#34;id&#34;</span><span class="p">))</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nx">userFound</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nf">findUserByID</span><span class="p">(</span><span class="nx">users</span><span class="p">,</span><span class="w"> </span><span class="nx">id</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nx">c</span><span class="p">.</span><span class="nf">JSON</span><span class="p">(</span><span class="nx">http</span><span class="p">.</span><span class="nx">StatusOK</span><span class="p">,</span><span class="w"> </span><span class="nx">userFound</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="nf">createUser</span><span class="p">(</span><span class="nx">c</span><span class="w"> </span><span class="o">*</span><span class="nx">gin</span><span class="p">.</span><span class="nx">Context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="kd">var</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">User</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nx">c</span><span class="p">.</span><span class="nf">BindJSON</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">user</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nx">users</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">append</span><span class="p">(</span><span class="nx">users</span><span class="p">,</span><span class="w"> </span><span class="nx">user</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nx">c</span><span class="p">.</span><span class="nf">JSON</span><span class="p">(</span><span class="nx">http</span><span class="p">.</span><span class="nx">StatusCreated</span><span class="p">,</span><span class="w"> </span><span class="nx">user</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="nf">editUser</span><span class="p">(</span><span class="nx">c</span><span class="w"> </span><span class="o">*</span><span class="nx">gin</span><span class="p">.</span><span class="nx">Context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="kd">var</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">User</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nx">c</span><span class="p">.</span><span class="nf">BindJSON</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">user</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nf">putUser</span><span class="p">(</span><span class="nx">users</span><span class="p">,</span><span class="w"> </span><span class="nx">user</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nx">c</span><span class="p">.</span><span class="nf">JSON</span><span class="p">(</span><span class="nx">http</span><span class="p">.</span><span class="nx">StatusOK</span><span class="p">,</span><span class="w"> </span><span class="nx">user</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="nf">removeUser</span><span class="p">(</span><span class="nx">c</span><span class="w"> </span><span class="o">*</span><span class="nx">gin</span><span class="p">.</span><span class="nx">Context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nx">id</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">strconv</span><span class="p">.</span><span class="nf">Atoi</span><span class="p">(</span><span class="nx">c</span><span class="p">.</span><span class="nf">Param</span><span class="p">(</span><span class="s">&#34;id&#34;</span><span class="p">))</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nf">deleteUserByID</span><span class="p">(</span><span class="nx">users</span><span class="p">,</span><span class="w"> </span><span class="nx">id</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nx">c</span><span class="p">.</span><span class="nf">JSON</span><span class="p">(</span><span class="nx">http</span><span class="p">.</span><span class="nx">StatusOK</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="nf">findUserByID</span><span class="p">(</span><span class="nx">users</span><span class="w"> </span><span class="p">[]</span><span class="nx">User</span><span class="p">,</span><span class="w"> </span><span class="nx">id</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="nx">User</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">users</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="k">if</span><span class="w"> </span><span class="nx">user</span><span class="p">.</span><span class="nx">ID</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">id</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="k">return</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">user</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="kc">nil</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="nf">deleteUserByID</span><span class="p">(</span><span class="nx">users</span><span class="w"> </span><span class="p">[]</span><span class="nx">User</span><span class="p">,</span><span class="w"> </span><span class="nx">id</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">[]</span><span class="nx">User</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nx">newUsers</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="nx">User</span><span class="p">{}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">users</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="k">if</span><span class="w"> </span><span class="nx">user</span><span class="p">.</span><span class="nx">ID</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nx">id</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="nx">newUsers</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">append</span><span class="p">(</span><span class="nx">newUsers</span><span class="p">,</span><span class="w"> </span><span class="nx">user</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="nx">newUsers</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="nf">putUser</span><span class="p">(</span><span class="nx">users</span><span class="w"> </span><span class="p">[]</span><span class="nx">User</span><span class="p">,</span><span class="w"> </span><span class="nx">newUser</span><span class="w"> </span><span class="nx">User</span><span class="p">)</span><span class="w"> </span><span class="p">[]</span><span class="nx">User</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">for</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">users</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="k">if</span><span class="w"> </span><span class="nx">users</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">ID</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">newUser</span><span class="p">.</span><span class="nx">ID</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="c1">// Update the existing user</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="nx">users</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">newUser</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="k">return</span><span class="w"> </span><span class="nx">users</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="c1">// Add new user if not found</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="nb">append</span><span class="p">(</span><span class="nx">users</span><span class="p">,</span><span class="w"> </span><span class="nx">newUser</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>Now that we have a simple CRUD API in Go, let’s document it.</p>
 <p>Note: In this example, I didn’t use the best approach for a CRUD. Instead, I defined a User struct to represent a user and used a slice to store the users.
 In a real-world project, you should use a database to store the data. Additionally,
 while I used basic functions to manipulate the data, it’s recommended to follow the repository pattern in production code.</p>
 <p>With that out of the way, let’s move on to creating our documentation.</p>
 <p>First, we’ll create a Makefile to simplify managing the app.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-makefile" data-lang="makefile"><span style="display:flex;"><span><span style="color:#a6e22e">run</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>    go run main.go
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">build-swagger</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>	@go run github.com/swaggo/swag/cmd/swag@latest init -g main.go -o docs
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-makefile" data-lang="makefile"><span class="line"><span class="cl"><span class="nf">run</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    go run main.go
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">build-swagger</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">	@go run github.com/swaggo/swag/cmd/swag@latest init -g main.go -o docs
 </span></span></code></pre></div><p>Now, we need to install some dependencies to use Swag.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    go get -u github.com/swaggo/gin-swagger
-</span></span><span style="display:flex;"><span>    go get -u github.com/swaggo/files
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">    go get -u github.com/swaggo/gin-swagger
+</span></span><span class="line"><span class="cl">    go get -u github.com/swaggo/files
 </span></span></code></pre></div><p>Now, I need to add some descriptions using code comments in the main function.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// @BasePath /api/v1</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// PingExample godoc</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Summary ping example</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Schemes</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Description do ping</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">...</span>
-</span></span></code></pre></div><p>We need to add a route to serve the Swagger documentation.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">GET</span>(<span style="color:#e6db74">&#34;/swagger/*any&#34;</span>, <span style="color:#a6e22e">ginSwagger</span>.<span style="color:#a6e22e">WrapHandler</span>(<span style="color:#a6e22e">swaggerfiles</span>.<span style="color:#a6e22e">Handler</span>))
-</span></span></code></pre></div><p>Now, we need to run a command to generate the documentation.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>make build-swagger
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// @BasePath /api/v1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// PingExample godoc</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Summary ping example</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Schemes</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Description do ping</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="o">...</span><span class="w">
+</span></span></span></code></pre></div><p>We need to add a route to serve the Swagger documentation.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">r</span><span class="p">.</span><span class="nf">GET</span><span class="p">(</span><span class="s">&#34;/swagger/*any&#34;</span><span class="p">,</span><span class="w"> </span><span class="nx">ginSwagger</span><span class="p">.</span><span class="nf">WrapHandler</span><span class="p">(</span><span class="nx">swaggerfiles</span><span class="p">.</span><span class="nx">Handler</span><span class="p">))</span><span class="w">
+</span></span></span></code></pre></div><p>Now, we need to run a command to generate the documentation.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">make build-swagger
 </span></span></code></pre></div><p>With all the Swag configurations complete, we can run the app and access the documentation in the browser.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>make run
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">make run
 </span></span></code></pre></div><p>Now, access the URL http://localhost:8080/swagger/index.html to view the documentation.</p>
 <p>Below is an example of how to document a CRUD:</p>
 <p>GET USERS:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// @BasePath /</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// ShowAccount 	 godoc</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Summary      Show a Users list</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Description  get users</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Tags         getUsers</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Accept       json</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Produce      json</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Router       /users  [get]</span>
-</span></span></code></pre></div><p>GET USER:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// @BasePath /</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// ShowAccount 	 godoc</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Summary      Show a Users list</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Description  get users</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Tags         getUsers</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Accept       json</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Produce      json</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Param        id         path      string  true  &#34;ID&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Router       /users/{id}  [get]</span>
-</span></span></code></pre></div><p>POST:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// @BasePath /</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// ShowAccount 	 godoc</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Summary      Create a User</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Description  create users</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Tags         createUser</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Accept       json</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Produce      json</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Param user body User true &#34;User to create&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Router 		/users [post]</span>
-</span></span></code></pre></div><p>PUT:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// @BasePath /</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// ShowAccount 	 godoc</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Summary      Edit a User</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Description  edit users</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Tags         editUser</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Accept       json</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Produce      json</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Param user body User true &#34;User to edit&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Router 		/users [put]</span>
-</span></span></code></pre></div><p>DELETE:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// @BasePath /</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// ShowAccount 	 godoc</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Summary      Remove a Users list</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Description  delete user</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Tags         removeUser</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Accept       json</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Produce      json</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Param        id         path      string  true  &#34;ID&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// @Router       /users/{id}  [delete]</span>
-</span></span></code></pre></div><p>With these comments in each function, we can generate the documentation using Swag.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// @BasePath /</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// ShowAccount 	 godoc</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Summary      Show a Users list</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Description  get users</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Tags         getUsers</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Accept       json</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Produce      json</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Router       /users  [get]</span><span class="w">
+</span></span></span></code></pre></div><p>GET USER:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// @BasePath /</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// ShowAccount 	 godoc</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Summary      Show a Users list</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Description  get users</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Tags         getUsers</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Accept       json</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Produce      json</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Param        id         path      string  true  &#34;ID&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Router       /users/{id}  [get]</span><span class="w">
+</span></span></span></code></pre></div><p>POST:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// @BasePath /</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// ShowAccount 	 godoc</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Summary      Create a User</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Description  create users</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Tags         createUser</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Accept       json</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Produce      json</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Param user body User true &#34;User to create&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Router 		/users [post]</span><span class="w">
+</span></span></span></code></pre></div><p>PUT:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// @BasePath /</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// ShowAccount 	 godoc</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Summary      Edit a User</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Description  edit users</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Tags         editUser</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Accept       json</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Produce      json</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Param user body User true &#34;User to edit&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Router 		/users [put]</span><span class="w">
+</span></span></span></code></pre></div><p>DELETE:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// @BasePath /</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// ShowAccount 	 godoc</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Summary      Remove a Users list</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Description  delete user</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Tags         removeUser</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Accept       json</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Produce      json</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Param        id         path      string  true  &#34;ID&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// @Router       /users/{id}  [delete]</span><span class="w">
+</span></span></span></code></pre></div><p>With these comments in each function, we can generate the documentation using Swag.</p>
 <p>The result is:</p>
 <p><img src="/images/swagger-doc.png" alt="Swagger example"></p>
 <p>You can view the project in the <a href="https://github.com/linuxsoares/crud-user-go">repository</a>.</p>
@@ -446,13 +466,24 @@ feel free to send me a message in my social media accounts.</p>
     title="E-Mail">
     
 </a>
+<a href="/index.xml" target="_blank" rel="noopener noreferrer me"
+    title="RSS Feed">
+    
+</a>
 </div>
     <small class="footer_copyright">
         © 2026 Gil.
         Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
     </small>
-</footer>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
 
+</a>
+
+
+    
 
 
 
@@ -460,7 +491,7 @@ feel free to send me a message in my social media accounts.</p>
 
 
     
-    <script src="/js/main.min.4ee188e1744c19816e95a540b2650ed9f033ea0371e74eac8e717355cfca8741.js" integrity="sha256-TuGI4XRMGYFulaVAsmUO2fAz6gNx506sjnFzVc/Kh0E="></script>
+    <script src="/js/main.min.35f435a5d8eac613c52daa28d8af544a4512337d3e95236e4a4978417b8dcb2f.js" integrity="sha256-NfQ1pdjqxhPFLaoo2K9USkUSM30&#43;lSNuSkl4QXuNyy8="></script>
 
     
 

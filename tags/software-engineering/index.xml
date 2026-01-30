@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software-Engineering on I&#39;m Gilmar Soares</title>
+    <link>/tags/software-engineering/</link>
+    <description>Recent content in Software-Engineering on I&#39;m Gilmar Soares</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 13 Feb 2025 10:02:53 -0300</lastBuildDate><atom:link href="/tags/software-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using AI for Programmers</title>
+      <link>/posts/using_ai_for_programmers/</link>
+      <pubDate>Thu, 13 Feb 2025 10:02:53 -0300</pubDate>
+      
+      <guid>/posts/using_ai_for_programmers/</guid>
+      
+      <description>&lt;p&gt;Today, I’m back from my vacation, and I’ve been thinking about writing about how we can use AI to help us with coding.&lt;/p&gt;
+&lt;h2 id=&#34;take-a-break-and-recharge&#34;&gt;Take a Break and Recharge&lt;/h2&gt;
+&lt;p&gt;First of all, I want to say this: take a moment in your life to rest. Go on vacation, visit the beach, the mountains,
+the countryside, or the city—go wherever you like. But make sure to take time to recharge.&lt;/p&gt;
+&lt;h2 id=&#34;now-lets-talk-about-ai&#34;&gt;Now, Let&amp;rsquo;s Talk About AI&lt;/h2&gt;
+&lt;p&gt;AI tools like Copilot, ChatGPT, and DeepSeek are great for assisting with coding, but we need to use them carefully.&lt;/p&gt;
+&lt;p&gt;While AI can help us write code, the generated code isn’t truly ours, and that can become a problem in the future.
+If we don’t fully understand the code AI produces, debugging it later can be challenging. When an exception is thrown,
+we need to know why it happened and how to fix it.&lt;/p&gt;
+&lt;p&gt;So, while AI tools are helpful, we must use them with caution.
+We should know every line of code we write, understand its logic, and truly take ownership of it.&lt;/p&gt;
+&lt;h2 id=&#34;my-advice-on-using-ai&#34;&gt;My Advice on Using AI&lt;/h2&gt;
+&lt;p&gt;Use AI for any task you need—whether for pair programming, writing code, generating tests,
+or creating documentation—but always make sure you understand what you’re writing.&lt;/p&gt;
+&lt;p&gt;With this post, I want to emphasize that AI is just a tool. The code that AI generates is still your responsibility.&lt;/p&gt;
+&lt;p&gt;This is my first post after my vacation and I hope you like it!&lt;/p&gt;
+&lt;p&gt;Wishing you a great day.&lt;/p&gt;
+&lt;p&gt;See you in the next post!&lt;/p&gt;
+&lt;p&gt;Bye.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>How Can AI Change the Way We Work</title>
+      <link>/posts/how-can-ai-change-the-way-we-work/</link>
+      <pubDate>Thu, 03 Oct 2024 18:50:05 -0300</pubDate>
+      
+      <guid>/posts/how-can-ai-change-the-way-we-work/</guid>
+      
+      <description>&lt;p&gt;The first answer is, I DON’T KNOW! Bye-bye! (Just kidding! Keep reading, please! It was only a joke!)&lt;/p&gt;
+&lt;p&gt;Today, I saw the new Canvas feature from OpenAI, and I’m feeling two things:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I’m very excited about the evolution of AI and the new possibilities it can bring.&lt;/li&gt;
+&lt;li&gt;I’m also a bit scared by the rapid advancement of AI and the potential changes it could bring.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let’s start with the first point. I use AI daily to help me write code at work. But of course, I don’t just copy and paste the AI-generated code into my editor (I use Zed). Instead, I use AI to resolve my doubts and assist me when I need to write in programming languages I’m less experienced with. This is amazing—it’s like having a knowledgeable assistant right by my side!&lt;/p&gt;
+&lt;p&gt;Now, for the second point. I have a daughter, and I’m worried about the future that AI might create for her. What will my profession look like in the medium and long term? Will I still have a job?&lt;/p&gt;
+&lt;p&gt;The only certainty I have is that no profession will be the same after the use of AI. Whether it will improve, worsen, or cease to exist, we do not know.&lt;/p&gt;
+&lt;p&gt;Despite these concerns, I believe the key is to keep learning and staying up to date with the latest technologies. We need to be prepared for the new challenges that lie ahead. AI is a tool that can help us create and complete tasks with greater speed and quality, but it’s up to us to continue improving our skills.&lt;/p&gt;
+&lt;p&gt;And as I said in another article, don&amp;rsquo;t stop studying, stay focused and studying!&lt;/p&gt;
+&lt;p&gt;So, what do you think? How do you feel about AI and the new possibilities it brings?&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Senior Software Engineer</title>
+      <link>/posts/senior-software-engineer/</link>
+      <pubDate>Tue, 17 Sep 2024 16:37:38 -0300</pubDate>
+      
+      <guid>/posts/senior-software-engineer/</guid>
+      
+      <description>&lt;h2 id=&#34;senior-software-engineers-impacting-business-growth-and-inspiring-teams&#34;&gt;Senior Software Engineers: Impacting Business Growth and Inspiring Teams&lt;/h2&gt;
+&lt;p&gt;When I started as a Software Engineer, I skipped the internal steps because my initial experience in tech was with infrastructure, not programming. I transitioned into software engineering four years later, and when I finally worked as a Software Engineer, I was very fortunate. My coworkers were exceptional professionals who supported me at the beginning of my journey.&lt;/p&gt;
+&lt;p&gt;As a Senior Software Engineer now, I strive every day to be like those mentors and positively impact the people I work with. Knowing the business you work in better than anyone else enables you to help those around you and be an outstanding professional wherever you go.
+A phrase that I always remember to impact the people around me is, always be the senior you wish you had met when you were a junior. This phrase has helped me to be a better professional and to help others in their journey.&lt;/p&gt;
+&lt;p&gt;This text is to invite you to be the senior you wish you had met when you were a junior. Be the professional who helps others and makes a difference in the lives of those around you.
+And a few years later, if you follow this tip every day, you will see incredible people, being excellent professionals because in the past, they were lucky enough to meet you, who impacted them positively.&lt;/p&gt;
+&lt;p&gt;Be the best version of yourself every day!&lt;/p&gt;
+&lt;p&gt;Hugs.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>

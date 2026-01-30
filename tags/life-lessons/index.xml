@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Life-Lessons on I&#39;m Gilmar Soares</title>
+    <link>/tags/life-lessons/</link>
+    <description>Recent content in Life-Lessons on I&#39;m Gilmar Soares</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 28 Nov 2024 16:40:03 -0300</lastBuildDate><atom:link href="/tags/life-lessons/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Going Against the Flow of the World</title>
+      <link>/posts/going_against_the_flow_of_the_world/</link>
+      <pubDate>Thu, 28 Nov 2024 16:40:03 -0300</pubDate>
+      
+      <guid>/posts/going_against_the_flow_of_the_world/</guid>
+      
+      <description>&lt;p&gt;In my country, this week marks the start of &amp;ldquo;Black Week,&amp;rdquo; although the correct term is &amp;ldquo;Black Friday,&amp;rdquo;
+traditionally a single day of discounts in stores. As you know,
+I’m a software engineer, and this week I’ve noticed many courses on sale,
+offering a variety of options for learning new things.&lt;/p&gt;
+&lt;p&gt;However, this time, I’ve been reflecting on these courses and the increasingly fast-paced world
+we live in—a world where everyone feels the need to learn quickly and where courses
+often promise accelerated learning. I’ve decided that, as a human being, I shouldn’t follow this path of speed.&lt;/p&gt;
+&lt;p&gt;Throughout history, anyone who has gained deep knowledge in a subject has done so through
+years of study and consistent practice. I believe this should remain the standard today.&lt;/p&gt;
+&lt;p&gt;The idea behind this post isn’t about avoiding buying courses or learning materials altogether.
+Instead, it’s about embracing the process of learning gradually, a little every day, and resisting
+the pressure to conform to the fast-paced trends of the modern world.&lt;/p&gt;
+&lt;p&gt;With that in mind, I’d like to share my decision this Black Friday week:
+I’ve decided not to buy any courses or materials that promise faster, easier,
+or miraculous results. Instead, I’ll continue reading my books, sticking to the routine
+I shared &lt;a href=&#34;https://linuxsoares.github.io/posts/remember-life-is-not-a-100-meter-race/&#34;&gt;here&lt;/a&gt;, and focusing on learning slowly and deeply.&lt;/p&gt;
+&lt;p&gt;I hope you make the most of this week of discounts where you live and take the opportunity to plan ahead,
+focusing on a path that considers the medium and long term and that this post inspires you to reflect on
+your learning process and the path you’re taking.&lt;/p&gt;
+&lt;p&gt;Hugs! 🤗&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>This Post Isn&#39;t About Technology</title>
+      <link>/posts/this-post-isnt-about-technology/</link>
+      <pubDate>Thu, 14 Nov 2024 17:36:05 -0300</pubDate>
+      
+      <guid>/posts/this-post-isnt-about-technology/</guid>
+      
+      <description>&lt;h2 id=&#34;this-post-is-about-depth-of-knowledge&#34;&gt;This post is about depth of knowledge!&lt;/h2&gt;
+&lt;p&gt;When I started my blog, I added Google Analytics—not to track performance,
+but because I was curious about how people engage with my posts.&lt;/p&gt;
+&lt;p&gt;Over time, as I’ve been writing for this blog, I’ve observed an interesting trend.
+People seem to gravitate toward “ready-made recipes” or practical guides.
+For instance, when I wrote posts about studying Golang or how Exercism helps me learn,
+they attracted little attention. Similarly, posts about LeetCode, study techniques,
+or my personal schedule and life routines didn’t generate much traffic.&lt;/p&gt;
+&lt;p&gt;However, when I shared a step-by-step guide on using Swagger in a Golang API—essentially
+a “recipe”—it became the most-viewed post in my blog’s history.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/count_posts_view.png&#34; alt=&#34;Example image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The image above shows a visualization of my blog&amp;rsquo;s behavior over the past week. As we can see, the post about Swagger has received more than double the views of any other post.&lt;/p&gt;
+&lt;p&gt;Reflecting on this, if I could share one piece of advice, it would be this:&lt;/p&gt;
+&lt;p&gt;Treat your life as a long journey—a marathon, not a sprint. Organize your time,
+study a little every day, and create a routine that helps you stay focused.
+Aim for deep, meaningful learning, because acquiring deep knowledge is the best way to
+secure a relatively stable future—free from fears and uncertainties, even about challenges like AI.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://linuxsoares.github.io/posts/remember-life-is-not-a-100-meter-race/&#34;&gt;In the post&lt;/a&gt; where I compare life to a
+marathon rather than a 100-meter sprint, I share how my routine works in the hope of helping and
+motivating you to organize your life and focus on the long term.&lt;/p&gt;
+&lt;p&gt;This post isn’t meant as criticism—think of it as friendly advice!
+As the poet says, “If advice were truly valuable, it would be sold, not given away.”
+Yet, here I am, offering it freely in an effort to help.&lt;/p&gt;
+&lt;p&gt;I hope you enjoyed this post and that it inspires or helps you in some way!&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Remember Life Is Not a 100 Meter Race</title>
+      <link>/posts/remember-life-is-not-a-100-meter-race/</link>
+      <pubDate>Thu, 17 Oct 2024 16:59:52 -0300</pubDate>
+      
+      <guid>/posts/remember-life-is-not-a-100-meter-race/</guid>
+      
+      <description>&lt;p&gt;In my life, I’ve often liked something and used it every day until I got sick of it.
+But now, I’ve started therapy, and one of the first things I’ve learned is how to use a calendar to organize my routine.&lt;/p&gt;
+&lt;p&gt;By organizing my routine, I realized that I need to plan everything in advance—whether it’s for the week, month, or year.
+For example, in my current routine:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;I exercise for one hour every weekday.
+I study English two days a week, for one hour each day.
+I spend 30 minutes every day reading books outside of my profession, among other activities.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The best part about organizing your week with clear goals is understanding that progress takes time.
+I won’t learn English or Golang (a programming language) in a day or a week. However, by organizing my week, I can work toward these goals gradually and stay on track.&lt;/p&gt;
+&lt;p&gt;Below, I’ll show you how I organize my week. I hope it helps you organize yours too.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/example-calendar.png&#34; alt=&#34;Example image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This is how I’ve structured my schedule:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;I exercise every day of the week.
+I read every day.
+I study a new technology every day.
+I work regularly and ensure I spend quality time with my daughter and family.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I truly hope this helps you organize your week. It has been a great tool for managing anxiety and developing a long-term mindset. After all, life is not a 100-meter race!&lt;/p&gt;
+&lt;p&gt;I hope you found this helpful and that it inspires you to organize your week too.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>

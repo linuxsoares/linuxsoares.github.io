@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Learning on I&#39;m Gilmar Soares</title>
+    <link>/categories/learning/</link>
+    <description>Recent content in Learning on I&#39;m Gilmar Soares</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 28 Nov 2024 16:40:03 -0300</lastBuildDate><atom:link href="/categories/learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Going Against the Flow of the World</title>
+      <link>/posts/going_against_the_flow_of_the_world/</link>
+      <pubDate>Thu, 28 Nov 2024 16:40:03 -0300</pubDate>
+      
+      <guid>/posts/going_against_the_flow_of_the_world/</guid>
+      
+      <description>&lt;p&gt;In my country, this week marks the start of &amp;ldquo;Black Week,&amp;rdquo; although the correct term is &amp;ldquo;Black Friday,&amp;rdquo;
+traditionally a single day of discounts in stores. As you know,
+I’m a software engineer, and this week I’ve noticed many courses on sale,
+offering a variety of options for learning new things.&lt;/p&gt;
+&lt;p&gt;However, this time, I’ve been reflecting on these courses and the increasingly fast-paced world
+we live in—a world where everyone feels the need to learn quickly and where courses
+often promise accelerated learning. I’ve decided that, as a human being, I shouldn’t follow this path of speed.&lt;/p&gt;
+&lt;p&gt;Throughout history, anyone who has gained deep knowledge in a subject has done so through
+years of study and consistent practice. I believe this should remain the standard today.&lt;/p&gt;
+&lt;p&gt;The idea behind this post isn’t about avoiding buying courses or learning materials altogether.
+Instead, it’s about embracing the process of learning gradually, a little every day, and resisting
+the pressure to conform to the fast-paced trends of the modern world.&lt;/p&gt;
+&lt;p&gt;With that in mind, I’d like to share my decision this Black Friday week:
+I’ve decided not to buy any courses or materials that promise faster, easier,
+or miraculous results. Instead, I’ll continue reading my books, sticking to the routine
+I shared &lt;a href=&#34;https://linuxsoares.github.io/posts/remember-life-is-not-a-100-meter-race/&#34;&gt;here&lt;/a&gt;, and focusing on learning slowly and deeply.&lt;/p&gt;
+&lt;p&gt;I hope you make the most of this week of discounts where you live and take the opportunity to plan ahead,
+focusing on a path that considers the medium and long term and that this post inspires you to reflect on
+your learning process and the path you’re taking.&lt;/p&gt;
+&lt;p&gt;Hugs! 🤗&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>This Post Isn&#39;t About Technology</title>
+      <link>/posts/this-post-isnt-about-technology/</link>
+      <pubDate>Thu, 14 Nov 2024 17:36:05 -0300</pubDate>
+      
+      <guid>/posts/this-post-isnt-about-technology/</guid>
+      
+      <description>&lt;h2 id=&#34;this-post-is-about-depth-of-knowledge&#34;&gt;This post is about depth of knowledge!&lt;/h2&gt;
+&lt;p&gt;When I started my blog, I added Google Analytics—not to track performance,
+but because I was curious about how people engage with my posts.&lt;/p&gt;
+&lt;p&gt;Over time, as I’ve been writing for this blog, I’ve observed an interesting trend.
+People seem to gravitate toward “ready-made recipes” or practical guides.
+For instance, when I wrote posts about studying Golang or how Exercism helps me learn,
+they attracted little attention. Similarly, posts about LeetCode, study techniques,
+or my personal schedule and life routines didn’t generate much traffic.&lt;/p&gt;
+&lt;p&gt;However, when I shared a step-by-step guide on using Swagger in a Golang API—essentially
+a “recipe”—it became the most-viewed post in my blog’s history.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/count_posts_view.png&#34; alt=&#34;Example image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The image above shows a visualization of my blog&amp;rsquo;s behavior over the past week. As we can see, the post about Swagger has received more than double the views of any other post.&lt;/p&gt;
+&lt;p&gt;Reflecting on this, if I could share one piece of advice, it would be this:&lt;/p&gt;
+&lt;p&gt;Treat your life as a long journey—a marathon, not a sprint. Organize your time,
+study a little every day, and create a routine that helps you stay focused.
+Aim for deep, meaningful learning, because acquiring deep knowledge is the best way to
+secure a relatively stable future—free from fears and uncertainties, even about challenges like AI.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://linuxsoares.github.io/posts/remember-life-is-not-a-100-meter-race/&#34;&gt;In the post&lt;/a&gt; where I compare life to a
+marathon rather than a 100-meter sprint, I share how my routine works in the hope of helping and
+motivating you to organize your life and focus on the long term.&lt;/p&gt;
+&lt;p&gt;This post isn’t meant as criticism—think of it as friendly advice!
+As the poet says, “If advice were truly valuable, it would be sold, not given away.”
+Yet, here I am, offering it freely in an effort to help.&lt;/p&gt;
+&lt;p&gt;I hope you enjoyed this post and that it inspires or helps you in some way!&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>How Am I Learning Golang</title>
+      <link>/posts/how-am-i-learning-golang/</link>
+      <pubDate>Mon, 23 Sep 2024 17:34:27 -0300</pubDate>
+      
+      <guid>/posts/how-am-i-learning-golang/</guid>
+      
+      <description>&lt;p&gt;In my work, I’ve started using Golang. I’m aware of AI tools like ChatGPT, which can help me complete tasks more efficiently.
+However, I really enjoy learning new technologies and am always open to new challenges.&lt;/p&gt;
+&lt;p&gt;In the past, I learned &lt;a href=&#34;https://www.scala-lang.org/&#34;&gt;Scala&lt;/a&gt;, &lt;a href=&#34;https://www.python.org/&#34;&gt;Python&lt;/a&gt;, and &lt;a href=&#34;https://www.java.com/&#34;&gt;Java&lt;/a&gt; by reading books and practicing them daily.
+This time, I’m learning Golang using different approaches. I use Exercism to practice Golang, and now I’ll show you how to use it.&lt;/p&gt;
+&lt;h2 id=&#34;step-1-install-golang&#34;&gt;Step 1: Install Golang&lt;/h2&gt;
+&lt;p&gt;First, you need to install Golang on your computer. You can download it from the official website.
+I won’t go into detail on how to install it because it’s straightforward.
+You can find the installation instructions &lt;a href=&#34;https://go.dev/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Once Golang is installed, you can check if it’s installed correctly by running this command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;step-2-install-exercism&#34;&gt;Step 2: Install Exercism&lt;/h2&gt;
+&lt;p&gt;Now that Golang is installed, let&amp;rsquo;s install Exercism.
+You can find the installation instructions for your operating system on &lt;a href=&#34;https://exercism.org/cli-walkthrough&#34;&gt;this page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;After installing Exercism, you can verify the installation by running:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exercism version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;step-3-start-practicing&#34;&gt;Step 3: Start Practicing&lt;/h2&gt;
+&lt;p&gt;Now that everything is set up, you can start practicing Golang using Exercism.
+You can download exercises using the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exercism download --exercise&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;exercise-name&amp;gt; --track&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;go
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exercism download --track&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;go --exercise&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;lasagna-master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This command will download the &lt;code&gt;lasagna-master&lt;/code&gt; exercise for the Golang track.&lt;/p&gt;
+&lt;p&gt;After solving the exercise, you can submit it using:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exercism submit
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will upload your solution to Exercism, and you can see other people’s solutions as well.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;This is how I’m learning Golang using Exercism. It’s a great platform to practice coding in different languages.
+Let’s try to solve some exercises in Golang or another language you prefer. I hope you enjoy the process!&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>

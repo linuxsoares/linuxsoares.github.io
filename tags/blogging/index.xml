@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogging on I&#39;m Gilmar Soares</title>
+    <link>/tags/blogging/</link>
+    <description>Recent content in Blogging on I&#39;m Gilmar Soares</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 14 Nov 2024 17:36:05 -0300</lastBuildDate><atom:link href="/tags/blogging/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>This Post Isn&#39;t About Technology</title>
+      <link>/posts/this-post-isnt-about-technology/</link>
+      <pubDate>Thu, 14 Nov 2024 17:36:05 -0300</pubDate>
+      
+      <guid>/posts/this-post-isnt-about-technology/</guid>
+      
+      <description>&lt;h2 id=&#34;this-post-is-about-depth-of-knowledge&#34;&gt;This post is about depth of knowledge!&lt;/h2&gt;
+&lt;p&gt;When I started my blog, I added Google Analytics—not to track performance,
+but because I was curious about how people engage with my posts.&lt;/p&gt;
+&lt;p&gt;Over time, as I’ve been writing for this blog, I’ve observed an interesting trend.
+People seem to gravitate toward “ready-made recipes” or practical guides.
+For instance, when I wrote posts about studying Golang or how Exercism helps me learn,
+they attracted little attention. Similarly, posts about LeetCode, study techniques,
+or my personal schedule and life routines didn’t generate much traffic.&lt;/p&gt;
+&lt;p&gt;However, when I shared a step-by-step guide on using Swagger in a Golang API—essentially
+a “recipe”—it became the most-viewed post in my blog’s history.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/count_posts_view.png&#34; alt=&#34;Example image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The image above shows a visualization of my blog&amp;rsquo;s behavior over the past week. As we can see, the post about Swagger has received more than double the views of any other post.&lt;/p&gt;
+&lt;p&gt;Reflecting on this, if I could share one piece of advice, it would be this:&lt;/p&gt;
+&lt;p&gt;Treat your life as a long journey—a marathon, not a sprint. Organize your time,
+study a little every day, and create a routine that helps you stay focused.
+Aim for deep, meaningful learning, because acquiring deep knowledge is the best way to
+secure a relatively stable future—free from fears and uncertainties, even about challenges like AI.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://linuxsoares.github.io/posts/remember-life-is-not-a-100-meter-race/&#34;&gt;In the post&lt;/a&gt; where I compare life to a
+marathon rather than a 100-meter sprint, I share how my routine works in the hope of helping and
+motivating you to organize your life and focus on the long term.&lt;/p&gt;
+&lt;p&gt;This post isn’t meant as criticism—think of it as friendly advice!
+As the poet says, “If advice were truly valuable, it would be sold, not given away.”
+Yet, here I am, offering it freely in an effort to help.&lt;/p&gt;
+&lt;p&gt;I hope you enjoyed this post and that it inspires or helps you in some way!&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>
