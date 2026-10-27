@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software-Engineering on Eu sou Gilmar Soares</title>
+    <link>https://gilsoares.dev/blog/pt/tags/software-engineering/</link>
+    <description>Recent content in Software-Engineering on Eu sou Gilmar Soares</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Thu, 13 Feb 2025 10:02:53 -0300</lastBuildDate><atom:link href="https://gilsoares.dev/blog/pt/tags/software-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Usando IA na Programação</title>
+      <link>https://gilsoares.dev/blog/pt/posts/using_ai_for_programmers/</link>
+      <pubDate>Thu, 13 Feb 2025 10:02:53 -0300</pubDate>
+      
+      <guid>https://gilsoares.dev/blog/pt/posts/using_ai_for_programmers/</guid>
+      
+      <description>&lt;p&gt;Hoje voltei das férias e fiquei pensando em escrever sobre como podemos usar IA para nos ajudar a programar.&lt;/p&gt;
+&lt;h2 id=&#34;faça-uma-pausa-e-recarregue-as-energias&#34;&gt;Faça uma pausa e recarregue as energias&lt;/h2&gt;
+&lt;p&gt;Antes de tudo, quero dizer o seguinte: reserve um momento na sua vida para descansar. Tire férias, vá à praia, à montanha,
+ao interior ou à cidade, vá para onde quiser. Mas garanta um tempo para recarregar as energias.&lt;/p&gt;
+&lt;h2 id=&#34;agora-vamos-falar-de-ia&#34;&gt;Agora, vamos falar de IA&lt;/h2&gt;
+&lt;p&gt;Ferramentas de IA como Copilot, ChatGPT e DeepSeek são ótimas para ajudar na programação, mas precisamos usá-las com cuidado.&lt;/p&gt;
+&lt;p&gt;Embora a IA possa nos ajudar a escrever código, o código gerado não é realmente nosso, e isso pode virar um problema no futuro.
+Se não entendermos completamente o código que a IA produz, depurá-lo depois pode ser difícil. Quando uma exceção é lançada,
+precisamos saber por que aconteceu e como corrigir.&lt;/p&gt;
+&lt;p&gt;Então, embora as ferramentas de IA sejam úteis, precisamos usá-las com cautela.
+Devemos conhecer cada linha de código que escrevemos, entender sua lógica e realmente assumir a responsabilidade por ela.&lt;/p&gt;
+&lt;h2 id=&#34;meu-conselho-sobre-o-uso-de-ia&#34;&gt;Meu conselho sobre o uso de IA&lt;/h2&gt;
+&lt;p&gt;Use IA para qualquer tarefa que precisar, seja para programar em par, escrever código, gerar testes
+ou criar documentação, mas sempre garanta que você entende o que está escrevendo.&lt;/p&gt;
+&lt;p&gt;Com este post, quero reforçar que a IA é só uma ferramenta. O código que a IA gera continua sendo responsabilidade sua.&lt;/p&gt;
+&lt;p&gt;Este é meu primeiro post depois das férias e espero que você goste!&lt;/p&gt;
+&lt;p&gt;Tenha um ótimo dia.&lt;/p&gt;
+&lt;p&gt;Até o próximo post!&lt;/p&gt;
+&lt;p&gt;Tchau.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Como a IA Pode Mudar a Forma Como Trabalhamos</title>
+      <link>https://gilsoares.dev/blog/pt/posts/how-can-ai-change-the-way-we-work/</link>
+      <pubDate>Thu, 03 Oct 2024 18:50:05 -0300</pubDate>
+      
+      <guid>https://gilsoares.dev/blog/pt/posts/how-can-ai-change-the-way-we-work/</guid>
+      
+      <description>&lt;p&gt;A primeira resposta é: EU NÃO SEI! Tchau, tchau! (Brincadeira! Continue lendo, por favor! Era só uma piada!)&lt;/p&gt;
+&lt;p&gt;Hoje vi o novo recurso Canvas da OpenAI e estou sentindo duas coisas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Estou muito animado com a evolução da IA e com as novas possibilidades que ela pode trazer.&lt;/li&gt;
+&lt;li&gt;Também estou um pouco assustado com o avanço rápido da IA e com as mudanças que ela pode causar.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Vamos começar pelo primeiro ponto. Uso IA todos os dias para me ajudar a escrever código no trabalho. Mas é claro que não copio e colo o código gerado pela IA direto no meu editor (uso o Zed). Uso a IA para tirar dúvidas e para me ajudar quando preciso escrever em linguagens de programação com as quais tenho menos experiência. Isso é incrível, é como ter um assistente que entende do assunto bem ao meu lado!&lt;/p&gt;
+&lt;p&gt;Agora, o segundo ponto. Tenho uma filha e me preocupo com o futuro que a IA pode criar para ela. Como vai ser minha profissão no médio e no longo prazo? Ainda vou ter emprego?&lt;/p&gt;
+&lt;p&gt;A única certeza que tenho é que nenhuma profissão vai ser a mesma depois da IA. Se ela vai melhorar, piorar ou deixar de existir, não sabemos.&lt;/p&gt;
+&lt;p&gt;Apesar dessas preocupações, acredito que o segredo é continuar aprendendo e se manter atualizado com as tecnologias mais recentes. Precisamos estar preparados para os novos desafios que vêm por aí. A IA é uma ferramenta que pode nos ajudar a criar e concluir tarefas com mais velocidade e qualidade, mas cabe a nós continuar melhorando nossas habilidades.&lt;/p&gt;
+&lt;p&gt;E, como eu disse em outro artigo, não pare de estudar, mantenha o foco e continue estudando!&lt;/p&gt;
+&lt;p&gt;E você, o que acha? Como você se sente em relação à IA e às novas possibilidades que ela traz?&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Engenheiro de Software Sênior</title>
+      <link>https://gilsoares.dev/blog/pt/posts/senior-software-engineer/</link>
+      <pubDate>Tue, 17 Sep 2024 16:37:38 -0300</pubDate>
+      
+      <guid>https://gilsoares.dev/blog/pt/posts/senior-software-engineer/</guid>
+      
+      <description>&lt;h2 id=&#34;engenheiros-de-software-sênior-impactando-o-crescimento-do-negócio-e-inspirando-times&#34;&gt;Engenheiros de Software Sênior: impactando o crescimento do negócio e inspirando times&lt;/h2&gt;
+&lt;p&gt;Quando comecei como Engenheiro de Software, pulei as etapas internas, porque minha primeira experiência em tecnologia foi com infraestrutura, não com programação. Fiz a transição para engenharia de software quatro anos depois e, quando finalmente trabalhei como Engenheiro de Software, tive muita sorte. Meus colegas eram profissionais excepcionais, que me apoiaram no começo da minha jornada.&lt;/p&gt;
+&lt;p&gt;Hoje, como Engenheiro de Software Sênior, me esforço todos os dias para ser como esses mentores e impactar positivamente as pessoas com quem trabalho. Conhecer o negócio em que você atua melhor do que ninguém permite ajudar quem está ao seu redor e ser um profissional excepcional onde quer que você vá.
+Uma frase que sempre lembro para impactar as pessoas ao meu redor é: seja sempre o sênior que você gostaria de ter conhecido quando era júnior. Essa frase me ajudou a ser um profissional melhor e a ajudar outras pessoas em suas jornadas.&lt;/p&gt;
+&lt;p&gt;Este texto é um convite para você ser o sênior que gostaria de ter conhecido quando era júnior. Seja o profissional que ajuda os outros e faz diferença na vida de quem está ao seu redor.
+E, alguns anos depois, se você seguir essa dica todos os dias, verá pessoas incríveis se tornando excelentes profissionais, porque no passado tiveram a sorte de conhecer você, que as impactou positivamente.&lt;/p&gt;
+&lt;p&gt;Seja a melhor versão de si mesmo todos os dias!&lt;/p&gt;
+&lt;p&gt;Abraços.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>

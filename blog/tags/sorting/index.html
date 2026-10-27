@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-gb"><head><meta charset="utf-8">
+<html lang="en-GB"><head><meta charset="utf-8">
 <meta http-equiv="content-type" content="text/html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,10 +15,12 @@
 <meta property="og:description" content="" />
 <meta name="twitter:description" content="" />
 
-<meta property="og:locale" content="en-gb" />
-<meta name="language" content="en-gb" />
+<meta property="og:locale" content="en-GB" />
+<meta name="language" content="en-GB" />
 
-  <link rel="alternate" hreflang="en-gb" href="https://gilsoares.dev/blog/tags/sorting/" title="" />
+  <link rel="alternate" hreflang="en" href="https://gilsoares.dev/blog/tags/sorting/" title="EN" />
+
+  <link rel="alternate" hreflang="pt" href="https://gilsoares.dev/blog/pt/tags/sorting/" title="PT" />
 
 
 
@@ -31,7 +33,7 @@
     <meta property="og:url" content="https://gilsoares.dev/blog/tags/sorting/">
 	<meta property="og:site_name" content="I&#39;m Gilmar Soares">
 	<meta property="og:title" content="Sorting">
-	<meta property="og:locale" content="en_gb">
+	<meta property="og:locale" content="en_GB">
 	<meta property="og:type" content="website">
 		<meta property="og:image" content="https://gilsoares.dev/blog/images/gilmar.jpeg">
 
@@ -48,7 +50,7 @@
     <link rel="canonical" href="https://gilsoares.dev/blog/tags/sorting/">
     <link href="/blog/tags/sorting/index.xml" rel="alternate" type="application/rss+xml" title="I&#39;m Gilmar Soares">
     <link href="/blog/tags/sorting/index.xml" rel="feed" type="application/rss+xml" title="I&#39;m Gilmar Soares">
-    <link href="/blog/style.min.009c76db84338e20dd9d3353f8bfaa7f0a2865c184b478f3b3ef0224b9026a2a.css" rel="stylesheet">
+    <link href="/blog/style.min.e3efc874cec9bc4f0234f3e5411cad1dfd09bd5d63794ea514fe343b0e8a141c.css" rel="stylesheet">
     <link href="/blog/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
 
     
@@ -90,6 +92,24 @@
     root.classList.add("dark");
     root.classList.remove("light");
     root.style.setProperty("--saber", SABERS[saber] || SABERS.blue);
+  })();
+
+  
+  (function () {
+    var here = "en";
+    var translations = {"en": "/blog/tags/sorting/", "pt": "/blog/pt/tags/sorting/"};
+    var saved = null;
+    try { saved = localStorage.getItem("lang"); } catch (e) {}
+    var wanted = saved === "pt" || saved === "en" ? saved
+      : (navigator.language || "").toLowerCase().indexOf("pt") === 0 ? "pt" : "en";
+    if (wanted !== here && translations[wanted]) {
+      location.replace(translations[wanted] + location.hash);
+      return;
+    }
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest(".lang a[data-lang]");
+      if (a) try { localStorage.setItem("lang", a.dataset.lang); } catch (e) {}
+    });
   })();
 </script>
 
@@ -136,7 +156,7 @@ stroke-linejoin="round" class="feather feather-home">
                 </li>
                 
                 <li>
-                    <a class="menu-link " href="https://gilsoares.dev/">
+                    <a class="menu-link " href="https://gilsoares.dev/?lang=en">
                         ABOUT
                     </a>
                     
@@ -152,9 +172,11 @@ stroke-linejoin="round" class="feather feather-home">
                 <li class="menu-separator">
                     <span>|</span>
                 </li>
-                
-                
             </ul>
+            <div class="lang" role="group" aria-label="Language">
+                <a href="/blog/tags/sorting/" data-lang="en" hreflang="en-GB" aria-current="true">EN</a>
+                <a href="/blog/pt/tags/sorting/" data-lang="pt" hreflang="pt-BR">PT</a>
+            </div>
             <a id="mode" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
 <title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
@@ -233,7 +255,7 @@ stroke-linejoin="round" class="feather feather-home">
     title="E-Mail">
     
 </a>
-<a href="https://gilsoares.dev/blog/index.xml" target="_blank" rel="noopener noreferrer me"
+<a href="/blog/index.xml" target="_blank" rel="noopener noreferrer me"
     title="RSS Feed">
     
 </a>

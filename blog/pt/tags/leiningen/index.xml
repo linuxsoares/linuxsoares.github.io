@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Leiningen on Eu sou Gilmar Soares</title>
+    <link>https://gilsoares.dev/blog/pt/tags/leiningen/</link>
+    <description>Recent content in Leiningen on Eu sou Gilmar Soares</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Mon, 16 Sep 2024 18:04:37 -0300</lastBuildDate><atom:link href="https://gilsoares.dev/blog/pt/tags/leiningen/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Primeiro Projeto em Clojure</title>
+      <link>https://gilsoares.dev/blog/pt/posts/first-clojure-project/</link>
+      <pubDate>Mon, 16 Sep 2024 18:04:37 -0300</pubDate>
+      
+      <guid>https://gilsoares.dev/blog/pt/posts/first-clojure-project/</guid>
+      
+      <description>&lt;h1 id=&#34;criando-nosso-primeiro-projeto-clojure&#34;&gt;Criando nosso primeiro projeto Clojure&lt;/h1&gt;
+&lt;p&gt;Vamos continuar nosso tutorial. Hoje vou explicar como criar um projeto Clojure. Decidi dividir este artigo em duas partes: vamos ver como criar um projeto comum e um projeto web, em que vamos criar uma API para algum serviço.&lt;/p&gt;
+&lt;p&gt;Vamos começar criando um projeto comum. Não vai ser uma API, uma biblioteca nem nada do tipo. Só quero mostrar como criar um projeto, explicar sua estrutura e todo o resto.&lt;/p&gt;
+&lt;p&gt;Criar um projeto é muito simples se você instalou o Leiningen [comentei sobre ele no nosso primeiro artigo]. Se ainda não instalou, faça um favor a si mesmo e instale. O link do projeto está aqui:
+&lt;a href=&#34;https://leiningen.org&#34;&gt;Leiningen&lt;/a&gt; — :)&lt;/p&gt;
+&lt;p&gt;Bom, se você fez esse favor a si mesmo e está com tudo bem instalado, é hora de criar o projeto Clojure. Vamos lá:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;➜ hello-clojure git:&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;master&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; ✗ lein new hello-clojure
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ao rodar o comando acima, você ganha um diretório chamado hello-clojure, porque esse é o nome do projeto que passamos como parâmetro para o comando new do lein.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;➜ creating-clojure-project git:&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;master&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; ✗ ls
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hello-clojure
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A estrutura de um projeto Clojure&lt;/p&gt;
+&lt;p&gt;Entrando no diretório, você vai encontrar uma estrutura com muitos arquivos e subdiretórios. Não se assuste nem abandone o artigo; vou explicar cada um deles em detalhes.
+Esta é a estrutura do projeto:&lt;/p&gt;
+&lt;p&gt;Vamos explicar cada arquivo e diretório, de cima para baixo:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;doc: na pasta doc, você pode colocar a documentação do seu projeto. O arquivo intro.md vem por padrão quando criamos o projeto com o lein.
+    Só para esclarecer, a extensão .md é de markdown, muito usado pelo GitHub, por exemplo.
+
+resources: o diretório resources é usado para guardar qualquer arquivo de configuração de que você precise.
+
+src: dentro de src é onde vamos guardar o código Clojure do projeto.
+
+test: o nome já diz tudo, contém todos os arquivos de teste do projeto.
+
+CHANGELOG: normalmente é onde registramos o que muda em cada versão do projeto, seja em Python, Java, Clojure ou Ruby.
+
+LICENSE: contém as informações legais em que normalmente clicamos &amp;quot;ACEITO&amp;quot; sem ler.
+
+project.clj: enquanto resources é usado para arquivos de configuração, o project.clj é onde de fato configuramos nosso projeto Clojure.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Para você não ficar com um projeto que não roda nem mostra o famoso &amp;ldquo;HELLO WORLD&amp;rdquo;, vou explicar como colocá-lo para funcionar. — :)&lt;/p&gt;
+&lt;p&gt;Abra o arquivo project.clj e adicione o código abaixo depois de :dependencies. Não esqueça que ele precisa ficar dentro dos parênteses.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ss&#34;&gt;:main&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;hello-clojure.core/foo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Depois disso, podemos rodar o projeto pela linha de comando, dentro do diretório do projeto, e ver o resultado:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;➜ hello-clojure git:&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;master&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; ✗ lein run Clojure
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Clojure Hello, World!
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;E aqui está nosso resultado, sem erros :)&lt;/p&gt;
+&lt;p&gt;Para este artigo não ficar longo demais, vou dividi-lo em partes.
+Esta parte é sobre criar o projeto, e outra vai tratar do uso de namespaces, de como importá-los em outros namespaces e assim por diante.&lt;/p&gt;
+&lt;p&gt;O código vai estar disponível no GitHub, e vamos atualizá-lo a cada artigo.&lt;/p&gt;
+&lt;p&gt;Por hoje é isso. Obrigado a todos que leram até aqui e pelo ótimo feedback!!!&lt;/p&gt;
+&lt;p&gt;Abaixo estão os outros artigos e os que vêm por aí:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Hello World;
+Criando nossas próprias funções;
+Usando funções existentes do Clojure;
+Criando um projeto Clojure;
+Vendo como criamos funções e as reutilizamos nos nossos projetos;
+Criando um projeto web;
+Usando classes Java em funções Clojure;
+E muito mais…
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Até mais!&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>

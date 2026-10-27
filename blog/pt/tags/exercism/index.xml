@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exercism on Eu sou Gilmar Soares</title>
+    <link>https://gilsoares.dev/blog/pt/tags/exercism/</link>
+    <description>Recent content in Exercism on Eu sou Gilmar Soares</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Mon, 23 Sep 2024 17:34:27 -0300</lastBuildDate><atom:link href="https://gilsoares.dev/blog/pt/tags/exercism/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Como Estou Aprendendo Golang</title>
+      <link>https://gilsoares.dev/blog/pt/posts/how-am-i-learning-golang/</link>
+      <pubDate>Mon, 23 Sep 2024 17:34:27 -0300</pubDate>
+      
+      <guid>https://gilsoares.dev/blog/pt/posts/how-am-i-learning-golang/</guid>
+      
+      <description>&lt;p&gt;No meu trabalho, comecei a usar Golang. Conheço ferramentas de IA como o ChatGPT, que podem me ajudar a concluir tarefas com mais eficiência.
+Mas eu gosto muito de aprender tecnologias novas e estou sempre aberto a novos desafios.&lt;/p&gt;
+&lt;p&gt;No passado, aprendi &lt;a href=&#34;https://www.scala-lang.org/&#34;&gt;Scala&lt;/a&gt;, &lt;a href=&#34;https://www.python.org/&#34;&gt;Python&lt;/a&gt; e &lt;a href=&#34;https://www.java.com/&#34;&gt;Java&lt;/a&gt; lendo livros e praticando todos os dias.
+Desta vez, estou aprendendo Golang de outras formas. Uso o Exercism para praticar Golang, e agora vou mostrar como usá-lo.&lt;/p&gt;
+&lt;h2 id=&#34;passo-1-instale-o-golang&#34;&gt;Passo 1: instale o Golang&lt;/h2&gt;
+&lt;p&gt;Primeiro, você precisa instalar o Golang no seu computador. Dá para baixar pelo site oficial.
+Não vou entrar em detalhes sobre a instalação, porque é bem simples.
+As instruções de instalação estão &lt;a href=&#34;https://go.dev/&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Com o Golang instalado, confira se a instalação deu certo rodando este comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;passo-2-instale-o-exercism&#34;&gt;Passo 2: instale o Exercism&lt;/h2&gt;
+&lt;p&gt;Agora que o Golang está instalado, vamos instalar o Exercism.
+As instruções de instalação para o seu sistema operacional estão &lt;a href=&#34;https://exercism.org/cli-walkthrough&#34;&gt;nesta página&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Depois de instalar o Exercism, confira a instalação rodando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exercism version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;passo-3-comece-a-praticar&#34;&gt;Passo 3: comece a praticar&lt;/h2&gt;
+&lt;p&gt;Com tudo configurado, você já pode praticar Golang com o Exercism.
+Baixe exercícios com o seguinte comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exercism download --exercise&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;exercise-name&amp;gt; --track&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;go
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Por exemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exercism download --track&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;go --exercise&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;lasagna-master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esse comando baixa o exercício &lt;code&gt;lasagna-master&lt;/code&gt; da trilha de Golang.&lt;/p&gt;
+&lt;p&gt;Depois de resolver o exercício, envie sua solução com:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exercism submit
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Isso envia sua solução para o Exercism, e você também pode ver as soluções de outras pessoas.&lt;/p&gt;
+&lt;h2 id=&#34;conclusão&#34;&gt;Conclusão&lt;/h2&gt;
+&lt;p&gt;É assim que estou aprendendo Golang com o Exercism. É uma ótima plataforma para praticar programação em várias linguagens.
+Que tal resolver alguns exercícios em Golang ou na linguagem que você preferir? Espero que você aproveite o processo!&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>

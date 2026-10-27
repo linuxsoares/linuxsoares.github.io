@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Copilot on Eu sou Gilmar Soares</title>
+    <link>https://gilsoares.dev/blog/pt/tags/copilot/</link>
+    <description>Recent content in Copilot on Eu sou Gilmar Soares</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Thu, 13 Feb 2025 10:02:53 -0300</lastBuildDate><atom:link href="https://gilsoares.dev/blog/pt/tags/copilot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Usando IA na Programação</title>
+      <link>https://gilsoares.dev/blog/pt/posts/using_ai_for_programmers/</link>
+      <pubDate>Thu, 13 Feb 2025 10:02:53 -0300</pubDate>
+      
+      <guid>https://gilsoares.dev/blog/pt/posts/using_ai_for_programmers/</guid>
+      
+      <description>&lt;p&gt;Hoje voltei das férias e fiquei pensando em escrever sobre como podemos usar IA para nos ajudar a programar.&lt;/p&gt;
+&lt;h2 id=&#34;faça-uma-pausa-e-recarregue-as-energias&#34;&gt;Faça uma pausa e recarregue as energias&lt;/h2&gt;
+&lt;p&gt;Antes de tudo, quero dizer o seguinte: reserve um momento na sua vida para descansar. Tire férias, vá à praia, à montanha,
+ao interior ou à cidade, vá para onde quiser. Mas garanta um tempo para recarregar as energias.&lt;/p&gt;
+&lt;h2 id=&#34;agora-vamos-falar-de-ia&#34;&gt;Agora, vamos falar de IA&lt;/h2&gt;
+&lt;p&gt;Ferramentas de IA como Copilot, ChatGPT e DeepSeek são ótimas para ajudar na programação, mas precisamos usá-las com cuidado.&lt;/p&gt;
+&lt;p&gt;Embora a IA possa nos ajudar a escrever código, o código gerado não é realmente nosso, e isso pode virar um problema no futuro.
+Se não entendermos completamente o código que a IA produz, depurá-lo depois pode ser difícil. Quando uma exceção é lançada,
+precisamos saber por que aconteceu e como corrigir.&lt;/p&gt;
+&lt;p&gt;Então, embora as ferramentas de IA sejam úteis, precisamos usá-las com cautela.
+Devemos conhecer cada linha de código que escrevemos, entender sua lógica e realmente assumir a responsabilidade por ela.&lt;/p&gt;
+&lt;h2 id=&#34;meu-conselho-sobre-o-uso-de-ia&#34;&gt;Meu conselho sobre o uso de IA&lt;/h2&gt;
+&lt;p&gt;Use IA para qualquer tarefa que precisar, seja para programar em par, escrever código, gerar testes
+ou criar documentação, mas sempre garanta que você entende o que está escrevendo.&lt;/p&gt;
+&lt;p&gt;Com este post, quero reforçar que a IA é só uma ferramenta. O código que a IA gera continua sendo responsabilidade sua.&lt;/p&gt;
+&lt;p&gt;Este é meu primeiro post depois das férias e espero que você goste!&lt;/p&gt;
+&lt;p&gt;Tenha um ótimo dia.&lt;/p&gt;
+&lt;p&gt;Até o próximo post!&lt;/p&gt;
+&lt;p&gt;Tchau.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>

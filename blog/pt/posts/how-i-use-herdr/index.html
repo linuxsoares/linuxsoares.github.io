@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Migrando do tmux para o Herdr: Configurando um Gerenciador de Workspaces Feito para IA | Eu sou Gilmar Soares</title>
+<meta property="og:title" content="Migrando do tmux para o Herdr: Configurando um Gerenciador de Workspaces Feito para IA | Eu sou Gilmar Soares" />
+<meta name="twitter:title" content="Migrando do tmux para o Herdr: Configurando um Gerenciador de Workspaces Feito para IA | Eu sou Gilmar Soares" />
+<meta itemprop="name" content="Migrando do tmux para o Herdr: Configurando um Gerenciador de Workspaces Feito para IA | Eu sou Gilmar Soares" />
+<meta name="application-name" content="Migrando do tmux para o Herdr: Configurando um Gerenciador de Workspaces Feito para IA | Eu sou Gilmar Soares" />
+<meta property="og:site_name" content="" />
+
+<meta name="description" content="">
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
+
+<meta property="og:locale" content="pt-BR" />
+<meta name="language" content="pt-BR" />
+
+  <link rel="alternate" hreflang="en" href="https://gilsoares.dev/blog/posts/how-i-use-herdr/" title="EN" />
+
+  <link rel="alternate" hreflang="pt" href="https://gilsoares.dev/blog/pt/posts/how-i-use-herdr/" title="PT" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2026-07-13T14:19:11-0300 />
+    <meta property="article:published_time" content=2026-07-13T14:19:11-0300 />
+    <meta property="og:url" content="https://gilsoares.dev/blog/pt/posts/how-i-use-herdr/" />
+
+    
+    <meta property="og:article:author" content="Gil" />
+    <meta property="article:author" content="Gil" />
+    <meta name="author" content="Gil" />
+    
+    
+
+    
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Migrando do tmux para o Herdr: Configurando um Gerenciador de Workspaces Feito para IA",
+        "author": {
+        "@type": "Person",
+        "name": "Gil"
+        },
+        "datePublished": "2026-07-13",
+        "description": "",
+        "wordCount":  588 ,
+        "mainEntityOfPage": "https://gilsoares.dev/blog/pt/posts/how-i-use-herdr/",
+        "dateModified": "2026-07-13",
+        "image": {
+        "@type": "ImageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Eu sou Gilmar Soares"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.168.0">
+
+    
+    <meta property="og:url" content="https://gilsoares.dev/blog/pt/posts/how-i-use-herdr/">
+	<meta property="og:site_name" content="Eu sou Gilmar Soares">
+	<meta property="og:title" content="Migrando do tmux para o Herdr: Configurando um Gerenciador de Workspaces Feito para IA">
+	<meta property="og:description" content="Por anos, o tmux foi o rei absoluto do meu fluxo de trabalho no terminal. Ele mantinha minhas sessões vivas, me deixava gerenciar abas e dividir painéis sem esforço. Mas, conforme agentes de código com IA como Claude Code e Antigravity passaram a fazer parte do meu dia a dia de desenvolvimento, senti falta de um gerenciador de workspaces que entendesse esses agentes.
+É aí que entra o Herdr, um gerenciador de workspaces nativo do terminal, feito especificamente para desenvolvedores que trabalham junto com agentes de código com IA. Ele oferece sessões persistentes, isolamento de workspaces e acompanhamento nativo do status dos agentes.">
+	<meta property="og:locale" content="pt_BR">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-07-13T14:19:11-03:00">
+		<meta property="article:modified_time" content="2026-07-13T14:19:11-03:00">
+		<meta property="og:image" content="https://gilsoares.dev/blog/images/gilmar.jpeg">
+
+
+    
+    
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://gilsoares.dev/blog/images/gilmar.jpeg">
+	<meta name="twitter:title" content="Migrando do tmux para o Herdr: Configurando um Gerenciador de Workspaces Feito para IA">
+	<meta name="twitter:description" content="Por anos, o tmux foi o rei absoluto do meu fluxo de trabalho no terminal. Ele mantinha minhas sessões vivas, me deixava gerenciar abas e dividir painéis sem esforço. Mas, conforme agentes de código com IA como Claude Code e Antigravity passaram a fazer parte do meu dia a dia de desenvolvimento, senti falta de um gerenciador de workspaces que entendesse esses agentes.
+É aí que entra o Herdr, um gerenciador de workspaces nativo do terminal, feito especificamente para desenvolvedores que trabalham junto com agentes de código com IA. Ele oferece sessões persistentes, isolamento de workspaces e acompanhamento nativo do status dos agentes.">
+
+
+    
+
+    <link rel="canonical" href="https://gilsoares.dev/blog/pt/posts/how-i-use-herdr/">
+    <link href="/blog/style.min.e3efc874cec9bc4f0234f3e5411cad1dfd09bd5d63794ea514fe343b0e8a141c.css" rel="stylesheet">
+    <link href="/blog/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/blog/favicon.ico">
+
+
+
+
+<link rel="manifest" href="https://gilsoares.dev/blog/site.webmanifest">
+
+<meta name="msapplication-config" content="/blog/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#03040a">
+    <meta name="color-scheme" content="light dark">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/blog/icons/favicon.svg">
+
+    
+    
+    
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script>
+  
+  (function () {
+    var SABERS = { blue: "#4fc3ff", green: "#5dff7a", purple: "#c77dff", red: "#ff3b3b" };
+    var saber = "blue";
+    try {
+      localStorage.setItem("theme", "dark");
+      saber = localStorage.getItem("saber") || saber;
+    } catch (e) {}
+    var root = document.documentElement;
+    root.classList.add("dark");
+    root.classList.remove("light");
+    root.style.setProperty("--saber", SABERS[saber] || SABERS.blue);
+  })();
+
+  
+  (function () {
+    var here = "pt";
+    var translations = {"en": "/blog/posts/how-i-use-herdr/", "pt": "/blog/pt/posts/how-i-use-herdr/"};
+    var saved = null;
+    try { saved = localStorage.getItem("lang"); } catch (e) {}
+    var wanted = saved === "pt" || saved === "en" ? saved
+      : (navigator.language || "").toLowerCase().indexOf("pt") === 0 ? "pt" : "en";
+    if (wanted !== here && translations[wanted]) {
+      location.replace(translations[wanted] + location.hash);
+      return;
+    }
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest(".lang a[data-lang]");
+      if (a) try { localStorage.setItem("lang", a.dataset.lang); } catch (e) {}
+    });
+  })();
+</script>
+
+    
+</head>
+<body data-theme = "dark" class="notransition">
+
+<script src="/blog/js/theme.min.8961c317c5b88b953fe27525839672c9343f1058ab044696ca225656c8ba2ab0.js" integrity="sha256-iWHDF8W4i5U/4nUlg5ZyyTQ/EFirBEaWyiJWVsi6KrA="></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="https://gilsoares.dev/blog/pt/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Início</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/blog/pt/">
+                        INÍCIO
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/blog/pt/posts/">
+                        ARQUIVO
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="https://gilsoares.dev/?lang=pt">
+                        SOBRE
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/pt/search/">
+                        BUSCA
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+            </ul>
+            <div class="lang" role="group" aria-label="Idioma">
+                <a href="/blog/posts/how-i-use-herdr/" data-lang="en" hreflang="en-GB">EN</a>
+                <a href="/blog/pt/posts/how-i-use-herdr/" data-lang="pt" hreflang="pt-BR" aria-current="true">PT</a>
+            </div>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Migrando do tmux para o Herdr: Configurando um Gerenciador de Workspaces Feito para IA</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2026-07-13T14:19:11-03:00" itemprop="datePublished"> 13 jul. 2026 </time>
+                    <span class="reading-time"> · 3 min de leitura</span>
+                </div>
+                
+            </header>
+            
+    
+    <details class="toc" ZgotmplZ>
+        <summary><b>Sumário</b></summary>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#a-configuração-mapeando-o-tmux-para-o-herdr">A configuração: mapeando o tmux para o Herdr</a>
+      <ul>
+        <li><a href="#1-a-tecla-de-prefixo">1. A tecla de prefixo</a></li>
+        <li><a href="#2-dividindo-painéis-de-forma-visual">2. Dividindo painéis de forma visual</a></li>
+        <li><a href="#3-navegação-entre-painéis-e-abas">3. Navegação entre painéis e abas</a></li>
+        <li><a href="#4-listas-interativas-o-equivalente-ao-choose-tree">4. Listas interativas (o equivalente ao choose-tree)</a></li>
+        <li><a href="#5-gerenciando-workspaces-na-hora">5. Gerenciando workspaces na hora</a></li>
+        <li><a href="#6-recarregando-a-configuração">6. Recarregando a configuração</a></li>
+      </ul>
+    </li>
+    <li><a href="#harmonia-visual-levando-o-tema-nord-para-o-herdr">Harmonia visual: levando o tema Nord para o Herdr</a></li>
+    <li><a href="#o-veredito">O veredito</a></li>
+  </ul>
+</nav>
+    </details>
+            <div class="page-content">
+                <p>Por anos, o <code>tmux</code> foi o rei absoluto do meu fluxo de trabalho no terminal. Ele mantinha minhas sessões vivas, me deixava gerenciar abas e dividir painéis sem esforço. Mas, conforme agentes de código com IA como Claude Code e Antigravity passaram a fazer parte do meu dia a dia de desenvolvimento, senti falta de um gerenciador de workspaces que entendesse esses agentes.</p>
+<p>É aí que entra o <strong><a href="https://herdr.dev/">Herdr</a></strong>, um gerenciador de workspaces nativo do terminal, feito especificamente para desenvolvedores que trabalham junto com agentes de código com IA. Ele oferece sessões persistentes, isolamento de workspaces e acompanhamento nativo do status dos agentes.</p>
+<p>Mas trocar de ferramenta não deveria significar jogar fora anos de memória muscular. Veja como configurei o Herdr para se comportar exatamente como meu <code>tmux</code>, dos atalhos ao tema.</p>
+<hr>
+<h2 id="a-configuração-mapeando-o-tmux-para-o-herdr">A configuração: mapeando o tmux para o Herdr</h2>
+<p>A configuração do Herdr fica em um arquivo TOML simples, em <code>~/.config/herdr/config.toml</code>. Para alinhá-lo às minhas convenções do tmux, mapeei as teclas na seção <code>[keys]</code>.</p>
+<h3 id="1-a-tecla-de-prefixo">1. A tecla de prefixo</h3>
+<p>Por padrão, o Herdr usa <code>ctrl+b</code>. Assim como no meu <code>.tmux.conf</code>, remapeei para <code>ctrl+a</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">keys</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">prefix</span> <span class="p">=</span> <span class="s2">&#34;ctrl+a&#34;</span>
+</span></span></code></pre></div><h3 id="2-dividindo-painéis-de-forma-visual">2. Dividindo painéis de forma visual</h3>
+<p>Prefiro usar <code>|</code> para dividir painéis na vertical (lado a lado) e <code>-</code> para divisões horizontais (um em cima do outro), porque são muito mais fáceis de lembrar que os padrões:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">split_vertical</span> <span class="p">=</span> <span class="s2">&#34;prefix+|&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">split_horizontal</span> <span class="p">=</span> <span class="s2">&#34;prefix+minus&#34;</span>
+</span></span></code></pre></div><h3 id="3-navegação-entre-painéis-e-abas">3. Navegação entre painéis e abas</h3>
+<p>Para me mover rápido sem interromper o fluxo, configurei uma combinação de setas e atalhos diretos:</p>
+<ul>
+<li><strong>Troca de painel:</strong> foco nos painéis usando as setas com o prefixo (<code>ctrl-a + Cima/Baixo/Esquerda/Direita</code>):
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">focus_pane_left</span> <span class="p">=</span> <span class="s2">&#34;prefix+left&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">focus_pane_down</span> <span class="p">=</span> <span class="s2">&#34;prefix+down&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">focus_pane_up</span> <span class="p">=</span> <span class="s2">&#34;prefix+up&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">focus_pane_right</span> <span class="p">=</span> <span class="s2">&#34;prefix+right&#34;</span>
+</span></span></code></pre></div></li>
+<li><strong>Troca direta de abas:</strong> atalhos diretos, como os do sistema operacional, para alternar entre abas sem apertar o prefixo:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">previous_tab</span> <span class="p">=</span> <span class="s2">&#34;ctrl+alt+h&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">next_tab</span> <span class="p">=</span> <span class="s2">&#34;ctrl+alt+l&#34;</span>
+</span></span></code></pre></div></li>
+</ul>
+<h3 id="4-listas-interativas-o-equivalente-ao-choose-tree">4. Listas interativas (o equivalente ao choose-tree)</h3>
+<p>No tmux, <code>prefix + w</code> abre uma lista de sessões e janelas (<code>choose-tree</code>). No Herdr, a busca equivalente é o <code>goto</code>. Troquei as teclas padrão para mapear o <code>goto</code> para o meu atalho do tmux:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">goto</span> <span class="p">=</span> <span class="s2">&#34;prefix+w&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">workspace_picker</span> <span class="p">=</span> <span class="s2">&#34;prefix+g&#34;</span>
+</span></span></code></pre></div><p><em>Agora <code>ctrl-a + w</code> abre uma busca em todos os workspaces, abas e painéis ativos.</em></p>
+<h3 id="5-gerenciando-workspaces-na-hora">5. Gerenciando workspaces na hora</h3>
+<p>Renomear workspaces ajuda a manter meus projetos ativos organizados. Ativei o atalho interativo para renomear workspaces:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">rename_workspace</span> <span class="p">=</span> <span class="s2">&#34;prefix+shift+w&#34;</span>
+</span></span></code></pre></div><p><em>Com <code>ctrl-a + W</code>, ele pede um novo nome para o workspace ativo.</em></p>
+<h3 id="6-recarregando-a-configuração">6. Recarregando a configuração</h3>
+<p>Para testar mudanças de configuração sem parar o servidor, mapeei o comando de recarregar:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">reload_config</span> <span class="p">=</span> <span class="s2">&#34;prefix+r&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">resize_mode</span> <span class="p">=</span> <span class="s2">&#34;prefix+shift+r&#34;</span> <span class="c"># Shifted resize_mode to avoid conflicts</span>
+</span></span></code></pre></div><hr>
+<h2 id="harmonia-visual-levando-o-tema-nord-para-o-herdr">Harmonia visual: levando o tema Nord para o Herdr</h2>
+<p>Uma das coisas de que eu mais gostava no tmux era meu tema Nord. Felizmente, o Herdr já vem com um tema Nord embutido. Configurar foi tão simples quanto mudar uma linha no bloco <code>[theme]</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">theme</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;nord&#34;</span>
+</span></span></code></pre></div><p>Isso atualiza as bordas, a barra de status, os destaques e os menus de busca para combinar com a estética limpa e gelada do Nord.</p>
+<hr>
+<h2 id="o-veredito">O veredito</h2>
+<p>Trocar o <code>tmux</code> pelo <code>Herdr</code> não exigiu sacrificar meu fluxo de trabalho. Mapeando as configurações no <code>config.toml</code>, fiquei com o melhor dos dois mundos:</p>
+<ol>
+<li>Minha memória muscular continua intacta.</li>
+<li>Agora tenho um gerenciador de workspaces que acompanha nativamente meus agentes de código com IA, roda esses agentes em sessões persistentes em segundo plano e se integra perfeitamente ao meu terminal.</li>
+</ol>
+<p>Se você quer atualizar seu multitarefa no terminal para a era da IA, recomendo muito experimentar o Herdr!</p>
+
+            </div>
+        </article><hr style="margin-top: 40px; margin-bottom: 40px" />
+<script
+  src="https://giscus.app/client.js"
+  data-repo="linuxsoares/linuxsoares.github.io"
+  data-repo-id="R_kgDOMy6rPg"
+  data-category="Q&A"
+  data-category-id="DIC_kwDOMy6rPs4C1pF4"
+  data-mapping="specific"
+  data-term="posts/how-i-use-herdr/"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="bottom"
+  data-theme="dark_tritanopia"
+  data-lang="pt"
+  crossorigin="anonymous"
+  async
+></script>
+</main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://www.linkedin.com/in/gilmarsoares/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    
+</a>
+<a href="https://www.instagram.com/gilmar.m.soares/" target="_blank" rel="noopener noreferrer me"
+    title="Instagram">
+    
+</a>
+<a href="https://bsky.app/profile/gilgms.bsky.social" target="_blank" rel="noopener noreferrer me"
+    title="Bluesky">
+    
+</a>
+<a href="mailto:linux.soares@gmail.com" target="_blank" rel="noopener noreferrer me"
+    title="E-Mail">
+    
+</a>
+<a href="/blog/pt/index.xml" target="_blank" rel="noopener noreferrer me"
+    title="RSS Feed">
+    
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2026 Gil.
+        Criado por <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Ir para cima" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+
+
+    
+    <script src="https://gilsoares.dev/blog/js/main.min.35f435a5d8eac613c52daa28d8af544a4512337d3e95236e4a4978417b8dcb2f.js" integrity="sha256-NfQ1pdjqxhPFLaoo2K9USkUSM30&#43;lSNuSkl4QXuNyy8="></script>
+
+    
+        
+        <script src="https://gilsoares.dev/blog/js/custom.min.c6cb5e120ab28067fbd32b878b08d30f70d7e9d2d9a11e7e8f13152037170bc3.js" integrity="sha256-xsteEgqygGf70yuHiwjTD3DX6dLZoR5&#43;jxMVIDcXC8M="></script>
+    
+
+</body>
+</html>

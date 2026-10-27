@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Learning on Eu sou Gilmar Soares</title>
+    <link>https://gilsoares.dev/blog/pt/tags/learning/</link>
+    <description>Recent content in Learning on Eu sou Gilmar Soares</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Thu, 28 Nov 2024 16:40:03 -0300</lastBuildDate><atom:link href="https://gilsoares.dev/blog/pt/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Indo Contra o Fluxo do Mundo</title>
+      <link>https://gilsoares.dev/blog/pt/posts/going_against_the_flow_of_the_world/</link>
+      <pubDate>Thu, 28 Nov 2024 16:40:03 -0300</pubDate>
+      
+      <guid>https://gilsoares.dev/blog/pt/posts/going_against_the_flow_of_the_world/</guid>
+      
+      <description>&lt;p&gt;No meu país, esta semana marca o início da &amp;ldquo;Black Week&amp;rdquo;, embora o termo correto seja &amp;ldquo;Black Friday&amp;rdquo;,
+tradicionalmente um único dia de descontos nas lojas. Como você sabe,
+sou engenheiro de software, e nesta semana notei muitos cursos em promoção,
+oferecendo várias opções para aprender coisas novas.&lt;/p&gt;
+&lt;p&gt;Desta vez, porém, fiquei refletindo sobre esses cursos e sobre o mundo cada vez mais acelerado
+em que vivemos, um mundo em que todos sentem a necessidade de aprender rápido e em que os cursos
+muitas vezes prometem aprendizado acelerado. Decidi que, como ser humano, não devo seguir esse caminho da pressa.&lt;/p&gt;
+&lt;p&gt;Ao longo da história, quem conquistou conhecimento profundo em algum assunto fez isso com
+anos de estudo e prática constante. Acredito que esse deve continuar sendo o padrão hoje.&lt;/p&gt;
+&lt;p&gt;A ideia deste post não é deixar de comprar cursos ou materiais de estudo.
+É abraçar o processo de aprender aos poucos, um pouco a cada dia, e resistir
+à pressão de seguir as tendências aceleradas do mundo moderno.&lt;/p&gt;
+&lt;p&gt;Pensando nisso, quero compartilhar minha decisão nesta semana de Black Friday:
+decidi não comprar nenhum curso ou material que prometa resultados mais rápidos, mais fáceis
+ou milagrosos. Vou continuar lendo meus livros, seguindo a rotina
+que compartilhei &lt;a href=&#34;https://gilsoares.dev/blog/pt/posts/remember-life-is-not-a-100-meter-race/&#34;&gt;aqui&lt;/a&gt; e focando em aprender devagar e com profundidade.&lt;/p&gt;
+&lt;p&gt;Espero que você aproveite bem esta semana de descontos onde mora e use a oportunidade para se planejar,
+focando em um caminho que considere o médio e o longo prazo, e que este post inspire você a refletir sobre
+seu processo de aprendizado e o caminho que está seguindo.&lt;/p&gt;
+&lt;p&gt;Abraços! 🤗&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Este Post Não É Sobre Tecnologia</title>
+      <link>https://gilsoares.dev/blog/pt/posts/this-post-isnt-about-technology/</link>
+      <pubDate>Thu, 14 Nov 2024 17:36:05 -0300</pubDate>
+      
+      <guid>https://gilsoares.dev/blog/pt/posts/this-post-isnt-about-technology/</guid>
+      
+      <description>&lt;h2 id=&#34;este-post-é-sobre-profundidade-de-conhecimento&#34;&gt;Este post é sobre profundidade de conhecimento!&lt;/h2&gt;
+&lt;p&gt;Quando comecei meu blog, adicionei o Google Analytics, não para acompanhar desempenho,
+mas porque tinha curiosidade de saber como as pessoas interagem com meus posts.&lt;/p&gt;
+&lt;p&gt;Com o tempo, escrevendo para este blog, percebi uma tendência interessante.
+As pessoas parecem preferir &amp;ldquo;receitas prontas&amp;rdquo; ou guias práticos.
+Por exemplo, quando escrevi posts sobre estudar Golang ou sobre como o Exercism me ajuda a aprender,
+eles chamaram pouca atenção. Da mesma forma, posts sobre LeetCode, técnicas de estudo
+ou minha agenda e rotina pessoal não geraram muito tráfego.&lt;/p&gt;
+&lt;p&gt;Mas, quando compartilhei um passo a passo de como usar Swagger em uma API em Golang, basicamente
+uma &amp;ldquo;receita&amp;rdquo;, ele se tornou o post mais visto da história do blog.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gilsoares.dev/blog/images/count_posts_view.png&#34; alt=&#34;Imagem de exemplo&#34;&gt;&lt;/p&gt;
+&lt;p&gt;A imagem acima mostra o comportamento do meu blog na última semana. Como dá para ver, o post sobre Swagger teve mais que o dobro de visualizações de qualquer outro post.&lt;/p&gt;
+&lt;p&gt;Refletindo sobre isso, se eu pudesse dar um conselho, seria este:&lt;/p&gt;
+&lt;p&gt;Trate sua vida como uma longa jornada, uma maratona, não uma corrida de velocidade. Organize seu tempo,
+estude um pouco todos os dias e crie uma rotina que ajude você a manter o foco.
+Busque um aprendizado profundo e significativo, porque adquirir conhecimento profundo é a melhor forma de
+garantir um futuro relativamente estável, livre de medos e incertezas, inclusive diante de desafios como a IA.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://gilsoares.dev/blog/pt/posts/remember-life-is-not-a-100-meter-race/&#34;&gt;No post&lt;/a&gt; em que comparo a vida a uma
+maratona, e não a uma corrida de 100 metros, mostro como funciona minha rotina, na esperança de ajudar e
+motivar você a organizar sua vida e focar no longo prazo.&lt;/p&gt;
+&lt;p&gt;Este post não é uma crítica, encare como um conselho de amigo!
+Como diz o poeta: &amp;ldquo;Se conselho fosse bom, não se dava, se vendia.&amp;rdquo;
+Mesmo assim, aqui estou eu, oferecendo de graça na tentativa de ajudar.&lt;/p&gt;
+&lt;p&gt;Espero que você tenha gostado deste post e que ele inspire ou ajude você de alguma forma!&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Continue Estudando, Nunca Pare</title>
+      <link>https://gilsoares.dev/blog/pt/posts/keep-studyng-never-stop/</link>
+      <pubDate>Fri, 27 Sep 2024 17:43:00 -0300</pubDate>
+      
+      <guid>https://gilsoares.dev/blog/pt/posts/keep-studyng-never-stop/</guid>
+      
+      <description>&lt;h2 id=&#34;por-que-sugiro-que-você-nunca-pare-de-estudar&#34;&gt;Por que sugiro que você nunca pare de estudar!&lt;/h2&gt;
+&lt;p&gt;No começo da minha carreira, procurando uma profissão, eu sempre fui muito curioso com computadores, mas, com uma renda limitada, não tínhamos condições de estudar, comprar computadores ou ter acesso à tecnologia em geral.&lt;/p&gt;
+&lt;p&gt;Meu primeiro emprego foi pintando guidões de bicicleta, e eu não tinha perspectivas. Depois, consegui um emprego cuidando do estoque de uma loja de doces. Com isso, fiz um acordo com minha família: o pouco dinheiro que eu ganhava iria para pagar a faculdade, e todos concordamos!&lt;/p&gt;
+&lt;p&gt;Antes de começar a faculdade, um amigo me indicou para uma vaga de infraestrutura (estágio) e, sem pensar duas vezes, &lt;strong&gt;eu disse SIM SIM SIM, EU QUERO&lt;/strong&gt;! Na entrevista, &lt;strong&gt;não fui totalmente sincero, COM MEDO DE PERDER A ÚNICA CHANCE&lt;/strong&gt;, e quando perguntaram se eu já tinha trocado discos rígidos em servidores, eu disse SIM, CLARO!&lt;/p&gt;
+&lt;p&gt;No fim, era tão simples que consegui fazer sem nunca ter feito antes.&lt;/p&gt;
+&lt;p&gt;Mais tarde, na faculdade, simplesmente me apaixonei por escrever código. Eu sempre concluía os projetos e as tarefas, às vezes sem dormir, mas concluía, e com uma alegria indescritível.&lt;/p&gt;
+&lt;p&gt;Hoje me tornei engenheiro de software e continuo aprendendo tecnologias novas como se fosse meu primeiro dia.&lt;/p&gt;
+&lt;p&gt;Preciso dizer: a faculdade ajudou minha vida como NADA mais poderia ter ajudado; mudou tudo para melhor! Às vezes ouço pessoas dizendo que não vale a pena, mas penso o contrário. Se você pode ou quer, faça sem hesitar, como eu fiz no passado!&lt;/p&gt;
+&lt;p&gt;Por fim, quero dizer que, apesar dos medos neste novo mundo de IA generativa e dos desafios que vêm com ele, &lt;strong&gt;nunca, NUNCA pare de estudar&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;E, se precisar de ajuda ou de alguma mentoria, posso tentar ajudar, é só me chamar!&lt;/p&gt;
+&lt;p&gt;Abraços, e siga em frente com seus estudos!&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Como Estou Aprendendo Golang</title>
+      <link>https://gilsoares.dev/blog/pt/posts/how-am-i-learning-golang/</link>
+      <pubDate>Mon, 23 Sep 2024 17:34:27 -0300</pubDate>
+      
+      <guid>https://gilsoares.dev/blog/pt/posts/how-am-i-learning-golang/</guid>
+      
+      <description>&lt;p&gt;No meu trabalho, comecei a usar Golang. Conheço ferramentas de IA como o ChatGPT, que podem me ajudar a concluir tarefas com mais eficiência.
+Mas eu gosto muito de aprender tecnologias novas e estou sempre aberto a novos desafios.&lt;/p&gt;
+&lt;p&gt;No passado, aprendi &lt;a href=&#34;https://www.scala-lang.org/&#34;&gt;Scala&lt;/a&gt;, &lt;a href=&#34;https://www.python.org/&#34;&gt;Python&lt;/a&gt; e &lt;a href=&#34;https://www.java.com/&#34;&gt;Java&lt;/a&gt; lendo livros e praticando todos os dias.
+Desta vez, estou aprendendo Golang de outras formas. Uso o Exercism para praticar Golang, e agora vou mostrar como usá-lo.&lt;/p&gt;
+&lt;h2 id=&#34;passo-1-instale-o-golang&#34;&gt;Passo 1: instale o Golang&lt;/h2&gt;
+&lt;p&gt;Primeiro, você precisa instalar o Golang no seu computador. Dá para baixar pelo site oficial.
+Não vou entrar em detalhes sobre a instalação, porque é bem simples.
+As instruções de instalação estão &lt;a href=&#34;https://go.dev/&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Com o Golang instalado, confira se a instalação deu certo rodando este comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;passo-2-instale-o-exercism&#34;&gt;Passo 2: instale o Exercism&lt;/h2&gt;
+&lt;p&gt;Agora que o Golang está instalado, vamos instalar o Exercism.
+As instruções de instalação para o seu sistema operacional estão &lt;a href=&#34;https://exercism.org/cli-walkthrough&#34;&gt;nesta página&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Depois de instalar o Exercism, confira a instalação rodando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exercism version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;passo-3-comece-a-praticar&#34;&gt;Passo 3: comece a praticar&lt;/h2&gt;
+&lt;p&gt;Com tudo configurado, você já pode praticar Golang com o Exercism.
+Baixe exercícios com o seguinte comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exercism download --exercise&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;exercise-name&amp;gt; --track&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;go
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Por exemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exercism download --track&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;go --exercise&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;lasagna-master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esse comando baixa o exercício &lt;code&gt;lasagna-master&lt;/code&gt; da trilha de Golang.&lt;/p&gt;
+&lt;p&gt;Depois de resolver o exercício, envie sua solução com:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exercism submit
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Isso envia sua solução para o Exercism, e você também pode ver as soluções de outras pessoas.&lt;/p&gt;
+&lt;h2 id=&#34;conclusão&#34;&gt;Conclusão&lt;/h2&gt;
+&lt;p&gt;É assim que estou aprendendo Golang com o Exercism. É uma ótima plataforma para praticar programação em várias linguagens.
+Que tal resolver alguns exercícios em Golang ou na linguagem que você preferir? Espero que você aproveite o processo!&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pkg-Go on Eu sou Gilmar Soares</title>
+    <link>https://gilsoares.dev/blog/pt/tags/pkg-go/</link>
+    <description>Recent content in Pkg-Go on Eu sou Gilmar Soares</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Thu, 31 Oct 2024 14:38:09 -0300</lastBuildDate><atom:link href="https://gilsoares.dev/blog/pt/tags/pkg-go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Como Publicar Sua Biblioteca Go no Pkg Go</title>
+      <link>https://gilsoares.dev/blog/pt/posts/how-to-publish-your-go-library-on-pkg-go/</link>
+      <pubDate>Thu, 31 Oct 2024 14:38:09 -0300</pubDate>
+      
+      <guid>https://gilsoares.dev/blog/pt/posts/how-to-publish-your-go-library-on-pkg-go/</guid>
+      
+      <description>&lt;p&gt;Continuando minha jornada para aprender Go com profundidade, hoje vou mostrar como publicar sua biblioteca no &lt;a href=&#34;https://pkg.go.dev/&#34;&gt;Pkg.Go&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Antes de tudo, você precisa ter uma biblioteca Go na sua conta do GitHub ou em qualquer outro repositório Git.
+Neste exemplo, vou usar uma biblioteca simples que criei, para mostrar como publicá-la.&lt;/p&gt;
+&lt;p&gt;A biblioteca é a &lt;a href=&#34;https://github.com/linuxsoares/valid-brazilian-cnpj&#34;&gt;valid-brazilian-cnpj&lt;/a&gt;.
+No Brasil temos um documento chamado CNPJ, e no ano que vem as regras de validação vão mudar,
+então criei esta biblioteca para me ajudar a validar CNPJs.&lt;/p&gt;
+&lt;p&gt;Como criei a biblioteca não é o foco deste post, mas, se quiser ver o código, é só acessar o repositório.&lt;/p&gt;
+&lt;p&gt;Para publicar sua biblioteca no Pkg.Go, você precisa criar uma release no seu repositório.&lt;/p&gt;
+&lt;h1 id=&#34;primeiro-passo-rode-go-mod-tidy&#34;&gt;Primeiro passo: rode go mod tidy&lt;/h1&gt;
+&lt;p&gt;O primeiro passo é rodar &lt;code&gt;go mod tidy&lt;/code&gt; para garantir que todas as dependências estejam no arquivo &lt;code&gt;go.mod&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go mod tidy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;segundo-passo-rode-os-testes&#34;&gt;Segundo passo: rode os testes&lt;/h1&gt;
+&lt;p&gt;O segundo passo é rodar os testes para garantir que tudo funciona como esperado.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt; -v
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esse comando roda todos os testes da biblioteca e mostra os resultados.&lt;/p&gt;
+&lt;h1 id=&#34;terceiro-passo-crie-uma-tag&#34;&gt;Terceiro passo: crie uma tag&lt;/h1&gt;
+&lt;p&gt;O terceiro passo é criar uma tag no seu repositório.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git tag v0.1.0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push origin v0.1.0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esses comandos criam uma tag chamada &lt;code&gt;v0.1.0&lt;/code&gt; e a enviam para o repositório.&lt;/p&gt;
+&lt;h1 id=&#34;quarto-passo-envie-para-o-pkggo&#34;&gt;Quarto passo: envie para o Pkg.Go&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;GOPROXY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;proxy.golang.org go list -m github.com/linuxsoares/valid-brazilian-cnpj@v0.1.1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Explicando o comando:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;GOPROXY=proxy.golang.org&lt;/code&gt;: é a URL do Pkg.Go&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;go list -m github.com/linuxsoares/valid-brazilian-cnpj@v0.1.1&lt;/code&gt;: este comando envia a biblioteca para o Pkg.Go&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Depois de rodar esse comando, você já pode acessar a biblioteca no Pkg.Go.&lt;/p&gt;
+&lt;h1 id=&#34;conclusão&#34;&gt;Conclusão&lt;/h1&gt;
+&lt;p&gt;Neste post, mostrei como publicar sua biblioteca no Pkg.Go.
+É um processo simples, mas é importante seguir os passos para garantir que tudo funcione como esperado.&lt;/p&gt;
+&lt;p&gt;Espero que você tenha gostado deste post, e até o próximo.&lt;/p&gt;
+&lt;p&gt;Bons códigos!&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>

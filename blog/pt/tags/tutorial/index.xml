@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorial on Eu sou Gilmar Soares</title>
+    <link>https://gilsoares.dev/blog/pt/tags/tutorial/</link>
+    <description>Recent content in Tutorial on Eu sou Gilmar Soares</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Thu, 31 Oct 2024 14:38:09 -0300</lastBuildDate><atom:link href="https://gilsoares.dev/blog/pt/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Como Publicar Sua Biblioteca Go no Pkg Go</title>
+      <link>https://gilsoares.dev/blog/pt/posts/how-to-publish-your-go-library-on-pkg-go/</link>
+      <pubDate>Thu, 31 Oct 2024 14:38:09 -0300</pubDate>
+      
+      <guid>https://gilsoares.dev/blog/pt/posts/how-to-publish-your-go-library-on-pkg-go/</guid>
+      
+      <description>&lt;p&gt;Continuando minha jornada para aprender Go com profundidade, hoje vou mostrar como publicar sua biblioteca no &lt;a href=&#34;https://pkg.go.dev/&#34;&gt;Pkg.Go&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Antes de tudo, você precisa ter uma biblioteca Go na sua conta do GitHub ou em qualquer outro repositório Git.
+Neste exemplo, vou usar uma biblioteca simples que criei, para mostrar como publicá-la.&lt;/p&gt;
+&lt;p&gt;A biblioteca é a &lt;a href=&#34;https://github.com/linuxsoares/valid-brazilian-cnpj&#34;&gt;valid-brazilian-cnpj&lt;/a&gt;.
+No Brasil temos um documento chamado CNPJ, e no ano que vem as regras de validação vão mudar,
+então criei esta biblioteca para me ajudar a validar CNPJs.&lt;/p&gt;
+&lt;p&gt;Como criei a biblioteca não é o foco deste post, mas, se quiser ver o código, é só acessar o repositório.&lt;/p&gt;
+&lt;p&gt;Para publicar sua biblioteca no Pkg.Go, você precisa criar uma release no seu repositório.&lt;/p&gt;
+&lt;h1 id=&#34;primeiro-passo-rode-go-mod-tidy&#34;&gt;Primeiro passo: rode go mod tidy&lt;/h1&gt;
+&lt;p&gt;O primeiro passo é rodar &lt;code&gt;go mod tidy&lt;/code&gt; para garantir que todas as dependências estejam no arquivo &lt;code&gt;go.mod&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go mod tidy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;segundo-passo-rode-os-testes&#34;&gt;Segundo passo: rode os testes&lt;/h1&gt;
+&lt;p&gt;O segundo passo é rodar os testes para garantir que tudo funciona como esperado.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt; -v
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esse comando roda todos os testes da biblioteca e mostra os resultados.&lt;/p&gt;
+&lt;h1 id=&#34;terceiro-passo-crie-uma-tag&#34;&gt;Terceiro passo: crie uma tag&lt;/h1&gt;
+&lt;p&gt;O terceiro passo é criar uma tag no seu repositório.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git tag v0.1.0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push origin v0.1.0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esses comandos criam uma tag chamada &lt;code&gt;v0.1.0&lt;/code&gt; e a enviam para o repositório.&lt;/p&gt;
+&lt;h1 id=&#34;quarto-passo-envie-para-o-pkggo&#34;&gt;Quarto passo: envie para o Pkg.Go&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;GOPROXY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;proxy.golang.org go list -m github.com/linuxsoares/valid-brazilian-cnpj@v0.1.1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Explicando o comando:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;GOPROXY=proxy.golang.org&lt;/code&gt;: é a URL do Pkg.Go&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;go list -m github.com/linuxsoares/valid-brazilian-cnpj@v0.1.1&lt;/code&gt;: este comando envia a biblioteca para o Pkg.Go&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Depois de rodar esse comando, você já pode acessar a biblioteca no Pkg.Go.&lt;/p&gt;
+&lt;h1 id=&#34;conclusão&#34;&gt;Conclusão&lt;/h1&gt;
+&lt;p&gt;Neste post, mostrei como publicar sua biblioteca no Pkg.Go.
+É um processo simples, mas é importante seguir os passos para garantir que tudo funcione como esperado.&lt;/p&gt;
+&lt;p&gt;Espero que você tenha gostado deste post, e até o próximo.&lt;/p&gt;
+&lt;p&gt;Bons códigos!&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Duck Typing em Go</title>
+      <link>https://gilsoares.dev/blog/pt/posts/duck-typing-in-go/</link>
+      <pubDate>Thu, 10 Oct 2024 13:46:16 -0300</pubDate>
+      
+      <guid>https://gilsoares.dev/blog/pt/posts/duck-typing-in-go/</guid>
+      
+      <description>&lt;p&gt;Olá, pessoal!&lt;/p&gt;
+&lt;p&gt;Como contei em um post anterior, estou aprendendo Go para usar em alguns projetos do trabalho.
+Neste post curto, vou explicar como usar duck typing em Go,
+algo que foi bem desafiador para mim quando comecei a aprender a linguagem.&lt;/p&gt;
+&lt;p&gt;Para começar, vamos ver um exemplo simples em Python:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Duck&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;quack&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Quack, quack!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Person&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Duck&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;pass&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;quack&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;obj&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;obj&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;quack&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;donald&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Duck&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;john&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Person&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;quack&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;donald&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Quack&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;quack&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;!&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;quack&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;john&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Quack&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;quack&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;!&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Neste exemplo um pouco excêntrico, a classe Person consegue &amp;ldquo;grasnar&amp;rdquo; como um Duck porque herda da classe Duck.
+Em Python, não precisamos declarar explicitamente o tipo do objeto na função; simplesmente chamamos o método que queremos usar.&lt;/p&gt;
+&lt;p&gt;Agora, vamos ver como fazer algo parecido em Go:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;package&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Dog&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;interface&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;	&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Bark&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Cat&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;interface&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;	&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Meow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Shihtzu&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;	&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Name&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Chartreux&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;	&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Name&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Shihtzu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Bark&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;	&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;message&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Sprintf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Type: %T - My name is %s! Bark! Bark! Bark!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;	&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;message&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Chartreux&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Meow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;	&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;message&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Sprintf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Type: %T - My name is %s! Meow! Meow! Meow! &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;	&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;message&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;	&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;dog&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Dog&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;	&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;dog&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Shihtzu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Puppy&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;	&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;dog&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Bark&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;	&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Cat&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;	&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Chartreux&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Kitty&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;	&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Meow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;O código de exemplo acima está neste &lt;a href=&#34;https://github.com/linuxsoares/go-interfaces&#34;&gt;repositório&lt;/a&gt; no GitHub.&lt;/p&gt;
+&lt;p&gt;Neste exemplo em Go, temos duas interfaces, Dog e Cat, e duas structs, Shihtzu e Chartreux.
+A interface Dog define um método Bark, enquanto a interface Cat define um método Meow.
+As structs Shihtzu e Chartreux implementam os métodos Bark e Meow, respectivamente.
+É importante notar que, embora isso não esteja escrito explicitamente no código, essas structs estão implementando as interfaces.&lt;/p&gt;
+&lt;p&gt;Em Go, implementamos uma interface simplesmente definindo os métodos exigidos, sem precisar declarar que a struct implementa explicitamente a interface.&lt;/p&gt;
+&lt;p&gt;Em outras palavras, não precisamos dizer que Shihtzu é um Dog; basta implementar o método Bark para a struct Shihtzu,
+e o Go entende automaticamente que Shihtzu satisfaz a interface Dog.&lt;/p&gt;
+&lt;p&gt;Isso é bem diferente de linguagens como Python ou Java, mas, quando você pega o jeito,
+é direto e fácil de usar.&lt;/p&gt;
+&lt;p&gt;Espero que este post ajude você a entender melhor o Go e como o duck typing funciona na linguagem!&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Como Estou Aprendendo Golang</title>
+      <link>https://gilsoares.dev/blog/pt/posts/how-am-i-learning-golang/</link>
+      <pubDate>Mon, 23 Sep 2024 17:34:27 -0300</pubDate>
+      
+      <guid>https://gilsoares.dev/blog/pt/posts/how-am-i-learning-golang/</guid>
+      
+      <description>&lt;p&gt;No meu trabalho, comecei a usar Golang. Conheço ferramentas de IA como o ChatGPT, que podem me ajudar a concluir tarefas com mais eficiência.
+Mas eu gosto muito de aprender tecnologias novas e estou sempre aberto a novos desafios.&lt;/p&gt;
+&lt;p&gt;No passado, aprendi &lt;a href=&#34;https://www.scala-lang.org/&#34;&gt;Scala&lt;/a&gt;, &lt;a href=&#34;https://www.python.org/&#34;&gt;Python&lt;/a&gt; e &lt;a href=&#34;https://www.java.com/&#34;&gt;Java&lt;/a&gt; lendo livros e praticando todos os dias.
+Desta vez, estou aprendendo Golang de outras formas. Uso o Exercism para praticar Golang, e agora vou mostrar como usá-lo.&lt;/p&gt;
+&lt;h2 id=&#34;passo-1-instale-o-golang&#34;&gt;Passo 1: instale o Golang&lt;/h2&gt;
+&lt;p&gt;Primeiro, você precisa instalar o Golang no seu computador. Dá para baixar pelo site oficial.
+Não vou entrar em detalhes sobre a instalação, porque é bem simples.
+As instruções de instalação estão &lt;a href=&#34;https://go.dev/&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Com o Golang instalado, confira se a instalação deu certo rodando este comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;passo-2-instale-o-exercism&#34;&gt;Passo 2: instale o Exercism&lt;/h2&gt;
+&lt;p&gt;Agora que o Golang está instalado, vamos instalar o Exercism.
+As instruções de instalação para o seu sistema operacional estão &lt;a href=&#34;https://exercism.org/cli-walkthrough&#34;&gt;nesta página&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Depois de instalar o Exercism, confira a instalação rodando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exercism version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;passo-3-comece-a-praticar&#34;&gt;Passo 3: comece a praticar&lt;/h2&gt;
+&lt;p&gt;Com tudo configurado, você já pode praticar Golang com o Exercism.
+Baixe exercícios com o seguinte comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exercism download --exercise&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;exercise-name&amp;gt; --track&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;go
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Por exemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exercism download --track&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;go --exercise&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;lasagna-master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esse comando baixa o exercício &lt;code&gt;lasagna-master&lt;/code&gt; da trilha de Golang.&lt;/p&gt;
+&lt;p&gt;Depois de resolver o exercício, envie sua solução com:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exercism submit
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Isso envia sua solução para o Exercism, e você também pode ver as soluções de outras pessoas.&lt;/p&gt;
+&lt;h2 id=&#34;conclusão&#34;&gt;Conclusão&lt;/h2&gt;
+&lt;p&gt;É assim que estou aprendendo Golang com o Exercism. É uma ótima plataforma para praticar programação em várias linguagens.
+Que tal resolver alguns exercícios em Golang ou na linguagem que você preferir? Espero que você aproveite o processo!&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Primeiro Projeto em Clojure</title>
+      <link>https://gilsoares.dev/blog/pt/posts/first-clojure-project/</link>
+      <pubDate>Mon, 16 Sep 2024 18:04:37 -0300</pubDate>
+      
+      <guid>https://gilsoares.dev/blog/pt/posts/first-clojure-project/</guid>
+      
+      <description>&lt;h1 id=&#34;criando-nosso-primeiro-projeto-clojure&#34;&gt;Criando nosso primeiro projeto Clojure&lt;/h1&gt;
+&lt;p&gt;Vamos continuar nosso tutorial. Hoje vou explicar como criar um projeto Clojure. Decidi dividir este artigo em duas partes: vamos ver como criar um projeto comum e um projeto web, em que vamos criar uma API para algum serviço.&lt;/p&gt;
+&lt;p&gt;Vamos começar criando um projeto comum. Não vai ser uma API, uma biblioteca nem nada do tipo. Só quero mostrar como criar um projeto, explicar sua estrutura e todo o resto.&lt;/p&gt;
+&lt;p&gt;Criar um projeto é muito simples se você instalou o Leiningen [comentei sobre ele no nosso primeiro artigo]. Se ainda não instalou, faça um favor a si mesmo e instale. O link do projeto está aqui:
+&lt;a href=&#34;https://leiningen.org&#34;&gt;Leiningen&lt;/a&gt; — :)&lt;/p&gt;
+&lt;p&gt;Bom, se você fez esse favor a si mesmo e está com tudo bem instalado, é hora de criar o projeto Clojure. Vamos lá:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;➜ hello-clojure git:&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;master&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; ✗ lein new hello-clojure
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ao rodar o comando acima, você ganha um diretório chamado hello-clojure, porque esse é o nome do projeto que passamos como parâmetro para o comando new do lein.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;➜ creating-clojure-project git:&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;master&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; ✗ ls
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hello-clojure
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A estrutura de um projeto Clojure&lt;/p&gt;
+&lt;p&gt;Entrando no diretório, você vai encontrar uma estrutura com muitos arquivos e subdiretórios. Não se assuste nem abandone o artigo; vou explicar cada um deles em detalhes.
+Esta é a estrutura do projeto:&lt;/p&gt;
+&lt;p&gt;Vamos explicar cada arquivo e diretório, de cima para baixo:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;doc: na pasta doc, você pode colocar a documentação do seu projeto. O arquivo intro.md vem por padrão quando criamos o projeto com o lein.
+    Só para esclarecer, a extensão .md é de markdown, muito usado pelo GitHub, por exemplo.
+
+resources: o diretório resources é usado para guardar qualquer arquivo de configuração de que você precise.
+
+src: dentro de src é onde vamos guardar o código Clojure do projeto.
+
+test: o nome já diz tudo, contém todos os arquivos de teste do projeto.
+
+CHANGELOG: normalmente é onde registramos o que muda em cada versão do projeto, seja em Python, Java, Clojure ou Ruby.
+
+LICENSE: contém as informações legais em que normalmente clicamos &amp;quot;ACEITO&amp;quot; sem ler.
+
+project.clj: enquanto resources é usado para arquivos de configuração, o project.clj é onde de fato configuramos nosso projeto Clojure.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Para você não ficar com um projeto que não roda nem mostra o famoso &amp;ldquo;HELLO WORLD&amp;rdquo;, vou explicar como colocá-lo para funcionar. — :)&lt;/p&gt;
+&lt;p&gt;Abra o arquivo project.clj e adicione o código abaixo depois de :dependencies. Não esqueça que ele precisa ficar dentro dos parênteses.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ss&#34;&gt;:main&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;hello-clojure.core/foo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Depois disso, podemos rodar o projeto pela linha de comando, dentro do diretório do projeto, e ver o resultado:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;➜ hello-clojure git:&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;master&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; ✗ lein run Clojure
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Clojure Hello, World!
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;E aqui está nosso resultado, sem erros :)&lt;/p&gt;
+&lt;p&gt;Para este artigo não ficar longo demais, vou dividi-lo em partes.
+Esta parte é sobre criar o projeto, e outra vai tratar do uso de namespaces, de como importá-los em outros namespaces e assim por diante.&lt;/p&gt;
+&lt;p&gt;O código vai estar disponível no GitHub, e vamos atualizá-lo a cada artigo.&lt;/p&gt;
+&lt;p&gt;Por hoje é isso. Obrigado a todos que leram até aqui e pelo ótimo feedback!!!&lt;/p&gt;
+&lt;p&gt;Abaixo estão os outros artigos e os que vêm por aí:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Hello World;
+Criando nossas próprias funções;
+Usando funções existentes do Clojure;
+Criando um projeto Clojure;
+Vendo como criamos funções e as reutilizamos nos nossos projetos;
+Criando um projeto web;
+Usando classes Java em funções Clojure;
+E muito mais…
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Até mais!&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>
