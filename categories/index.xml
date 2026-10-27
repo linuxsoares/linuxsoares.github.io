@@ -6,7 +6,29 @@
     <description>Recent content in Categories on I&#39;m Gilmar Soares</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 06 Jan 2026 17:54:50 -0300</lastBuildDate><atom:link href="https://linuxsoares.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Oct 2026 10:00:00 -0300</lastBuildDate><atom:link href="https://linuxsoares.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI</title>
+      <link>https://linuxsoares.github.io/categories/ai/</link>
+      <pubDate>Tue, 27 Oct 2026 10:00:00 -0300</pubDate>
+      
+      <guid>https://linuxsoares.github.io/categories/ai/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Tutorials</title>
+      <link>https://linuxsoares.github.io/categories/tutorials/</link>
+      <pubDate>Tue, 27 Oct 2026 10:00:00 -0300</pubDate>
+      
+      <guid>https://linuxsoares.github.io/categories/tutorials/</guid>
+      
+      <description></description>
+      
+    </item>
+    
     <item>
       <title>Personal</title>
       <link>https://linuxsoares.github.io/categories/personal/</link>
@@ -52,33 +74,11 @@
     </item>
     
     <item>
-      <title>AI</title>
-      <link>https://linuxsoares.github.io/categories/ai/</link>
-      <pubDate>Thu, 13 Feb 2025 10:02:53 -0300</pubDate>
-      
-      <guid>https://linuxsoares.github.io/categories/ai/</guid>
-      
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>Learning</title>
       <link>https://linuxsoares.github.io/categories/learning/</link>
       <pubDate>Thu, 28 Nov 2024 16:40:03 -0300</pubDate>
       
       <guid>https://linuxsoares.github.io/categories/learning/</guid>
-      
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Tutorials</title>
-      <link>https://linuxsoares.github.io/categories/tutorials/</link>
-      <pubDate>Thu, 31 Oct 2024 14:38:09 -0300</pubDate>
-      
-      <guid>https://linuxsoares.github.io/categories/tutorials/</guid>
       
       <description></description>
       

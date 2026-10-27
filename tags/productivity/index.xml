@@ -6,7 +6,84 @@
     <description>Recent content in Productivity on I&#39;m Gilmar Soares</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 06 Jan 2026 17:54:50 -0300</lastBuildDate><atom:link href="https://linuxsoares.github.io/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Oct 2026 10:00:00 -0300</lastBuildDate><atom:link href="https://linuxsoares.github.io/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Treating Claude Code Like a Teammate: Developing with Multica</title>
+      <link>https://linuxsoares.github.io/posts/how-to-use-multica-with-claude-code/</link>
+      <pubDate>Tue, 27 Oct 2026 10:00:00 -0300</pubDate>
+      
+      <guid>https://linuxsoares.github.io/posts/how-to-use-multica-with-claude-code/</guid>
+      
+      <description>&lt;p&gt;Running Claude Code in a terminal works great for one task at a time. You open a session, describe what you want, watch it work, review the diff. But once you start juggling several tasks — a bug fix here, a refactor there, a small feature waiting in the backlog — the terminal stops being the right place to manage that work. You end up with a pile of tabs, half-finished sessions, and no clear picture of what each agent is doing.&lt;/p&gt;
+&lt;p&gt;That is the problem &lt;strong&gt;&lt;a href=&#34;https://github.com/multica-ai/multica&#34;&gt;Multica&lt;/a&gt;&lt;/strong&gt; solves. It is a source-available, self-hostable workspace where coding agents work like teammates: you assign them an issue, they pick it up, report progress, raise blockers, and hand the work back for review. It does not ship its own model — it drives the agent CLIs you already have installed, and Claude Code is one of them.&lt;/p&gt;
+&lt;p&gt;Here is how to set it up and use it day to day with Claude Code.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;how-multica-fits-together&#34;&gt;How Multica Fits Together&lt;/h2&gt;
+&lt;p&gt;Before installing anything, it helps to know the pieces:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Workspaces&lt;/strong&gt; — separate agents, issues and settings per team or project.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Issues&lt;/strong&gt; — units of work. You assign an issue to an agent the same way you would assign it to a person.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Agents&lt;/strong&gt; — named teammates, each backed by a provider (like Claude Code) and a runtime.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Runtimes&lt;/strong&gt; — the machines where agents actually run. Each one runs a small daemon, so &lt;strong&gt;your code stays on your machine&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Skills&lt;/strong&gt; — reusable playbooks that agents share, so a good way of doing something only has to be written once.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Squads&lt;/strong&gt; — agents and people on one team, with a leader routing work.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Autopilots&lt;/strong&gt; — scheduled jobs for things like standups, audits and reports.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The key idea: the Multica server is the board, and the daemon on your laptop is the worker that runs &lt;code&gt;claude&lt;/code&gt; when an issue lands on it.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;step-1-install-the-cli&#34;&gt;Step 1: Install the CLI&lt;/h2&gt;
+&lt;p&gt;On macOS or Linux, Homebrew is the easiest route:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install multica-ai/tap/multica
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Make sure Claude Code itself is installed and signed in — Multica uses your existing &lt;code&gt;claude&lt;/code&gt; binary, it does not bring its own:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;claude --version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;step-2-connect-and-start-the-daemon&#34;&gt;Step 2: Connect and Start the Daemon&lt;/h2&gt;
+&lt;p&gt;If you are using Multica Cloud, a single command configures the CLI, authenticates you in the browser and starts the daemon:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;multica setup
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Prefer to keep everything on your own infrastructure? Multica can be self-hosted with Docker. The install script can bring the server along, and &lt;code&gt;setup self-host&lt;/code&gt; points the CLI at it:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -fsSL https://raw.githubusercontent.com/multica-ai/multica/main/scripts/install.sh &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; bash -s -- --with-server
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;multica setup self-host
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then confirm the daemon is running and that it found Claude Code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;multica daemon status
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The daemon auto-detects agent CLIs on your &lt;code&gt;PATH&lt;/code&gt;, so &lt;code&gt;claude&lt;/code&gt; should show up in the list of detected agents. If it lives somewhere unusual, point the daemon at it:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;MULTICA_CLAUDE_PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/.local/bin/claude&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;step-3-create-a-claude-agent&#34;&gt;Step 3: Create a Claude Agent&lt;/h2&gt;
+&lt;p&gt;In the web app, open &lt;strong&gt;Agents → New agent&lt;/strong&gt;, pick your machine as the runtime and Claude Code as the provider, and give it a name. That name is how you will assign work to it. You can check it from the terminal:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;multica agent list
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;the-daily-loop-issues-in-reviews-out&#34;&gt;The Daily Loop: Issues In, Reviews Out&lt;/h2&gt;
+&lt;p&gt;This is where Multica changes the workflow. Instead of opening a terminal session, you write an issue:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;multica issue create --title &lt;span class=&#34;s2&#34;&gt;&amp;#34;Add pagination to the /posts endpoint&amp;#34;&lt;/span&gt; --assignee &lt;span class=&#34;s2&#34;&gt;&amp;#34;claude&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Or assign an existing one:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;multica issue assign &amp;lt;issue-id&amp;gt; --to &lt;span class=&#34;s2&#34;&gt;&amp;#34;claude&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;From there, the daemon picks up the task and runs Claude Code against your repository. Two details here matter a lot:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Every task runs in isolation.&lt;/strong&gt; Multica keeps a cached clone of the repository and gives each task its own &lt;code&gt;git worktree&lt;/code&gt; under &lt;code&gt;~/multica_workspaces&lt;/code&gt;. Two agents working on two issues never step on each other&amp;rsquo;s files.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Work goes to review, not to &lt;code&gt;main&lt;/code&gt;.&lt;/strong&gt; When Claude finishes, the issue moves to review. You read the diff like you would read a colleague&amp;rsquo;s pull request.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;While it works, you can follow along without attaching to any terminal:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;multica issue runs &amp;lt;issue-id&amp;gt; --active   &lt;span class=&#34;c1&#34;&gt;# what is running right now&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;multica issue run-messages &amp;lt;task-id&amp;gt;     &lt;span class=&#34;c1&#34;&gt;# the full message log for a run&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;multica issue usage &amp;lt;issue-id&amp;gt;           &lt;span class=&#34;c1&#34;&gt;# how many tokens it took&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The execution log records every tool call and command the agent ran, which makes reviewing &lt;em&gt;how&lt;/em&gt; it got to a result just as easy as reviewing the result itself. If the agent gets stuck, it raises a blocker on the issue, and you answer it with a comment — in the web app or with &lt;code&gt;multica issue comment add&lt;/code&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;tips-for-getting-good-results-with-claude&#34;&gt;Tips for Getting Good Results with Claude&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Keep a &lt;code&gt;CLAUDE.md&lt;/code&gt; in your repository.&lt;/strong&gt; Claude Code reads it on every run, so it is the best place to describe your conventions: how to run the tests, how commits should look, what not to touch. Since every Multica task starts from a fresh worktree, this file is what gives each run the same context.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Write issues like you would for a person.&lt;/strong&gt; A clear title, the expected behavior and how to verify it. An agent that knows how to check its own work hands back much better reviews.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tune the daemon with environment variables.&lt;/strong&gt; A few I find useful:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;MULTICA_CLAUDE_MODEL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;opus&amp;#34;&lt;/span&gt;               &lt;span class=&#34;c1&#34;&gt;# model used by Claude Code tasks&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;MULTICA_DAEMON_MAX_CONCURRENT_TASKS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;     &lt;span class=&#34;c1&#34;&gt;# default is 20 — keep your laptop breathing&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;MULTICA_AGENT_IDLE_WATCHDOG&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;30m           &lt;span class=&#34;c1&#34;&gt;# stop runs that go quiet (default 2h)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Let the daemon start on its own.&lt;/strong&gt; So you never forget to bring your agents online:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;multica daemon autostart &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Turn repeated instructions into Skills.&lt;/strong&gt; If you keep writing the same guidance in issues (&amp;ldquo;always add a test&amp;rdquo;, &amp;ldquo;update the changelog&amp;rdquo;), that belongs in a skill that every agent can reuse.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;the-verdict&#34;&gt;The Verdict&lt;/h2&gt;
+&lt;p&gt;Claude Code is already a capable developer. What Multica adds is the &lt;em&gt;team&lt;/em&gt; around it: a board where work is visible, isolated worktrees so tasks run in parallel safely, a review step before anything reaches &lt;code&gt;main&lt;/code&gt;, and a log of everything the agent did.&lt;/p&gt;
+&lt;p&gt;The shift in mindset is the real win. I stopped thinking &amp;ldquo;let me open Claude and do this&amp;rdquo; and started thinking &amp;ldquo;let me write a good issue and assign it.&amp;rdquo; If you already use Claude Code daily and feel the pain of managing several sessions at once, give Multica a try.&lt;/p&gt;
+</description>
+      
+    </item>
+    
     <item>
       <title>New Year, Same Consistency</title>
       <link>https://linuxsoares.github.io/posts/new_year_same_consistency/</link>
