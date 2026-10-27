@@ -1,9 +1,9 @@
 {
     "name": "I'm Gilmar Soares",
     "short_name": "I'm Gilmar Soares",
-    "start_url": "/",
-    "theme_color": "#434648",
-    "background_color": "#ffffff",
+    "start_url": "https://linuxsoares.github.io/",
+    "theme_color": "#03040a",
+    "background_color": "#131418",
     "display": "standalone",
     "icons": [
         {

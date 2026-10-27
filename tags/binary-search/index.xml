@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Binary-Search on I&#39;m Gilmar Soares</title>
-    <link>/tags/binary-search/</link>
+    <link>https://linuxsoares.github.io/tags/binary-search/</link>
     <description>Recent content in Binary-Search on I&#39;m Gilmar Soares</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 21 Nov 2024 16:15:51 -0300</lastBuildDate><atom:link href="/tags/binary-search/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 Nov 2024 16:15:51 -0300</lastBuildDate><atom:link href="https://linuxsoares.github.io/tags/binary-search/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Explaining Binary Search in a Simple Way</title>
-      <link>/posts/explaining_binary_search_in_a_simple_way/</link>
+      <link>https://linuxsoares.github.io/posts/explaining_binary_search_in_a_simple_way/</link>
       <pubDate>Thu, 21 Nov 2024 16:15:51 -0300</pubDate>
       
-      <guid>/posts/explaining_binary_search_in_a_simple_way/</guid>
+      <guid>https://linuxsoares.github.io/posts/explaining_binary_search_in_a_simple_way/</guid>
       
       <description>&lt;p&gt;Today I try to explain binary search in a simple way.
 Binary search is a search algorithm that finds the position of a target value within a sorted array.

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on I&#39;m Gilmar Soares</title>
-    <link>/tags/</link>
+    <link>https://linuxsoares.github.io/tags/</link>
     <description>Recent content in Tags on I&#39;m Gilmar Soares</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 06 Jan 2026 17:54:50 -0300</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Jan 2026 17:54:50 -0300</lastBuildDate><atom:link href="https://linuxsoares.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Consistency</title>
-      <link>/tags/consistency/</link>
+      <link>https://linuxsoares.github.io/tags/consistency/</link>
       <pubDate>Tue, 06 Jan 2026 17:54:50 -0300</pubDate>
       
-      <guid>/tags/consistency/</guid>
+      <guid>https://linuxsoares.github.io/tags/consistency/</guid>
       
       <description></description>
       
@@ -20,10 +20,10 @@
     
     <item>
       <title>Goals</title>
-      <link>/tags/goals/</link>
+      <link>https://linuxsoares.github.io/tags/goals/</link>
       <pubDate>Tue, 06 Jan 2026 17:54:50 -0300</pubDate>
       
-      <guid>/tags/goals/</guid>
+      <guid>https://linuxsoares.github.io/tags/goals/</guid>
       
       <description></description>
       
@@ -31,10 +31,10 @@
     
     <item>
       <title>Motivation</title>
-      <link>/tags/motivation/</link>
+      <link>https://linuxsoares.github.io/tags/motivation/</link>
       <pubDate>Tue, 06 Jan 2026 17:54:50 -0300</pubDate>
       
-      <guid>/tags/motivation/</guid>
+      <guid>https://linuxsoares.github.io/tags/motivation/</guid>
       
       <description></description>
       
@@ -42,10 +42,10 @@
     
     <item>
       <title>New-Year</title>
-      <link>/tags/new-year/</link>
+      <link>https://linuxsoares.github.io/tags/new-year/</link>
       <pubDate>Tue, 06 Jan 2026 17:54:50 -0300</pubDate>
       
-      <guid>/tags/new-year/</guid>
+      <guid>https://linuxsoares.github.io/tags/new-year/</guid>
       
       <description></description>
       
@@ -53,10 +53,10 @@
     
     <item>
       <title>Productivity</title>
-      <link>/tags/productivity/</link>
+      <link>https://linuxsoares.github.io/tags/productivity/</link>
       <pubDate>Tue, 06 Jan 2026 17:54:50 -0300</pubDate>
       
-      <guid>/tags/productivity/</guid>
+      <guid>https://linuxsoares.github.io/tags/productivity/</guid>
       
       <description></description>
       
@@ -64,10 +64,10 @@
     
     <item>
       <title>Algorithms</title>
-      <link>/tags/algorithms/</link>
+      <link>https://linuxsoares.github.io/tags/algorithms/</link>
       <pubDate>Thu, 06 Mar 2025 17:54:50 -0300</pubDate>
       
-      <guid>/tags/algorithms/</guid>
+      <guid>https://linuxsoares.github.io/tags/algorithms/</guid>
       
       <description></description>
       
@@ -75,10 +75,10 @@
     
     <item>
       <title>Data-Structures</title>
-      <link>/tags/data-structures/</link>
+      <link>https://linuxsoares.github.io/tags/data-structures/</link>
       <pubDate>Thu, 06 Mar 2025 17:54:50 -0300</pubDate>
       
-      <guid>/tags/data-structures/</guid>
+      <guid>https://linuxsoares.github.io/tags/data-structures/</guid>
       
       <description></description>
       
@@ -86,10 +86,10 @@
     
     <item>
       <title>Hashmap</title>
-      <link>/tags/hashmap/</link>
+      <link>https://linuxsoares.github.io/tags/hashmap/</link>
       <pubDate>Thu, 06 Mar 2025 17:54:50 -0300</pubDate>
       
-      <guid>/tags/hashmap/</guid>
+      <guid>https://linuxsoares.github.io/tags/hashmap/</guid>
       
       <description></description>
       
@@ -97,10 +97,10 @@
     
     <item>
       <title>Python</title>
-      <link>/tags/python/</link>
+      <link>https://linuxsoares.github.io/tags/python/</link>
       <pubDate>Thu, 06 Mar 2025 17:54:50 -0300</pubDate>
       
-      <guid>/tags/python/</guid>
+      <guid>https://linuxsoares.github.io/tags/python/</guid>
       
       <description></description>
       
@@ -108,10 +108,10 @@
     
     <item>
       <title>Ai</title>
-      <link>/tags/ai/</link>
+      <link>https://linuxsoares.github.io/tags/ai/</link>
       <pubDate>Thu, 13 Feb 2025 10:02:53 -0300</pubDate>
       
-      <guid>/tags/ai/</guid>
+      <guid>https://linuxsoares.github.io/tags/ai/</guid>
       
       <description></description>
       
@@ -119,10 +119,10 @@
     
     <item>
       <title>Best-Practices</title>
-      <link>/tags/best-practices/</link>
+      <link>https://linuxsoares.github.io/tags/best-practices/</link>
       <pubDate>Thu, 13 Feb 2025 10:02:53 -0300</pubDate>
       
-      <guid>/tags/best-practices/</guid>
+      <guid>https://linuxsoares.github.io/tags/best-practices/</guid>
       
       <description></description>
       
@@ -130,10 +130,10 @@
     
     <item>
       <title>Chatgpt</title>
-      <link>/tags/chatgpt/</link>
+      <link>https://linuxsoares.github.io/tags/chatgpt/</link>
       <pubDate>Thu, 13 Feb 2025 10:02:53 -0300</pubDate>
       
-      <guid>/tags/chatgpt/</guid>
+      <guid>https://linuxsoares.github.io/tags/chatgpt/</guid>
       
       <description></description>
       
@@ -141,10 +141,10 @@
     
     <item>
       <title>Copilot</title>
-      <link>/tags/copilot/</link>
+      <link>https://linuxsoares.github.io/tags/copilot/</link>
       <pubDate>Thu, 13 Feb 2025 10:02:53 -0300</pubDate>
       
-      <guid>/tags/copilot/</guid>
+      <guid>https://linuxsoares.github.io/tags/copilot/</guid>
       
       <description></description>
       
@@ -152,10 +152,10 @@
     
     <item>
       <title>Software-Engineering</title>
-      <link>/tags/software-engineering/</link>
+      <link>https://linuxsoares.github.io/tags/software-engineering/</link>
       <pubDate>Thu, 13 Feb 2025 10:02:53 -0300</pubDate>
       
-      <guid>/tags/software-engineering/</guid>
+      <guid>https://linuxsoares.github.io/tags/software-engineering/</guid>
       
       <description></description>
       
@@ -163,10 +163,10 @@
     
     <item>
       <title>Golang</title>
-      <link>/tags/golang/</link>
+      <link>https://linuxsoares.github.io/tags/golang/</link>
       <pubDate>Mon, 16 Dec 2024 16:18:30 -0300</pubDate>
       
-      <guid>/tags/golang/</guid>
+      <guid>https://linuxsoares.github.io/tags/golang/</guid>
       
       <description></description>
       
@@ -174,10 +174,10 @@
     
     <item>
       <title>Quick-Sort</title>
-      <link>/tags/quick-sort/</link>
+      <link>https://linuxsoares.github.io/tags/quick-sort/</link>
       <pubDate>Mon, 16 Dec 2024 16:18:30 -0300</pubDate>
       
-      <guid>/tags/quick-sort/</guid>
+      <guid>https://linuxsoares.github.io/tags/quick-sort/</guid>
       
       <description></description>
       
@@ -185,10 +185,10 @@
     
     <item>
       <title>Recursion</title>
-      <link>/tags/recursion/</link>
+      <link>https://linuxsoares.github.io/tags/recursion/</link>
       <pubDate>Mon, 16 Dec 2024 16:18:30 -0300</pubDate>
       
-      <guid>/tags/recursion/</guid>
+      <guid>https://linuxsoares.github.io/tags/recursion/</guid>
       
       <description></description>
       
@@ -196,10 +196,10 @@
     
     <item>
       <title>Sorting</title>
-      <link>/tags/sorting/</link>
+      <link>https://linuxsoares.github.io/tags/sorting/</link>
       <pubDate>Mon, 16 Dec 2024 16:18:30 -0300</pubDate>
       
-      <guid>/tags/sorting/</guid>
+      <guid>https://linuxsoares.github.io/tags/sorting/</guid>
       
       <description></description>
       
@@ -207,10 +207,10 @@
     
     <item>
       <title>Learning</title>
-      <link>/tags/learning/</link>
+      <link>https://linuxsoares.github.io/tags/learning/</link>
       <pubDate>Thu, 28 Nov 2024 16:40:03 -0300</pubDate>
       
-      <guid>/tags/learning/</guid>
+      <guid>https://linuxsoares.github.io/tags/learning/</guid>
       
       <description></description>
       
@@ -218,10 +218,10 @@
     
     <item>
       <title>Life-Lessons</title>
-      <link>/tags/life-lessons/</link>
+      <link>https://linuxsoares.github.io/tags/life-lessons/</link>
       <pubDate>Thu, 28 Nov 2024 16:40:03 -0300</pubDate>
       
-      <guid>/tags/life-lessons/</guid>
+      <guid>https://linuxsoares.github.io/tags/life-lessons/</guid>
       
       <description></description>
       
@@ -229,10 +229,10 @@
     
     <item>
       <title>Mindfulness</title>
-      <link>/tags/mindfulness/</link>
+      <link>https://linuxsoares.github.io/tags/mindfulness/</link>
       <pubDate>Thu, 28 Nov 2024 16:40:03 -0300</pubDate>
       
-      <guid>/tags/mindfulness/</guid>
+      <guid>https://linuxsoares.github.io/tags/mindfulness/</guid>
       
       <description></description>
       
@@ -240,10 +240,10 @@
     
     <item>
       <title>Personal-Growth</title>
-      <link>/tags/personal-growth/</link>
+      <link>https://linuxsoares.github.io/tags/personal-growth/</link>
       <pubDate>Thu, 28 Nov 2024 16:40:03 -0300</pubDate>
       
-      <guid>/tags/personal-growth/</guid>
+      <guid>https://linuxsoares.github.io/tags/personal-growth/</guid>
       
       <description></description>
       
@@ -251,10 +251,10 @@
     
     <item>
       <title>Binary-Search</title>
-      <link>/tags/binary-search/</link>
+      <link>https://linuxsoares.github.io/tags/binary-search/</link>
       <pubDate>Thu, 21 Nov 2024 16:15:51 -0300</pubDate>
       
-      <guid>/tags/binary-search/</guid>
+      <guid>https://linuxsoares.github.io/tags/binary-search/</guid>
       
       <description></description>
       
@@ -262,10 +262,10 @@
     
     <item>
       <title>Analytics</title>
-      <link>/tags/analytics/</link>
+      <link>https://linuxsoares.github.io/tags/analytics/</link>
       <pubDate>Thu, 14 Nov 2024 17:36:05 -0300</pubDate>
       
-      <guid>/tags/analytics/</guid>
+      <guid>https://linuxsoares.github.io/tags/analytics/</guid>
       
       <description></description>
       
@@ -273,10 +273,10 @@
     
     <item>
       <title>Blogging</title>
-      <link>/tags/blogging/</link>
+      <link>https://linuxsoares.github.io/tags/blogging/</link>
       <pubDate>Thu, 14 Nov 2024 17:36:05 -0300</pubDate>
       
-      <guid>/tags/blogging/</guid>
+      <guid>https://linuxsoares.github.io/tags/blogging/</guid>
       
       <description></description>
       
@@ -284,10 +284,10 @@
     
     <item>
       <title>Interview-Prep</title>
-      <link>/tags/interview-prep/</link>
+      <link>https://linuxsoares.github.io/tags/interview-prep/</link>
       <pubDate>Thu, 07 Nov 2024 10:58:22 -0300</pubDate>
       
-      <guid>/tags/interview-prep/</guid>
+      <guid>https://linuxsoares.github.io/tags/interview-prep/</guid>
       
       <description></description>
       
@@ -295,10 +295,10 @@
     
     <item>
       <title>Leetcode</title>
-      <link>/tags/leetcode/</link>
+      <link>https://linuxsoares.github.io/tags/leetcode/</link>
       <pubDate>Thu, 07 Nov 2024 10:58:22 -0300</pubDate>
       
-      <guid>/tags/leetcode/</guid>
+      <guid>https://linuxsoares.github.io/tags/leetcode/</guid>
       
       <description></description>
       
@@ -306,10 +306,10 @@
     
     <item>
       <title>Open-Source</title>
-      <link>/tags/open-source/</link>
+      <link>https://linuxsoares.github.io/tags/open-source/</link>
       <pubDate>Thu, 31 Oct 2024 14:38:09 -0300</pubDate>
       
-      <guid>/tags/open-source/</guid>
+      <guid>https://linuxsoares.github.io/tags/open-source/</guid>
       
       <description></description>
       
@@ -317,10 +317,10 @@
     
     <item>
       <title>Pkg-Go</title>
-      <link>/tags/pkg-go/</link>
+      <link>https://linuxsoares.github.io/tags/pkg-go/</link>
       <pubDate>Thu, 31 Oct 2024 14:38:09 -0300</pubDate>
       
-      <guid>/tags/pkg-go/</guid>
+      <guid>https://linuxsoares.github.io/tags/pkg-go/</guid>
       
       <description></description>
       
@@ -328,10 +328,10 @@
     
     <item>
       <title>Tutorial</title>
-      <link>/tags/tutorial/</link>
+      <link>https://linuxsoares.github.io/tags/tutorial/</link>
       <pubDate>Thu, 31 Oct 2024 14:38:09 -0300</pubDate>
       
-      <guid>/tags/tutorial/</guid>
+      <guid>https://linuxsoares.github.io/tags/tutorial/</guid>
       
       <description></description>
       
@@ -339,10 +339,10 @@
     
     <item>
       <title>Api</title>
-      <link>/tags/api/</link>
+      <link>https://linuxsoares.github.io/tags/api/</link>
       <pubDate>Thu, 24 Oct 2024 16:22:02 -0300</pubDate>
       
-      <guid>/tags/api/</guid>
+      <guid>https://linuxsoares.github.io/tags/api/</guid>
       
       <description></description>
       
@@ -350,10 +350,10 @@
     
     <item>
       <title>Documentation</title>
-      <link>/tags/documentation/</link>
+      <link>https://linuxsoares.github.io/tags/documentation/</link>
       <pubDate>Thu, 24 Oct 2024 16:22:02 -0300</pubDate>
       
-      <guid>/tags/documentation/</guid>
+      <guid>https://linuxsoares.github.io/tags/documentation/</guid>
       
       <description></description>
       
@@ -361,10 +361,10 @@
     
     <item>
       <title>Gin</title>
-      <link>/tags/gin/</link>
+      <link>https://linuxsoares.github.io/tags/gin/</link>
       <pubDate>Thu, 24 Oct 2024 16:22:02 -0300</pubDate>
       
-      <guid>/tags/gin/</guid>
+      <guid>https://linuxsoares.github.io/tags/gin/</guid>
       
       <description></description>
       
@@ -372,10 +372,10 @@
     
     <item>
       <title>Swagger</title>
-      <link>/tags/swagger/</link>
+      <link>https://linuxsoares.github.io/tags/swagger/</link>
       <pubDate>Thu, 24 Oct 2024 16:22:02 -0300</pubDate>
       
-      <guid>/tags/swagger/</guid>
+      <guid>https://linuxsoares.github.io/tags/swagger/</guid>
       
       <description></description>
       
@@ -383,10 +383,10 @@
     
     <item>
       <title>Mental-Health</title>
-      <link>/tags/mental-health/</link>
+      <link>https://linuxsoares.github.io/tags/mental-health/</link>
       <pubDate>Thu, 17 Oct 2024 16:59:52 -0300</pubDate>
       
-      <guid>/tags/mental-health/</guid>
+      <guid>https://linuxsoares.github.io/tags/mental-health/</guid>
       
       <description></description>
       
@@ -394,10 +394,10 @@
     
     <item>
       <title>Routine</title>
-      <link>/tags/routine/</link>
+      <link>https://linuxsoares.github.io/tags/routine/</link>
       <pubDate>Thu, 17 Oct 2024 16:59:52 -0300</pubDate>
       
-      <guid>/tags/routine/</guid>
+      <guid>https://linuxsoares.github.io/tags/routine/</guid>
       
       <description></description>
       
@@ -405,10 +405,10 @@
     
     <item>
       <title>Duck-Typing</title>
-      <link>/tags/duck-typing/</link>
+      <link>https://linuxsoares.github.io/tags/duck-typing/</link>
       <pubDate>Thu, 10 Oct 2024 13:46:16 -0300</pubDate>
       
-      <guid>/tags/duck-typing/</guid>
+      <guid>https://linuxsoares.github.io/tags/duck-typing/</guid>
       
       <description></description>
       
@@ -416,10 +416,10 @@
     
     <item>
       <title>Interfaces</title>
-      <link>/tags/interfaces/</link>
+      <link>https://linuxsoares.github.io/tags/interfaces/</link>
       <pubDate>Thu, 10 Oct 2024 13:46:16 -0300</pubDate>
       
-      <guid>/tags/interfaces/</guid>
+      <guid>https://linuxsoares.github.io/tags/interfaces/</guid>
       
       <description></description>
       
@@ -427,10 +427,10 @@
     
     <item>
       <title>Future-of-Work</title>
-      <link>/tags/future-of-work/</link>
+      <link>https://linuxsoares.github.io/tags/future-of-work/</link>
       <pubDate>Thu, 03 Oct 2024 18:50:05 -0300</pubDate>
       
-      <guid>/tags/future-of-work/</guid>
+      <guid>https://linuxsoares.github.io/tags/future-of-work/</guid>
       
       <description></description>
       
@@ -438,10 +438,10 @@
     
     <item>
       <title>Career</title>
-      <link>/tags/career/</link>
+      <link>https://linuxsoares.github.io/tags/career/</link>
       <pubDate>Fri, 27 Sep 2024 17:43:00 -0300</pubDate>
       
-      <guid>/tags/career/</guid>
+      <guid>https://linuxsoares.github.io/tags/career/</guid>
       
       <description></description>
       
@@ -449,10 +449,10 @@
     
     <item>
       <title>Education</title>
-      <link>/tags/education/</link>
+      <link>https://linuxsoares.github.io/tags/education/</link>
       <pubDate>Fri, 27 Sep 2024 17:43:00 -0300</pubDate>
       
-      <guid>/tags/education/</guid>
+      <guid>https://linuxsoares.github.io/tags/education/</guid>
       
       <description></description>
       
@@ -460,10 +460,10 @@
     
     <item>
       <title>Exercism</title>
-      <link>/tags/exercism/</link>
+      <link>https://linuxsoares.github.io/tags/exercism/</link>
       <pubDate>Mon, 23 Sep 2024 17:34:27 -0300</pubDate>
       
-      <guid>/tags/exercism/</guid>
+      <guid>https://linuxsoares.github.io/tags/exercism/</guid>
       
       <description></description>
       
@@ -471,10 +471,10 @@
     
     <item>
       <title>Leadership</title>
-      <link>/tags/leadership/</link>
+      <link>https://linuxsoares.github.io/tags/leadership/</link>
       <pubDate>Tue, 17 Sep 2024 16:37:38 -0300</pubDate>
       
-      <guid>/tags/leadership/</guid>
+      <guid>https://linuxsoares.github.io/tags/leadership/</guid>
       
       <description></description>
       
@@ -482,10 +482,10 @@
     
     <item>
       <title>Mentorship</title>
-      <link>/tags/mentorship/</link>
+      <link>https://linuxsoares.github.io/tags/mentorship/</link>
       <pubDate>Tue, 17 Sep 2024 16:37:38 -0300</pubDate>
       
-      <guid>/tags/mentorship/</guid>
+      <guid>https://linuxsoares.github.io/tags/mentorship/</guid>
       
       <description></description>
       
@@ -493,10 +493,10 @@
     
     <item>
       <title>Clojure</title>
-      <link>/tags/clojure/</link>
+      <link>https://linuxsoares.github.io/tags/clojure/</link>
       <pubDate>Mon, 16 Sep 2024 18:04:37 -0300</pubDate>
       
-      <guid>/tags/clojure/</guid>
+      <guid>https://linuxsoares.github.io/tags/clojure/</guid>
       
       <description></description>
       
@@ -504,10 +504,10 @@
     
     <item>
       <title>Functional-Programming</title>
-      <link>/tags/functional-programming/</link>
+      <link>https://linuxsoares.github.io/tags/functional-programming/</link>
       <pubDate>Mon, 16 Sep 2024 18:04:37 -0300</pubDate>
       
-      <guid>/tags/functional-programming/</guid>
+      <guid>https://linuxsoares.github.io/tags/functional-programming/</guid>
       
       <description></description>
       
@@ -515,10 +515,10 @@
     
     <item>
       <title>Leiningen</title>
-      <link>/tags/leiningen/</link>
+      <link>https://linuxsoares.github.io/tags/leiningen/</link>
       <pubDate>Mon, 16 Sep 2024 18:04:37 -0300</pubDate>
       
-      <guid>/tags/leiningen/</guid>
+      <guid>https://linuxsoares.github.io/tags/leiningen/</guid>
       
       <description></description>
       

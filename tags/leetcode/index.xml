@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Leetcode on I&#39;m Gilmar Soares</title>
-    <link>/tags/leetcode/</link>
+    <link>https://linuxsoares.github.io/tags/leetcode/</link>
     <description>Recent content in Leetcode on I&#39;m Gilmar Soares</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 07 Nov 2024 10:58:22 -0300</lastBuildDate><atom:link href="/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Nov 2024 10:58:22 -0300</lastBuildDate><atom:link href="https://linuxsoares.github.io/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My Strategy for Studying LeetCode</title>
-      <link>/posts/my-strategy-for-studying-leetcode/</link>
+      <link>https://linuxsoares.github.io/posts/my-strategy-for-studying-leetcode/</link>
       <pubDate>Thu, 07 Nov 2024 10:58:22 -0300</pubDate>
       
-      <guid>/posts/my-strategy-for-studying-leetcode/</guid>
+      <guid>https://linuxsoares.github.io/posts/my-strategy-for-studying-leetcode/</guid>
       
       <description>&lt;p&gt;First of all, don&amp;rsquo;t put pressure on yourself. Focus on the long term by doing a little every day or fitting it into your schedule and sticking to the plan, okay?&lt;/p&gt;
 &lt;p&gt;With that in mind, here is my strategy for studying Leetcode.&lt;/p&gt;
@@ -85,7 +85,7 @@ I only need to compare the characters at specific positions. With this approach,
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I saw that this optimized solution now &lt;code&gt;takes 0 ms and uses only 4.5 MB of memory&lt;/code&gt;.
 At this point, I’ll see if there’s any further room for improvement, though the solution is already very efficient.&lt;/p&gt;
 &lt;p&gt;Here a printscreen of the solutions on Leetcode:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/images/leetcode.png&#34; alt=&#34;Leetcode&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linuxsoares.github.io/images/leetcode.png&#34; alt=&#34;Leetcode&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;6-conclusion&#34;&gt;6. Conclusion&lt;/h2&gt;
 &lt;p&gt;In these steps, I’ve shown you my approach to studying on Leetcode:&lt;/p&gt;
 &lt;p&gt;First, I solve the problem without worrying about finding the optimal solution—just focusing on getting it to work.

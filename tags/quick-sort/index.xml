@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Quick-Sort on I&#39;m Gilmar Soares</title>
-    <link>/tags/quick-sort/</link>
+    <link>https://linuxsoares.github.io/tags/quick-sort/</link>
     <description>Recent content in Quick-Sort on I&#39;m Gilmar Soares</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 16 Dec 2024 16:18:30 -0300</lastBuildDate><atom:link href="/tags/quick-sort/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Dec 2024 16:18:30 -0300</lastBuildDate><atom:link href="https://linuxsoares.github.io/tags/quick-sort/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Recursion and Quick Sort</title>
-      <link>/posts/recursion_and_quick_sort/</link>
+      <link>https://linuxsoares.github.io/posts/recursion_and_quick_sort/</link>
       <pubDate>Mon, 16 Dec 2024 16:18:30 -0300</pubDate>
       
-      <guid>/posts/recursion_and_quick_sort/</guid>
+      <guid>https://linuxsoares.github.io/posts/recursion_and_quick_sort/</guid>
       
       <description>&lt;p&gt;In this post, I can explain two important concepts in computer science: recursion and quick sort.
 I need to explain recursion before I can explain quick sort because quick sort use recursion to sort the array.&lt;/p&gt;

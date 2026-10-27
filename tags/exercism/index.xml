@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Exercism on I&#39;m Gilmar Soares</title>
-    <link>/tags/exercism/</link>
+    <link>https://linuxsoares.github.io/tags/exercism/</link>
     <description>Recent content in Exercism on I&#39;m Gilmar Soares</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 23 Sep 2024 17:34:27 -0300</lastBuildDate><atom:link href="/tags/exercism/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Sep 2024 17:34:27 -0300</lastBuildDate><atom:link href="https://linuxsoares.github.io/tags/exercism/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How Am I Learning Golang</title>
-      <link>/posts/how-am-i-learning-golang/</link>
+      <link>https://linuxsoares.github.io/posts/how-am-i-learning-golang/</link>
       <pubDate>Mon, 23 Sep 2024 17:34:27 -0300</pubDate>
       
-      <guid>/posts/how-am-i-learning-golang/</guid>
+      <guid>https://linuxsoares.github.io/posts/how-am-i-learning-golang/</guid>
       
       <description>&lt;p&gt;In my work, I’ve started using Golang. I’m aware of AI tools like ChatGPT, which can help me complete tasks more efficiently.
 However, I really enjoy learning new technologies and am always open to new challenges.&lt;/p&gt;

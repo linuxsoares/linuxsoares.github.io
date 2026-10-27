@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Documentation on I&#39;m Gilmar Soares</title>
-    <link>/tags/documentation/</link>
+    <link>https://linuxsoares.github.io/tags/documentation/</link>
     <description>Recent content in Documentation on I&#39;m Gilmar Soares</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 24 Oct 2024 16:22:02 -0300</lastBuildDate><atom:link href="/tags/documentation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Oct 2024 16:22:02 -0300</lastBuildDate><atom:link href="https://linuxsoares.github.io/tags/documentation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Document Your Go API</title>
-      <link>/posts/how-to-document-your-go-api/</link>
+      <link>https://linuxsoares.github.io/posts/how-to-document-your-go-api/</link>
       <pubDate>Thu, 24 Oct 2024 16:22:02 -0300</pubDate>
       
-      <guid>/posts/how-to-document-your-go-api/</guid>
+      <guid>https://linuxsoares.github.io/posts/how-to-document-your-go-api/</guid>
       
       <description>&lt;p&gt;Today, I’m writing a technical post about API documentation in Go. I hope you find it useful!&lt;/p&gt;
 &lt;p&gt;First, we’ll create a simple CRUD API using Go and the Gin framework.
@@ -197,7 +197,7 @@ while I used basic functions to manipulate the data, it’s recommended to follo
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// @Router       /users/{id}  [delete]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;With these comments in each function, we can generate the documentation using Swag.&lt;/p&gt;
 &lt;p&gt;The result is:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/images/swagger-doc.png&#34; alt=&#34;Swagger example&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linuxsoares.github.io/images/swagger-doc.png&#34; alt=&#34;Swagger example&#34;&gt;&lt;/p&gt;
 &lt;p&gt;You can view the project in the &lt;a href=&#34;https://github.com/linuxsoares/crud-user-go&#34;&gt;repository&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;In this article, we learned how to document a Go API using Swag.

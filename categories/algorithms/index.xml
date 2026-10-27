@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Algorithms on I&#39;m Gilmar Soares</title>
-    <link>/categories/algorithms/</link>
+    <link>https://linuxsoares.github.io/categories/algorithms/</link>
     <description>Recent content in Algorithms on I&#39;m Gilmar Soares</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 06 Mar 2025 17:54:50 -0300</lastBuildDate><atom:link href="/categories/algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Mar 2025 17:54:50 -0300</lastBuildDate><atom:link href="https://linuxsoares.github.io/categories/algorithms/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Build a Hashmap</title>
-      <link>/posts/how_to_build_a_hashmap/</link>
+      <link>https://linuxsoares.github.io/posts/how_to_build_a_hashmap/</link>
       <pubDate>Thu, 06 Mar 2025 17:54:50 -0300</pubDate>
       
-      <guid>/posts/how_to_build_a_hashmap/</guid>
+      <guid>https://linuxsoares.github.io/posts/how_to_build_a_hashmap/</guid>
       
       <description>&lt;p&gt;This week, we&amp;rsquo;re diving into one of the most powerful and fundamental data structures in programming: the Hash Map, often called a Hash Table or Dictionary. Hash maps are vital in nearly every language for quickly storing and retrieving data as key-value pairs.&lt;/p&gt;
 &lt;p&gt;What&amp;rsquo;s a Hash Map, Really?&lt;/p&gt;
@@ -88,10 +88,10 @@ Got a question or need clarification on collisions or resizing? Don&amp;rsquo;t 
     
     <item>
       <title>Recursion and Quick Sort</title>
-      <link>/posts/recursion_and_quick_sort/</link>
+      <link>https://linuxsoares.github.io/posts/recursion_and_quick_sort/</link>
       <pubDate>Mon, 16 Dec 2024 16:18:30 -0300</pubDate>
       
-      <guid>/posts/recursion_and_quick_sort/</guid>
+      <guid>https://linuxsoares.github.io/posts/recursion_and_quick_sort/</guid>
       
       <description>&lt;p&gt;In this post, I can explain two important concepts in computer science: recursion and quick sort.
 I need to explain recursion before I can explain quick sort because quick sort use recursion to sort the array.&lt;/p&gt;
@@ -197,10 +197,10 @@ especially those who have difficulty or even fear of algorithms!&lt;/p&gt;
     
     <item>
       <title>Selection Sort</title>
-      <link>/posts/selection_sort/</link>
+      <link>https://linuxsoares.github.io/posts/selection_sort/</link>
       <pubDate>Thu, 05 Dec 2024 18:46:28 -0300</pubDate>
       
-      <guid>/posts/selection_sort/</guid>
+      <guid>https://linuxsoares.github.io/posts/selection_sort/</guid>
       
       <description>&lt;p&gt;Continuing my study of algorithms, I can now explain the selection sort algorithm to you.&lt;/p&gt;
 &lt;p&gt;Selection sort is a simple algorithm. It works by finding the smallest element in an array,
@@ -260,10 +260,10 @@ When the loop finish, the &lt;code&gt;pos&lt;/code&gt; variable will be returned
     
     <item>
       <title>Explaining Binary Search in a Simple Way</title>
-      <link>/posts/explaining_binary_search_in_a_simple_way/</link>
+      <link>https://linuxsoares.github.io/posts/explaining_binary_search_in_a_simple_way/</link>
       <pubDate>Thu, 21 Nov 2024 16:15:51 -0300</pubDate>
       
-      <guid>/posts/explaining_binary_search_in_a_simple_way/</guid>
+      <guid>https://linuxsoares.github.io/posts/explaining_binary_search_in_a_simple_way/</guid>
       
       <description>&lt;p&gt;Today I try to explain binary search in a simple way.
 Binary search is a search algorithm that finds the position of a target value within a sorted array.
@@ -332,10 +332,10 @@ Hugs!&lt;/p&gt;
     
     <item>
       <title>My Strategy for Studying LeetCode</title>
-      <link>/posts/my-strategy-for-studying-leetcode/</link>
+      <link>https://linuxsoares.github.io/posts/my-strategy-for-studying-leetcode/</link>
       <pubDate>Thu, 07 Nov 2024 10:58:22 -0300</pubDate>
       
-      <guid>/posts/my-strategy-for-studying-leetcode/</guid>
+      <guid>https://linuxsoares.github.io/posts/my-strategy-for-studying-leetcode/</guid>
       
       <description>&lt;p&gt;First of all, don&amp;rsquo;t put pressure on yourself. Focus on the long term by doing a little every day or fitting it into your schedule and sticking to the plan, okay?&lt;/p&gt;
 &lt;p&gt;With that in mind, here is my strategy for studying Leetcode.&lt;/p&gt;
@@ -408,7 +408,7 @@ I only need to compare the characters at specific positions. With this approach,
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I saw that this optimized solution now &lt;code&gt;takes 0 ms and uses only 4.5 MB of memory&lt;/code&gt;.
 At this point, I’ll see if there’s any further room for improvement, though the solution is already very efficient.&lt;/p&gt;
 &lt;p&gt;Here a printscreen of the solutions on Leetcode:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/images/leetcode.png&#34; alt=&#34;Leetcode&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linuxsoares.github.io/images/leetcode.png&#34; alt=&#34;Leetcode&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;6-conclusion&#34;&gt;6. Conclusion&lt;/h2&gt;
 &lt;p&gt;In these steps, I’ve shown you my approach to studying on Leetcode:&lt;/p&gt;
 &lt;p&gt;First, I solve the problem without worrying about finding the optimal solution—just focusing on getting it to work.

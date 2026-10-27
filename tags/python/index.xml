@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on I&#39;m Gilmar Soares</title>
-    <link>/tags/python/</link>
+    <link>https://linuxsoares.github.io/tags/python/</link>
     <description>Recent content in Python on I&#39;m Gilmar Soares</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 06 Mar 2025 17:54:50 -0300</lastBuildDate><atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Mar 2025 17:54:50 -0300</lastBuildDate><atom:link href="https://linuxsoares.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Build a Hashmap</title>
-      <link>/posts/how_to_build_a_hashmap/</link>
+      <link>https://linuxsoares.github.io/posts/how_to_build_a_hashmap/</link>
       <pubDate>Thu, 06 Mar 2025 17:54:50 -0300</pubDate>
       
-      <guid>/posts/how_to_build_a_hashmap/</guid>
+      <guid>https://linuxsoares.github.io/posts/how_to_build_a_hashmap/</guid>
       
       <description>&lt;p&gt;This week, we&amp;rsquo;re diving into one of the most powerful and fundamental data structures in programming: the Hash Map, often called a Hash Table or Dictionary. Hash maps are vital in nearly every language for quickly storing and retrieving data as key-value pairs.&lt;/p&gt;
 &lt;p&gt;What&amp;rsquo;s a Hash Map, Really?&lt;/p&gt;

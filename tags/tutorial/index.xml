@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tutorial on I&#39;m Gilmar Soares</title>
-    <link>/tags/tutorial/</link>
+    <link>https://linuxsoares.github.io/tags/tutorial/</link>
     <description>Recent content in Tutorial on I&#39;m Gilmar Soares</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 31 Oct 2024 14:38:09 -0300</lastBuildDate><atom:link href="/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 31 Oct 2024 14:38:09 -0300</lastBuildDate><atom:link href="https://linuxsoares.github.io/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Publish Your Go Library on Pkg Go</title>
-      <link>/posts/how-to-publish-your-go-library-on-pkg-go/</link>
+      <link>https://linuxsoares.github.io/posts/how-to-publish-your-go-library-on-pkg-go/</link>
       <pubDate>Thu, 31 Oct 2024 14:38:09 -0300</pubDate>
       
-      <guid>/posts/how-to-publish-your-go-library-on-pkg-go/</guid>
+      <guid>https://linuxsoares.github.io/posts/how-to-publish-your-go-library-on-pkg-go/</guid>
       
       <description>&lt;p&gt;Continue my way to learn Go in a deep way, today I&amp;rsquo;ll show to you how to publish you library in &lt;a href=&#34;https://pkg.go.dev/&#34;&gt;Pkg.Go&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;First of all, you need to have a Go library in you Github account or any other Git repository.
@@ -53,10 +53,10 @@ This is a simple process, but it&amp;rsquo;s important to follow the steps to ma
     
     <item>
       <title>Duck Typing in Go</title>
-      <link>/posts/duck-typing-in-go/</link>
+      <link>https://linuxsoares.github.io/posts/duck-typing-in-go/</link>
       <pubDate>Thu, 10 Oct 2024 13:46:16 -0300</pubDate>
       
-      <guid>/posts/duck-typing-in-go/</guid>
+      <guid>https://linuxsoares.github.io/posts/duck-typing-in-go/</guid>
       
       <description>&lt;p&gt;Hello everyone!&lt;/p&gt;
 &lt;p&gt;As I mentioned in a previous post, I’m currently learning Go to use in some of my work projects.
@@ -140,10 +140,10 @@ it’s straightforward and easy to use.&lt;/p&gt;
     
     <item>
       <title>How Am I Learning Golang</title>
-      <link>/posts/how-am-i-learning-golang/</link>
+      <link>https://linuxsoares.github.io/posts/how-am-i-learning-golang/</link>
       <pubDate>Mon, 23 Sep 2024 17:34:27 -0300</pubDate>
       
-      <guid>/posts/how-am-i-learning-golang/</guid>
+      <guid>https://linuxsoares.github.io/posts/how-am-i-learning-golang/</guid>
       
       <description>&lt;p&gt;In my work, I’ve started using Golang. I’m aware of AI tools like ChatGPT, which can help me complete tasks more efficiently.
 However, I really enjoy learning new technologies and am always open to new challenges.&lt;/p&gt;
@@ -179,10 +179,10 @@ Let’s try to solve some exercises in Golang or another language you prefer. I 
     
     <item>
       <title>First Clojure Project</title>
-      <link>/posts/first-clojure-project/</link>
+      <link>https://linuxsoares.github.io/posts/first-clojure-project/</link>
       <pubDate>Mon, 16 Sep 2024 18:04:37 -0300</pubDate>
       
-      <guid>/posts/first-clojure-project/</guid>
+      <guid>https://linuxsoares.github.io/posts/first-clojure-project/</guid>
       
       <description>&lt;h1 id=&#34;creating-our-first-clojure-project&#34;&gt;Creating Our First Clojure Project&lt;/h1&gt;
 &lt;p&gt;Let&amp;rsquo;s continue with our tutorial. Today, I will explain how we can create a Clojure project. I decided to split this article into two parts: we will explain how to create a regular project and a web project, where we will create an API for some service.&lt;/p&gt;

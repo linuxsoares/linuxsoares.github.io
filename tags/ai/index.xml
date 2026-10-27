@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ai on I&#39;m Gilmar Soares</title>
-    <link>/tags/ai/</link>
+    <link>https://linuxsoares.github.io/tags/ai/</link>
     <description>Recent content in Ai on I&#39;m Gilmar Soares</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 13 Feb 2025 10:02:53 -0300</lastBuildDate><atom:link href="/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Feb 2025 10:02:53 -0300</lastBuildDate><atom:link href="https://linuxsoares.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using AI for Programmers</title>
-      <link>/posts/using_ai_for_programmers/</link>
+      <link>https://linuxsoares.github.io/posts/using_ai_for_programmers/</link>
       <pubDate>Thu, 13 Feb 2025 10:02:53 -0300</pubDate>
       
-      <guid>/posts/using_ai_for_programmers/</guid>
+      <guid>https://linuxsoares.github.io/posts/using_ai_for_programmers/</guid>
       
       <description>&lt;p&gt;Today, I’m back from my vacation, and I’ve been thinking about writing about how we can use AI to help us with coding.&lt;/p&gt;
 &lt;h2 id=&#34;take-a-break-and-recharge&#34;&gt;Take a Break and Recharge&lt;/h2&gt;
@@ -39,10 +39,10 @@ or creating documentation—but always make sure you understand what you’re wr
     
     <item>
       <title>How Can AI Change the Way We Work</title>
-      <link>/posts/how-can-ai-change-the-way-we-work/</link>
+      <link>https://linuxsoares.github.io/posts/how-can-ai-change-the-way-we-work/</link>
       <pubDate>Thu, 03 Oct 2024 18:50:05 -0300</pubDate>
       
-      <guid>/posts/how-can-ai-change-the-way-we-work/</guid>
+      <guid>https://linuxsoares.github.io/posts/how-can-ai-change-the-way-we-work/</guid>
       
       <description>&lt;p&gt;The first answer is, I DON’T KNOW! Bye-bye! (Just kidding! Keep reading, please! It was only a joke!)&lt;/p&gt;
 &lt;p&gt;Today, I saw the new Canvas feature from OpenAI, and I’m feeling two things:&lt;/p&gt;

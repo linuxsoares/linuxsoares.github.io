@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Best-Practices on I&#39;m Gilmar Soares</title>
-    <link>/tags/best-practices/</link>
+    <link>https://linuxsoares.github.io/tags/best-practices/</link>
     <description>Recent content in Best-Practices on I&#39;m Gilmar Soares</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 13 Feb 2025 10:02:53 -0300</lastBuildDate><atom:link href="/tags/best-practices/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Feb 2025 10:02:53 -0300</lastBuildDate><atom:link href="https://linuxsoares.github.io/tags/best-practices/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using AI for Programmers</title>
-      <link>/posts/using_ai_for_programmers/</link>
+      <link>https://linuxsoares.github.io/posts/using_ai_for_programmers/</link>
       <pubDate>Thu, 13 Feb 2025 10:02:53 -0300</pubDate>
       
-      <guid>/posts/using_ai_for_programmers/</guid>
+      <guid>https://linuxsoares.github.io/posts/using_ai_for_programmers/</guid>
       
       <description>&lt;p&gt;Today, I’m back from my vacation, and I’ve been thinking about writing about how we can use AI to help us with coding.&lt;/p&gt;
 &lt;h2 id=&#34;take-a-break-and-recharge&#34;&gt;Take a Break and Recharge&lt;/h2&gt;

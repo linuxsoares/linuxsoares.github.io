@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Programming on I&#39;m Gilmar Soares</title>
-    <link>/categories/programming/</link>
+    <link>https://linuxsoares.github.io/categories/programming/</link>
     <description>Recent content in Programming on I&#39;m Gilmar Soares</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 06 Mar 2025 17:54:50 -0300</lastBuildDate><atom:link href="/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Mar 2025 17:54:50 -0300</lastBuildDate><atom:link href="https://linuxsoares.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Build a Hashmap</title>
-      <link>/posts/how_to_build_a_hashmap/</link>
+      <link>https://linuxsoares.github.io/posts/how_to_build_a_hashmap/</link>
       <pubDate>Thu, 06 Mar 2025 17:54:50 -0300</pubDate>
       
-      <guid>/posts/how_to_build_a_hashmap/</guid>
+      <guid>https://linuxsoares.github.io/posts/how_to_build_a_hashmap/</guid>
       
       <description>&lt;p&gt;This week, we&amp;rsquo;re diving into one of the most powerful and fundamental data structures in programming: the Hash Map, often called a Hash Table or Dictionary. Hash maps are vital in nearly every language for quickly storing and retrieving data as key-value pairs.&lt;/p&gt;
 &lt;p&gt;What&amp;rsquo;s a Hash Map, Really?&lt;/p&gt;
@@ -88,10 +88,10 @@ Got a question or need clarification on collisions or resizing? Don&amp;rsquo;t 
     
     <item>
       <title>Using AI for Programmers</title>
-      <link>/posts/using_ai_for_programmers/</link>
+      <link>https://linuxsoares.github.io/posts/using_ai_for_programmers/</link>
       <pubDate>Thu, 13 Feb 2025 10:02:53 -0300</pubDate>
       
-      <guid>/posts/using_ai_for_programmers/</guid>
+      <guid>https://linuxsoares.github.io/posts/using_ai_for_programmers/</guid>
       
       <description>&lt;p&gt;Today, I’m back from my vacation, and I’ve been thinking about writing about how we can use AI to help us with coding.&lt;/p&gt;
 &lt;h2 id=&#34;take-a-break-and-recharge&#34;&gt;Take a Break and Recharge&lt;/h2&gt;
@@ -118,10 +118,10 @@ or creating documentation—but always make sure you understand what you’re wr
     
     <item>
       <title>Recursion and Quick Sort</title>
-      <link>/posts/recursion_and_quick_sort/</link>
+      <link>https://linuxsoares.github.io/posts/recursion_and_quick_sort/</link>
       <pubDate>Mon, 16 Dec 2024 16:18:30 -0300</pubDate>
       
-      <guid>/posts/recursion_and_quick_sort/</guid>
+      <guid>https://linuxsoares.github.io/posts/recursion_and_quick_sort/</guid>
       
       <description>&lt;p&gt;In this post, I can explain two important concepts in computer science: recursion and quick sort.
 I need to explain recursion before I can explain quick sort because quick sort use recursion to sort the array.&lt;/p&gt;
@@ -227,10 +227,10 @@ especially those who have difficulty or even fear of algorithms!&lt;/p&gt;
     
     <item>
       <title>Selection Sort</title>
-      <link>/posts/selection_sort/</link>
+      <link>https://linuxsoares.github.io/posts/selection_sort/</link>
       <pubDate>Thu, 05 Dec 2024 18:46:28 -0300</pubDate>
       
-      <guid>/posts/selection_sort/</guid>
+      <guid>https://linuxsoares.github.io/posts/selection_sort/</guid>
       
       <description>&lt;p&gt;Continuing my study of algorithms, I can now explain the selection sort algorithm to you.&lt;/p&gt;
 &lt;p&gt;Selection sort is a simple algorithm. It works by finding the smallest element in an array,
@@ -290,10 +290,10 @@ When the loop finish, the &lt;code&gt;pos&lt;/code&gt; variable will be returned
     
     <item>
       <title>Explaining Binary Search in a Simple Way</title>
-      <link>/posts/explaining_binary_search_in_a_simple_way/</link>
+      <link>https://linuxsoares.github.io/posts/explaining_binary_search_in_a_simple_way/</link>
       <pubDate>Thu, 21 Nov 2024 16:15:51 -0300</pubDate>
       
-      <guid>/posts/explaining_binary_search_in_a_simple_way/</guid>
+      <guid>https://linuxsoares.github.io/posts/explaining_binary_search_in_a_simple_way/</guid>
       
       <description>&lt;p&gt;Today I try to explain binary search in a simple way.
 Binary search is a search algorithm that finds the position of a target value within a sorted array.
@@ -362,10 +362,10 @@ Hugs!&lt;/p&gt;
     
     <item>
       <title>My Strategy for Studying LeetCode</title>
-      <link>/posts/my-strategy-for-studying-leetcode/</link>
+      <link>https://linuxsoares.github.io/posts/my-strategy-for-studying-leetcode/</link>
       <pubDate>Thu, 07 Nov 2024 10:58:22 -0300</pubDate>
       
-      <guid>/posts/my-strategy-for-studying-leetcode/</guid>
+      <guid>https://linuxsoares.github.io/posts/my-strategy-for-studying-leetcode/</guid>
       
       <description>&lt;p&gt;First of all, don&amp;rsquo;t put pressure on yourself. Focus on the long term by doing a little every day or fitting it into your schedule and sticking to the plan, okay?&lt;/p&gt;
 &lt;p&gt;With that in mind, here is my strategy for studying Leetcode.&lt;/p&gt;
@@ -438,7 +438,7 @@ I only need to compare the characters at specific positions. With this approach,
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I saw that this optimized solution now &lt;code&gt;takes 0 ms and uses only 4.5 MB of memory&lt;/code&gt;.
 At this point, I’ll see if there’s any further room for improvement, though the solution is already very efficient.&lt;/p&gt;
 &lt;p&gt;Here a printscreen of the solutions on Leetcode:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/images/leetcode.png&#34; alt=&#34;Leetcode&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linuxsoares.github.io/images/leetcode.png&#34; alt=&#34;Leetcode&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;6-conclusion&#34;&gt;6. Conclusion&lt;/h2&gt;
 &lt;p&gt;In these steps, I’ve shown you my approach to studying on Leetcode:&lt;/p&gt;
 &lt;p&gt;First, I solve the problem without worrying about finding the optimal solution—just focusing on getting it to work.
@@ -454,10 +454,10 @@ This method has helped me write better code in my daily work, and I hope it’s 
     
     <item>
       <title>How to Publish Your Go Library on Pkg Go</title>
-      <link>/posts/how-to-publish-your-go-library-on-pkg-go/</link>
+      <link>https://linuxsoares.github.io/posts/how-to-publish-your-go-library-on-pkg-go/</link>
       <pubDate>Thu, 31 Oct 2024 14:38:09 -0300</pubDate>
       
-      <guid>/posts/how-to-publish-your-go-library-on-pkg-go/</guid>
+      <guid>https://linuxsoares.github.io/posts/how-to-publish-your-go-library-on-pkg-go/</guid>
       
       <description>&lt;p&gt;Continue my way to learn Go in a deep way, today I&amp;rsquo;ll show to you how to publish you library in &lt;a href=&#34;https://pkg.go.dev/&#34;&gt;Pkg.Go&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;First of all, you need to have a Go library in you Github account or any other Git repository.
@@ -498,10 +498,10 @@ This is a simple process, but it&amp;rsquo;s important to follow the steps to ma
     
     <item>
       <title>How to Document Your Go API</title>
-      <link>/posts/how-to-document-your-go-api/</link>
+      <link>https://linuxsoares.github.io/posts/how-to-document-your-go-api/</link>
       <pubDate>Thu, 24 Oct 2024 16:22:02 -0300</pubDate>
       
-      <guid>/posts/how-to-document-your-go-api/</guid>
+      <guid>https://linuxsoares.github.io/posts/how-to-document-your-go-api/</guid>
       
       <description>&lt;p&gt;Today, I’m writing a technical post about API documentation in Go. I hope you find it useful!&lt;/p&gt;
 &lt;p&gt;First, we’ll create a simple CRUD API using Go and the Gin framework.
@@ -686,7 +686,7 @@ while I used basic functions to manipulate the data, it’s recommended to follo
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// @Router       /users/{id}  [delete]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;With these comments in each function, we can generate the documentation using Swag.&lt;/p&gt;
 &lt;p&gt;The result is:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/images/swagger-doc.png&#34; alt=&#34;Swagger example&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linuxsoares.github.io/images/swagger-doc.png&#34; alt=&#34;Swagger example&#34;&gt;&lt;/p&gt;
 &lt;p&gt;You can view the project in the &lt;a href=&#34;https://github.com/linuxsoares/crud-user-go&#34;&gt;repository&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;In this article, we learned how to document a Go API using Swag.
@@ -702,10 +702,10 @@ feel free to send me a message in my social media accounts.&lt;/p&gt;
     
     <item>
       <title>Duck Typing in Go</title>
-      <link>/posts/duck-typing-in-go/</link>
+      <link>https://linuxsoares.github.io/posts/duck-typing-in-go/</link>
       <pubDate>Thu, 10 Oct 2024 13:46:16 -0300</pubDate>
       
-      <guid>/posts/duck-typing-in-go/</guid>
+      <guid>https://linuxsoares.github.io/posts/duck-typing-in-go/</guid>
       
       <description>&lt;p&gt;Hello everyone!&lt;/p&gt;
 &lt;p&gt;As I mentioned in a previous post, I’m currently learning Go to use in some of my work projects.
@@ -789,10 +789,10 @@ it’s straightforward and easy to use.&lt;/p&gt;
     
     <item>
       <title>How Am I Learning Golang</title>
-      <link>/posts/how-am-i-learning-golang/</link>
+      <link>https://linuxsoares.github.io/posts/how-am-i-learning-golang/</link>
       <pubDate>Mon, 23 Sep 2024 17:34:27 -0300</pubDate>
       
-      <guid>/posts/how-am-i-learning-golang/</guid>
+      <guid>https://linuxsoares.github.io/posts/how-am-i-learning-golang/</guid>
       
       <description>&lt;p&gt;In my work, I’ve started using Golang. I’m aware of AI tools like ChatGPT, which can help me complete tasks more efficiently.
 However, I really enjoy learning new technologies and am always open to new challenges.&lt;/p&gt;
@@ -828,10 +828,10 @@ Let’s try to solve some exercises in Golang or another language you prefer. I 
     
     <item>
       <title>First Clojure Project</title>
-      <link>/posts/first-clojure-project/</link>
+      <link>https://linuxsoares.github.io/posts/first-clojure-project/</link>
       <pubDate>Mon, 16 Sep 2024 18:04:37 -0300</pubDate>
       
-      <guid>/posts/first-clojure-project/</guid>
+      <guid>https://linuxsoares.github.io/posts/first-clojure-project/</guid>
       
       <description>&lt;h1 id=&#34;creating-our-first-clojure-project&#34;&gt;Creating Our First Clojure Project&lt;/h1&gt;
 &lt;p&gt;Let&amp;rsquo;s continue with our tutorial. Today, I will explain how we can create a Clojure project. I decided to split this article into two parts: we will explain how to create a regular project and a web project, where we will create an API for some service.&lt;/p&gt;

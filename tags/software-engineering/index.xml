@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Software-Engineering on I&#39;m Gilmar Soares</title>
-    <link>/tags/software-engineering/</link>
+    <link>https://linuxsoares.github.io/tags/software-engineering/</link>
     <description>Recent content in Software-Engineering on I&#39;m Gilmar Soares</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 13 Feb 2025 10:02:53 -0300</lastBuildDate><atom:link href="/tags/software-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Feb 2025 10:02:53 -0300</lastBuildDate><atom:link href="https://linuxsoares.github.io/tags/software-engineering/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using AI for Programmers</title>
-      <link>/posts/using_ai_for_programmers/</link>
+      <link>https://linuxsoares.github.io/posts/using_ai_for_programmers/</link>
       <pubDate>Thu, 13 Feb 2025 10:02:53 -0300</pubDate>
       
-      <guid>/posts/using_ai_for_programmers/</guid>
+      <guid>https://linuxsoares.github.io/posts/using_ai_for_programmers/</guid>
       
       <description>&lt;p&gt;Today, I’m back from my vacation, and I’ve been thinking about writing about how we can use AI to help us with coding.&lt;/p&gt;
 &lt;h2 id=&#34;take-a-break-and-recharge&#34;&gt;Take a Break and Recharge&lt;/h2&gt;
@@ -39,10 +39,10 @@ or creating documentation—but always make sure you understand what you’re wr
     
     <item>
       <title>How Can AI Change the Way We Work</title>
-      <link>/posts/how-can-ai-change-the-way-we-work/</link>
+      <link>https://linuxsoares.github.io/posts/how-can-ai-change-the-way-we-work/</link>
       <pubDate>Thu, 03 Oct 2024 18:50:05 -0300</pubDate>
       
-      <guid>/posts/how-can-ai-change-the-way-we-work/</guid>
+      <guid>https://linuxsoares.github.io/posts/how-can-ai-change-the-way-we-work/</guid>
       
       <description>&lt;p&gt;The first answer is, I DON’T KNOW! Bye-bye! (Just kidding! Keep reading, please! It was only a joke!)&lt;/p&gt;
 &lt;p&gt;Today, I saw the new Canvas feature from OpenAI, and I’m feeling two things:&lt;/p&gt;
@@ -62,10 +62,10 @@ or creating documentation—but always make sure you understand what you’re wr
     
     <item>
       <title>Senior Software Engineer</title>
-      <link>/posts/senior-software-engineer/</link>
+      <link>https://linuxsoares.github.io/posts/senior-software-engineer/</link>
       <pubDate>Tue, 17 Sep 2024 16:37:38 -0300</pubDate>
       
-      <guid>/posts/senior-software-engineer/</guid>
+      <guid>https://linuxsoares.github.io/posts/senior-software-engineer/</guid>
       
       <description>&lt;h2 id=&#34;senior-software-engineers-impacting-business-growth-and-inspiring-teams&#34;&gt;Senior Software Engineers: Impacting Business Growth and Inspiring Teams&lt;/h2&gt;
 &lt;p&gt;When I started as a Software Engineer, I skipped the internal steps because my initial experience in tech was with infrastructure, not programming. I transitioned into software engineering four years later, and when I finally worked as a Software Engineer, I was very fortunate. My coworkers were exceptional professionals who supported me at the beginning of my journey.&lt;/p&gt;

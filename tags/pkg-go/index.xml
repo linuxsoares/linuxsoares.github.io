@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pkg-Go on I&#39;m Gilmar Soares</title>
-    <link>/tags/pkg-go/</link>
+    <link>https://linuxsoares.github.io/tags/pkg-go/</link>
     <description>Recent content in Pkg-Go on I&#39;m Gilmar Soares</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 31 Oct 2024 14:38:09 -0300</lastBuildDate><atom:link href="/tags/pkg-go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 31 Oct 2024 14:38:09 -0300</lastBuildDate><atom:link href="https://linuxsoares.github.io/tags/pkg-go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Publish Your Go Library on Pkg Go</title>
-      <link>/posts/how-to-publish-your-go-library-on-pkg-go/</link>
+      <link>https://linuxsoares.github.io/posts/how-to-publish-your-go-library-on-pkg-go/</link>
       <pubDate>Thu, 31 Oct 2024 14:38:09 -0300</pubDate>
       
-      <guid>/posts/how-to-publish-your-go-library-on-pkg-go/</guid>
+      <guid>https://linuxsoares.github.io/posts/how-to-publish-your-go-library-on-pkg-go/</guid>
       
       <description>&lt;p&gt;Continue my way to learn Go in a deep way, today I&amp;rsquo;ll show to you how to publish you library in &lt;a href=&#34;https://pkg.go.dev/&#34;&gt;Pkg.Go&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;First of all, you need to have a Go library in you Github account or any other Git repository.
