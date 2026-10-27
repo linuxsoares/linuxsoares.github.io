@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on I&#39;m Gilmar Soares</title>
+    <link>https://gilsoares.dev/blog/categories/</link>
+    <description>Recent content in Categories on I&#39;m Gilmar Soares</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 27 Oct 2026 10:00:00 -0300</lastBuildDate><atom:link href="https://gilsoares.dev/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI</title>
+      <link>https://gilsoares.dev/blog/categories/ai/</link>
+      <pubDate>Tue, 27 Oct 2026 10:00:00 -0300</pubDate>
+      
+      <guid>https://gilsoares.dev/blog/categories/ai/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Tutorials</title>
+      <link>https://gilsoares.dev/blog/categories/tutorials/</link>
+      <pubDate>Tue, 27 Oct 2026 10:00:00 -0300</pubDate>
+      
+      <guid>https://gilsoares.dev/blog/categories/tutorials/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Personal</title>
+      <link>https://gilsoares.dev/blog/categories/personal/</link>
+      <pubDate>Tue, 06 Jan 2026 17:54:50 -0300</pubDate>
+      
+      <guid>https://gilsoares.dev/blog/categories/personal/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Productivity</title>
+      <link>https://gilsoares.dev/blog/categories/productivity/</link>
+      <pubDate>Tue, 06 Jan 2026 17:54:50 -0300</pubDate>
+      
+      <guid>https://gilsoares.dev/blog/categories/productivity/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Algorithms</title>
+      <link>https://gilsoares.dev/blog/categories/algorithms/</link>
+      <pubDate>Thu, 06 Mar 2025 17:54:50 -0300</pubDate>
+      
+      <guid>https://gilsoares.dev/blog/categories/algorithms/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Programming</title>
+      <link>https://gilsoares.dev/blog/categories/programming/</link>
+      <pubDate>Thu, 06 Mar 2025 17:54:50 -0300</pubDate>
+      
+      <guid>https://gilsoares.dev/blog/categories/programming/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Learning</title>
+      <link>https://gilsoares.dev/blog/categories/learning/</link>
+      <pubDate>Thu, 28 Nov 2024 16:40:03 -0300</pubDate>
+      
+      <guid>https://gilsoares.dev/blog/categories/learning/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Career</title>
+      <link>https://gilsoares.dev/blog/categories/career/</link>
+      <pubDate>Thu, 03 Oct 2024 18:50:05 -0300</pubDate>
+      
+      <guid>https://gilsoares.dev/blog/categories/career/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

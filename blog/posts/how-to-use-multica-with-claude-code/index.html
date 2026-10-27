@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Treating Claude Code Like a Teammate: Developing with Multica | I&#39;m Gilmar Soares</title>
+<meta property="og:title" content="Treating Claude Code Like a Teammate: Developing with Multica | I&#39;m Gilmar Soares" />
+<meta name="twitter:title" content="Treating Claude Code Like a Teammate: Developing with Multica | I&#39;m Gilmar Soares" />
+<meta itemprop="name" content="Treating Claude Code Like a Teammate: Developing with Multica | I&#39;m Gilmar Soares" />
+<meta name="application-name" content="Treating Claude Code Like a Teammate: Developing with Multica | I&#39;m Gilmar Soares" />
+<meta property="og:site_name" content="" />
+
+<meta name="description" content="">
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="https://gilsoares.dev/blog/posts/how-to-use-multica-with-claude-code/" title="" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2026-10-27T10:00:00-0300 />
+    <meta property="article:published_time" content=2026-10-27T10:00:00-0300 />
+    <meta property="og:url" content="https://gilsoares.dev/blog/posts/how-to-use-multica-with-claude-code/" />
+
+    
+    <meta property="og:article:author" content="Gil" />
+    <meta property="article:author" content="Gil" />
+    <meta name="author" content="Gil" />
+    
+    
+
+    
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Treating Claude Code Like a Teammate: Developing with Multica",
+        "author": {
+        "@type": "Person",
+        "name": "Gil"
+        },
+        "datePublished": "2026-10-27",
+        "description": "",
+        "wordCount":  1043 ,
+        "mainEntityOfPage": "https://gilsoares.dev/blog/posts/how-to-use-multica-with-claude-code/",
+        "dateModified": "2026-10-27",
+        "image": {
+        "@type": "ImageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "I'm Gilmar Soares"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.168.0">
+
+    
+    <meta property="og:url" content="https://gilsoares.dev/blog/posts/how-to-use-multica-with-claude-code/">
+	<meta property="og:site_name" content="I&#39;m Gilmar Soares">
+	<meta property="og:title" content="Treating Claude Code Like a Teammate: Developing with Multica">
+	<meta property="og:description" content="Running Claude Code in a terminal works great for one task at a time. You open a session, describe what you want, watch it work, review the diff. But once you start juggling several tasks — a bug fix here, a refactor there, a small feature waiting in the backlog — the terminal stops being the right place to manage that work. You end up with a pile of tabs, half-finished sessions, and no clear picture of what each agent is doing.">
+	<meta property="og:locale" content="en_gb">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-10-27T10:00:00-03:00">
+		<meta property="article:modified_time" content="2026-10-27T10:00:00-03:00">
+		<meta property="article:tag" content="Ai">
+		<meta property="article:tag" content="Claude-Code">
+		<meta property="article:tag" content="Multica">
+		<meta property="article:tag" content="Productivity">
+		<meta property="og:image" content="https://gilsoares.dev/blog/images/gilmar.jpeg">
+
+
+    
+    
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://gilsoares.dev/blog/images/gilmar.jpeg">
+	<meta name="twitter:title" content="Treating Claude Code Like a Teammate: Developing with Multica">
+	<meta name="twitter:description" content="Running Claude Code in a terminal works great for one task at a time. You open a session, describe what you want, watch it work, review the diff. But once you start juggling several tasks — a bug fix here, a refactor there, a small feature waiting in the backlog — the terminal stops being the right place to manage that work. You end up with a pile of tabs, half-finished sessions, and no clear picture of what each agent is doing.">
+
+
+    
+
+    <link rel="canonical" href="https://gilsoares.dev/blog/posts/how-to-use-multica-with-claude-code/">
+    <link href="/blog/style.min.009c76db84338e20dd9d3353f8bfaa7f0a2865c184b478f3b3ef0224b9026a2a.css" rel="stylesheet">
+    <link href="/blog/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/blog/favicon.ico">
+
+
+
+
+<link rel="manifest" href="https://gilsoares.dev/blog/site.webmanifest">
+
+<meta name="msapplication-config" content="/blog/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#03040a">
+    <meta name="color-scheme" content="light dark">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/blog/icons/favicon.svg">
+
+    
+    
+    
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script>
+  
+  (function () {
+    var SABERS = { blue: "#4fc3ff", green: "#5dff7a", purple: "#c77dff", red: "#ff3b3b" };
+    var saber = "blue";
+    try {
+      localStorage.setItem("theme", "dark");
+      saber = localStorage.getItem("saber") || saber;
+    } catch (e) {}
+    var root = document.documentElement;
+    root.classList.add("dark");
+    root.classList.remove("light");
+    root.style.setProperty("--saber", SABERS[saber] || SABERS.blue);
+  })();
+</script>
+
+    
+</head>
+<body data-theme = "dark" class="notransition">
+
+<script src="/blog/js/theme.min.8961c317c5b88b953fe27525839672c9343f1058ab044696ca225656c8ba2ab0.js" integrity="sha256-iWHDF8W4i5U/4nUlg5ZyyTQ/EFirBEaWyiJWVsi6KrA="></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="https://gilsoares.dev/blog/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        HOME
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/blog/posts/">
+                        ARCHIVE
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="https://gilsoares.dev/">
+                        ABOUT
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/search/">
+                        SEARCH
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Treating Claude Code Like a Teammate: Developing with Multica</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2026-10-27T10:00:00-03:00" itemprop="datePublished"> 27 Oct 2026 </time>
+                    <span class="reading-time"> · 5 min read</span>
+                </div>
+                
+            </header>
+            
+    
+    <details class="toc" ZgotmplZ>
+        <summary><b>Table of Contents</b></summary>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#how-multica-fits-together">How Multica Fits Together</a></li>
+    <li><a href="#step-1-install-the-cli">Step 1: Install the CLI</a></li>
+    <li><a href="#step-2-connect-and-start-the-daemon">Step 2: Connect and Start the Daemon</a></li>
+    <li><a href="#step-3-create-a-claude-agent">Step 3: Create a Claude Agent</a></li>
+    <li><a href="#the-daily-loop-issues-in-reviews-out">The Daily Loop: Issues In, Reviews Out</a></li>
+    <li><a href="#tips-for-getting-good-results-with-claude">Tips for Getting Good Results with Claude</a></li>
+    <li><a href="#the-verdict">The Verdict</a></li>
+  </ul>
+</nav>
+    </details>
+            <div class="page-content">
+                <p>Running Claude Code in a terminal works great for one task at a time. You open a session, describe what you want, watch it work, review the diff. But once you start juggling several tasks — a bug fix here, a refactor there, a small feature waiting in the backlog — the terminal stops being the right place to manage that work. You end up with a pile of tabs, half-finished sessions, and no clear picture of what each agent is doing.</p>
+<p>That is the problem <strong><a href="https://github.com/multica-ai/multica">Multica</a></strong> solves. It is a source-available, self-hostable workspace where coding agents work like teammates: you assign them an issue, they pick it up, report progress, raise blockers, and hand the work back for review. It does not ship its own model — it drives the agent CLIs you already have installed, and Claude Code is one of them.</p>
+<p>Here is how to set it up and use it day to day with Claude Code.</p>
+<hr>
+<h2 id="how-multica-fits-together">How Multica Fits Together</h2>
+<p>Before installing anything, it helps to know the pieces:</p>
+<ul>
+<li><strong>Workspaces</strong> — separate agents, issues and settings per team or project.</li>
+<li><strong>Issues</strong> — units of work. You assign an issue to an agent the same way you would assign it to a person.</li>
+<li><strong>Agents</strong> — named teammates, each backed by a provider (like Claude Code) and a runtime.</li>
+<li><strong>Runtimes</strong> — the machines where agents actually run. Each one runs a small daemon, so <strong>your code stays on your machine</strong>.</li>
+<li><strong>Skills</strong> — reusable playbooks that agents share, so a good way of doing something only has to be written once.</li>
+<li><strong>Squads</strong> — agents and people on one team, with a leader routing work.</li>
+<li><strong>Autopilots</strong> — scheduled jobs for things like standups, audits and reports.</li>
+</ul>
+<p>The key idea: the Multica server is the board, and the daemon on your laptop is the worker that runs <code>claude</code> when an issue lands on it.</p>
+<hr>
+<h2 id="step-1-install-the-cli">Step 1: Install the CLI</h2>
+<p>On macOS or Linux, Homebrew is the easiest route:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">brew install multica-ai/tap/multica
+</span></span></code></pre></div><p>Make sure Claude Code itself is installed and signed in — Multica uses your existing <code>claude</code> binary, it does not bring its own:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">claude --version
+</span></span></code></pre></div><h2 id="step-2-connect-and-start-the-daemon">Step 2: Connect and Start the Daemon</h2>
+<p>If you are using Multica Cloud, a single command configures the CLI, authenticates you in the browser and starts the daemon:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">multica setup
+</span></span></code></pre></div><p>Prefer to keep everything on your own infrastructure? Multica can be self-hosted with Docker. The install script can bring the server along, and <code>setup self-host</code> points the CLI at it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -fsSL https://raw.githubusercontent.com/multica-ai/multica/main/scripts/install.sh <span class="p">|</span> bash -s -- --with-server
+</span></span><span class="line"><span class="cl">multica setup self-host
+</span></span></code></pre></div><p>Then confirm the daemon is running and that it found Claude Code:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">multica daemon status
+</span></span></code></pre></div><p>The daemon auto-detects agent CLIs on your <code>PATH</code>, so <code>claude</code> should show up in the list of detected agents. If it lives somewhere unusual, point the daemon at it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">MULTICA_CLAUDE_PATH</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.local/bin/claude&#34;</span>
+</span></span></code></pre></div><h2 id="step-3-create-a-claude-agent">Step 3: Create a Claude Agent</h2>
+<p>In the web app, open <strong>Agents → New agent</strong>, pick your machine as the runtime and Claude Code as the provider, and give it a name. That name is how you will assign work to it. You can check it from the terminal:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">multica agent list
+</span></span></code></pre></div><hr>
+<h2 id="the-daily-loop-issues-in-reviews-out">The Daily Loop: Issues In, Reviews Out</h2>
+<p>This is where Multica changes the workflow. Instead of opening a terminal session, you write an issue:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">multica issue create --title <span class="s2">&#34;Add pagination to the /posts endpoint&#34;</span> --assignee <span class="s2">&#34;claude&#34;</span>
+</span></span></code></pre></div><p>Or assign an existing one:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">multica issue assign &lt;issue-id&gt; --to <span class="s2">&#34;claude&#34;</span>
+</span></span></code></pre></div><p>From there, the daemon picks up the task and runs Claude Code against your repository. Two details here matter a lot:</p>
+<ol>
+<li><strong>Every task runs in isolation.</strong> Multica keeps a cached clone of the repository and gives each task its own <code>git worktree</code> under <code>~/multica_workspaces</code>. Two agents working on two issues never step on each other&rsquo;s files.</li>
+<li><strong>Work goes to review, not to <code>main</code>.</strong> When Claude finishes, the issue moves to review. You read the diff like you would read a colleague&rsquo;s pull request.</li>
+</ol>
+<p>While it works, you can follow along without attaching to any terminal:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">multica issue runs &lt;issue-id&gt; --active   <span class="c1"># what is running right now</span>
+</span></span><span class="line"><span class="cl">multica issue run-messages &lt;task-id&gt;     <span class="c1"># the full message log for a run</span>
+</span></span><span class="line"><span class="cl">multica issue usage &lt;issue-id&gt;           <span class="c1"># how many tokens it took</span>
+</span></span></code></pre></div><p>The execution log records every tool call and command the agent ran, which makes reviewing <em>how</em> it got to a result just as easy as reviewing the result itself. If the agent gets stuck, it raises a blocker on the issue, and you answer it with a comment — in the web app or with <code>multica issue comment add</code>.</p>
+<hr>
+<h2 id="tips-for-getting-good-results-with-claude">Tips for Getting Good Results with Claude</h2>
+<p><strong>Keep a <code>CLAUDE.md</code> in your repository.</strong> Claude Code reads it on every run, so it is the best place to describe your conventions: how to run the tests, how commits should look, what not to touch. Since every Multica task starts from a fresh worktree, this file is what gives each run the same context.</p>
+<p><strong>Write issues like you would for a person.</strong> A clear title, the expected behavior and how to verify it. An agent that knows how to check its own work hands back much better reviews.</p>
+<p><strong>Tune the daemon with environment variables.</strong> A few I find useful:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">MULTICA_CLAUDE_MODEL</span><span class="o">=</span><span class="s2">&#34;opus&#34;</span>               <span class="c1"># model used by Claude Code tasks</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">MULTICA_DAEMON_MAX_CONCURRENT_TASKS</span><span class="o">=</span><span class="m">3</span>     <span class="c1"># default is 20 — keep your laptop breathing</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">MULTICA_AGENT_IDLE_WATCHDOG</span><span class="o">=</span>30m           <span class="c1"># stop runs that go quiet (default 2h)</span>
+</span></span></code></pre></div><p><strong>Let the daemon start on its own.</strong> So you never forget to bring your agents online:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">multica daemon autostart <span class="nb">enable</span>
+</span></span></code></pre></div><p><strong>Turn repeated instructions into Skills.</strong> If you keep writing the same guidance in issues (&ldquo;always add a test&rdquo;, &ldquo;update the changelog&rdquo;), that belongs in a skill that every agent can reuse.</p>
+<hr>
+<h2 id="the-verdict">The Verdict</h2>
+<p>Claude Code is already a capable developer. What Multica adds is the <em>team</em> around it: a board where work is visible, isolated worktrees so tasks run in parallel safely, a review step before anything reaches <code>main</code>, and a log of everything the agent did.</p>
+<p>The shift in mindset is the real win. I stopped thinking &ldquo;let me open Claude and do this&rdquo; and started thinking &ldquo;let me write a good issue and assign it.&rdquo; If you already use Claude Code daily and feel the pain of managing several sessions at once, give Multica a try.</p>
+
+            </div>
+        </article><hr style="margin-top: 40px; margin-bottom: 40px" />
+<script
+  src="https://giscus.app/client.js"
+  data-repo="linuxsoares/linuxsoares.github.io"
+  data-repo-id="R_kgDOMy6rPg"
+  data-category="Q&A"
+  data-category-id="DIC_kwDOMy6rPs4C1pF4"
+  data-mapping="specific"
+  data-term="posts/how-to-use-multica-with-claude-code/"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="bottom"
+  data-theme="dark_tritanopia"
+  data-lang="en"
+  crossorigin="anonymous"
+  async
+></script>
+</main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://www.linkedin.com/in/gilmarsoares/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    
+</a>
+<a href="https://www.instagram.com/gilmar.m.soares/" target="_blank" rel="noopener noreferrer me"
+    title="Instagram">
+    
+</a>
+<a href="https://bsky.app/profile/gilgms.bsky.social" target="_blank" rel="noopener noreferrer me"
+    title="Bluesky">
+    
+</a>
+<a href="mailto:linux.soares@gmail.com" target="_blank" rel="noopener noreferrer me"
+    title="E-Mail">
+    
+</a>
+<a href="https://gilsoares.dev/blog/index.xml" target="_blank" rel="noopener noreferrer me"
+    title="RSS Feed">
+    
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2026 Gil.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+
+
+    
+    <script src="https://gilsoares.dev/blog/js/main.min.35f435a5d8eac613c52daa28d8af544a4512337d3e95236e4a4978417b8dcb2f.js" integrity="sha256-NfQ1pdjqxhPFLaoo2K9USkUSM30&#43;lSNuSkl4QXuNyy8="></script>
+
+    
+        
+        <script src="https://gilsoares.dev/blog/js/custom.min.c6cb5e120ab28067fbd32b878b08d30f70d7e9d2d9a11e7e8f13152037170bc3.js" integrity="sha256-xsteEgqygGf70yuHiwjTD3DX6dLZoR5&#43;jxMVIDcXC8M="></script>
+    
+
+</body>
+</html>
