@@ -23,6 +23,7 @@
     },
     experience: { pt: "Experiência", en: "Experience" },
     certs: { pt: "Certificações", en: "Certifications" },
+    education: { pt: "Formação", en: "Education" },
     back: { pt: "Voltar ao início", en: "Back to start" },
     farewell: { pt: "Que a Força esteja com você", en: "May the Force be with you" },
     sabers: { pt: "Cor do sabre de luz", en: "Lightsaber color" },
@@ -420,6 +421,7 @@
           <h2>${t(UI.originsTitle)}</h2>
           <div class="saber-line"></div>
           ${list(C.timeline.map((e) => `<li><span>${t(e.year)}</span><div>${t(e.text)}</div></li>`), "timeline")}
+          ${(C.education || []).length ? `<h3 class="eyebrow">${t(UI.education)}</h3>${list(C.education.map((e) => `<li><span>${t(e.year)}</span><div><strong>${t(e.title)}</strong>, ${t(e.school)}${e.details ? `<small>${t(e.details)}</small>` : ""}</div></li>`), "timeline")}` : ""}
           ${C.hobby ? `<p>${t(C.hobby)}</p>` : ""}
         </div>
         <div data-arch="origens"></div>

@@ -465,6 +465,13 @@ h2 { font-size: clamp(24px, 5vw, 34px); }
 
 h3.eyebrow { margin-top: 32px; }
 
+.timeline small {
+  display: block;
+  margin-top: 2px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
 .farewell {
   margin-top: 32px;
   font: 500 13px var(--display);

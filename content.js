@@ -142,11 +142,12 @@ window.CONTENT = {
       period: { pt: "mai 2011 – jul 2016", en: "May 2011 – Jul 2016" },
       title: { pt: "Bilhetagem do transporte metropolitano", en: "Fare systems for metropolitan transit" },
       intro: {
-        pt: "Aplicações para o transporte coletivo da Região Metropolitana de São Paulo, controlando as utilizações e gerando relatórios para os centros de controle de transporte.",
-        en: "Applications for public transit in Greater São Paulo, tracking ridership and producing reports for the transit control centers.",
+        pt: "Aplicações para o transporte coletivo da Região Metropolitana de São Paulo: da venda de créditos para recarga dos bilhetes nas lojas ao controle das utilizações e aos relatórios para os centros de controle de transporte.",
+        en: "Applications for public transit in Greater São Paulo: from selling fare card top-ups in stores to tracking ridership and producing reports for the transit control centers.",
       },
       facts: [
         { pt: "<strong>7 milhões</strong> de usuários por dia em <strong>39 municípios</strong>", en: "<strong>7 million</strong> riders a day across <strong>39 cities</strong>" },
+        { pt: "Sistema de <strong>venda de créditos</strong> para recarga de bilhetes nas lojas", en: "<strong>Credit sales</strong> system for fare card top-ups in stores" },
         { pt: "Relatórios para EMTU, CPTM e EMTC", en: "Reports for EMTU, CPTM and EMTC" },
         { pt: "Configuração dos validadores dos ônibus intermunicipais", en: "Configuration of intercity bus fare validators" },
         { pt: "Java, webservices, Oracle, MongoDB, Redis, WebLogic e WebSphere", en: "Java, web services, Oracle, MongoDB, Redis, WebLogic and WebSphere" },
@@ -154,7 +155,7 @@ window.CONTENT = {
       arch: {
         nodes: [
           { id: "bus1", kind: "client", x: 8, y: 16, label: { pt: "Validadores", en: "Validators" } },
-          { id: "bus2", kind: "client", x: 8, y: 56, label: { pt: "Ônibus", en: "Buses" } },
+          { id: "stores", kind: "client", x: 8, y: 56, label: { pt: "Lojas", en: "Stores" } },
           { id: "ws", kind: "service", x: 28, y: 36, label: "Webservices" },
           { id: "ora", kind: "db", x: 50, y: 16, label: "Oracle" },
           { id: "mongo", kind: "db", x: 50, y: 56, label: "MongoDB" },
@@ -163,21 +164,38 @@ window.CONTENT = {
           { id: "cptm", kind: "client", x: 93, y: 36, label: "CPTM" },
           { id: "emtc", kind: "client", x: 93, y: 60, label: "EMTC" },
         ],
-        edges: [["bus1", "ws"], ["bus2", "ws"], ["ws", "ora"], ["ws", "mongo"], ["ora", "rep"], ["mongo", "rep"], ["rep", "emtu"], ["rep", "cptm"], ["rep", "emtc"]],
-        sources: ["bus1", "bus2"],
+        edges: [["bus1", "ws"], ["stores", "ws"], ["ws", "ora"], ["ws", "mongo"], ["ora", "rep"], ["mongo", "rep"], ["rep", "emtu"], ["rep", "cptm"], ["rep", "emtc"]],
+        sources: ["bus1", "stores"],
       },
     },
   ],
 
   // Linha do tempo da seção "Origens".
   timeline: [
-    { year: "2008–11", text: { pt: "Estagiário e depois analista de suporte e dev Java, Museu de Arte Moderna de São Paulo", en: "Intern, then support analyst and Java developer, São Paulo Museum of Modern Art" } },
-    { year: "2011", text: { pt: "Analista de projetos, <a href=\"#autopass\">Autopass</a>: Oracle, SQL e C#", en: "Project analyst, <a href=\"#autopass\">Autopass</a>: Oracle, SQL and C#" } },
+    { year: "2008–11", text: { pt: "Estagiário e depois analista de suporte e dev Java no Museu de Arte Moderna de São Paulo, cuidando dos servidores Linux de rede e intranet e do servidor de arquivos Windows", en: "Intern, then support analyst and Java developer at the São Paulo Museum of Modern Art, running the Linux network and intranet servers and the Windows file server" } },
+    { year: "2011", text: { pt: "Analista de projetos, <a href=\"#autopass\">Autopass</a>: monitoramento de Oracle, configuração dos validadores dos ônibus intermunicipais, SQL e C#", en: "Project analyst, <a href=\"#autopass\">Autopass</a>: Oracle monitoring, intercity bus fare validator setup, SQL and C#" } },
     { year: "2012–16", text: { pt: "Analista de sistemas, <a href=\"#autopass\">Autopass</a>", en: "Systems analyst, <a href=\"#autopass\">Autopass</a>" } },
     { year: "2016–20", text: { pt: "Desenvolvedor, <a href=\"#magalu\">luizalabs</a>", en: "Software developer, <a href=\"#magalu\">luizalabs</a>" } },
     { year: "2020–23", text: { pt: "Engenheiro de software, <a href=\"#jusbrasil\">Jusbrasil</a>", en: "Software engineer, <a href=\"#jusbrasil\">Jusbrasil</a>" } },
     { year: "2023–", text: { pt: "Tech Lead do time de Trust, <a href=\"#tech-lead\">Jusbrasil</a>", en: "Tech Lead, Trust team, <a href=\"#tech-lead\">Jusbrasil</a>" } },
-    { year: { pt: "formação", en: "education" }, text: "Centro Universitário Sant'Anna" },
+  ],
+
+  // Formação, exibida em "Origens" logo abaixo da linha do tempo.
+  education: [
+    {
+      year: "2008–11",
+      title: { pt: "Bacharelado em Ciência da Computação", en: "BSc in Computer Science" },
+      school: "Centro Universitário Sant'Anna",
+      details: {
+        pt: "Redes neurais (sistemas conexionistas), compiladores para a sintaxe Oracle, gerenciamento de projetos e apps mobile em Java J2ME",
+        en: "Neural networks (connectionist systems), compilers for Oracle syntax, project management and mobile apps in Java J2ME",
+      },
+    },
+    {
+      year: "2017",
+      title: { pt: "MBA em Engenharia de Software", en: "MBA in Software Engineering" },
+      school: "FIAP",
+    },
   ],
   originsArch: {
     nodes: [
