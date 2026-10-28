@@ -56,7 +56,7 @@ a { color: inherit; }
   color: var(--far);
   font-size: clamp(20px, 3.6vw, 34px);
   opacity: 0;
-  animation: far 5s ease-in-out 0.4s forwards;
+  animation: far 7s ease-in-out 0.4s forwards;
 }
 
 @keyframes far {
@@ -76,7 +76,7 @@ a { color: inherit; }
   color: transparent;
   -webkit-text-stroke: 2px var(--crawl);
   opacity: 0;
-  animation: logo 9s cubic-bezier(0.2, 0.6, 0.4, 1) 5.8s forwards;
+  animation: logo 9s cubic-bezier(0.2, 0.6, 0.4, 1) 7.8s forwards;
 }
 
 @keyframes logo {
@@ -105,7 +105,7 @@ a { color: inherit; }
   hyphens: auto;
   transform-origin: 50% 0;
   transform: rotateX(28deg);
-  animation: crawl 52s linear 7.5s forwards;
+  animation: crawl 90s linear 9.5s forwards;
 }
 
 @keyframes crawl {
